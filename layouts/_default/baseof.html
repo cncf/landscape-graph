@@ -1,0 +1,29 @@
+{{ $lang := site.LanguageCode }}
+<!DOCTYPE html>
+<html{{ with $lang }} lang="{{ . }}"{{ end }}>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Replace 315531be7c52f5156 with your own Programmable Search Engine ID -->
+    <script async src="https://cse.google.com/cse.js?cx=315531be7c52f5156"></script>
+    <title>
+      {{ block "title" . }}
+        {{ site.Title }}
+      {{ end }}
+    </title>
+    {{ partial "css.html" . }}
+    {{ partial "favicon.html" . }}
+    {{ partial "javascript.html" }}
+
+  </head>
+
+    <body>
+      {{ partial "navbar.html" . }}
+    <main class="content">
+      {{ block "main" . }}
+      {{ end }}
+    </main>
+    {{ partial "footer.html" . }}
+  </body>
+</html>

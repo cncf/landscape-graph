@@ -1,0 +1,69 @@
+title: Hugo Netlify Starter
+
+disableKinds:
+  - taxonomy
+  - taxonomyTerm
+
+enableGitInfo: true
+
+caches:
+  assets:
+    dir: ':cacheDir/_gen'
+    maxAge: -1
+  getcsv:
+    dir: ':cacheDir/:project'
+    maxAge: 60s
+  getjson:
+    dir: ':cacheDir/:project'
+    maxAge: 60s
+  images:
+    dir: ':cacheDir/_images'
+    maxAge: -1
+  modules:
+    dir: ':cacheDir/modules'
+    maxAge: -1
+
+markup:
+  highlight:
+    style: paraiso-dark
+
+params:
+  projectName: Hugo Netlify Starter
+  font_awesome_version: 5.12.0
+  description: Boilerplate for building beautiful websites
+  favicon: favicon.png
+  repositoryUrl: 'https://github.com/cncf/hugo-netlify-starter'
+  contentDir: /content/
+  logos:
+    navbar: cncf-color.png
+  social:
+    - name: GitHub
+      color: '#000000'
+      url: 'https://github.com/cncf/hugo-netlify-starter'
+      icon: fab fa-github
+    - name: Twitter
+      color: '#00aced'
+      url: 'https://twitter.com/CloudNativeFdn'
+      icon: fab fa-twitter
+  fonts:
+    - name: Roboto
+      sizes:
+        - 400
+        - 500
+        - 700
+      type: heading_font
+    - name: Open Sans
+      sizes:
+        - 400
+        - 600
+        - 700
+      type: sans_serif
+
+menu:
+  main:
+    - name: Home
+      url: /
+      weight: 1
+    - name: Documentation
+      url: /docs/
+      weight: 2

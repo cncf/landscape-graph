@@ -1,0 +1,10 @@
+# Hugo-generated assets
+/public
+/resources
+
+# npm assets
+node_modules/
+package-lock.json
+
+# ignore system files
+.DS_Store

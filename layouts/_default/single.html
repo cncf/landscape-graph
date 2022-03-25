@@ -1,0 +1,23 @@
+{{ define "main" }}
+  <header>
+    <div>
+      {{ partial "single-header.html" . }}
+    </div>
+  </header>
+  <div class="container">
+      <section class="row">        
+        <section class="col">
+          {{ partial "section-nav.html" . }}
+        </section>
+        <section class="col col-8">
+          <h1 class="title">{{ .Page.Title | markdownify }}</h1>
+          <p class="subtitle">{{ .Page.Description | markdownify }}</p>
+          {{ partial "docs/content.html" . }}
+        </section>
+        <section class="col d-none d-lg-block">
+          {{ partial "docs/docs-nav.html" . }}
+        </section>
+
+      </section>
+    </div>
+{{ end }}

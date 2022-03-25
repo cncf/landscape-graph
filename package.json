@@ -1,0 +1,18 @@
+{
+  "scripts": {
+    "build-and-serve": "npm run build && npm run serve",
+    "build:preview": "hugo --cleanDestinationDir -DFE --minify --baseURL \"${DEPLOY_PRIME_URL:-/}\"",
+    "build:production": "hugo --cleanDestinationDir --minify",
+    "build": "hugo --cleanDestinationDir -e dev -DFE",
+    "hugo:version": "hugo version",
+    "serve": "netlify dev -c \"hugo serve -DFE --minify -w\""
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.14.0",
+    "bootstrap": "^4.5.2",
+    "hugo-extended": "^0.86.0",
+    "jquery": "^3.5.1",
+    "netlify-cli": "^5.2.10",
+    "popper.js": "^1.16.1"
+  }
+}

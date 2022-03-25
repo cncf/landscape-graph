@@ -1,0 +1,14 @@
+{{ $inProd := hugo.IsProduction -}}
+{{ $includePaths := (slice "node_modules") -}}
+{{ $sass         := "sass/custom.sass" -}}
+{{ $cssOutput    := "css/style.css" -}}
+{{ $devOpts      := (dict "targetPath" $cssOutput "includePaths" $includePaths "enableSourceMap" true) -}}
+{{ $prodOpts     := (dict "targetPath" $cssOutput "includePaths" $includePaths "outputStyle" "compressed") -}}
+{{ $cssOpts      := cond $inProd $prodOpts $devOpts -}}
+{{ $css          := resources.Get $sass | resources.ExecuteAsTemplate "blah.sass" . | toCSS $cssOpts -}}
+{{ if $inProd -}}
+{{ $prodCss      := $css | fingerprint -}}
+<link rel="stylesheet" href="{{ $prodCss.RelPermalink }}" integrity="{{ $prodCss.Data.Integrity }}">
+{{ else -}}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}">
+{{ end -}}

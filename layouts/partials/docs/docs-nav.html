@@ -1,0 +1,9 @@
+{{ $hastoc := .Params.toc }}
+{{ $toc := .TableOfContents }}
+
+{{ if ($hastoc) }}
+  <div class="toc">
+    <p> On this page:</p>
+    {{ $toc }}
+  </div>
+{{ end }}

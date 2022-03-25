@@ -1,0 +1,328 @@
+// Custom.scss
+@charset "utf-8"
+
+{{ $extraColors := site.Params.colors.extra }}
+{{ $fontAwesomeVersion := site.Params.font_awesome_version }}
+{{ $fonts := site.Params.fonts }}
+
+{{ with $fontAwesomeVersion }}
+{{ $fontAwesomeUrl := printf "https://use.fontawesome.com/releases/v%s/css/all.css" . }}
+@import url("{{ $fontAwesomeUrl }}")
+{{ end }}
+
+{{ if $fonts }}
+{{ $fontSlice := (slice) }}
+{{ range $fonts }}
+{{ $fontSlice = $fontSlice | append (printf "%s:%s" (replace .name " " "+") (delimit .sizes ",")) }}
+{{ end }}
+{{ $fontsUrl := printf "https://fonts.googleapis.com/css?family=%s" (delimit $fontSlice "|") }}
+@import url("{{ $fontsUrl }}")
+{{ end }}
+
+
+// Required
+@import "bootstrap/scss/functions" 
+@import "bootstrap/scss/variables" 
+@import "bootstrap/scss/mixins" 
+@import "bootstrap/scss/root" 
+
+//Optional
+@import "bootstrap/scss/reboot" 
+@import "bootstrap/scss/type" 
+@import "bootstrap/scss/images" 
+@import "bootstrap/scss/code" 
+@import "bootstrap/scss/grid" 
+@import "bootstrap/scss/tables" 
+@import "bootstrap/scss/forms" 
+@import "bootstrap/scss/buttons" 
+@import "bootstrap/scss/transitions" 
+@import "bootstrap/scss/dropdown" 
+//@import "bootstrap/scss/button-group" 
+//@import "bootstrap/scss/input-group" 
+//@import "bootstrap/scss/custom-forms" 
+@import "bootstrap/scss/nav" 
+@import "bootstrap/scss/navbar" 
+//@import "bootstrap/scss/card" 
+//@import "bootstrap/scss/breadcrumb" 
+//@import "bootstrap/scss/pagination" 
+//@import "bootstrap/scss/badge" 
+@import "bootstrap/scss/jumbotron" 
+//@import "bootstrap/scss/alert" 
+//@import "bootstrap/scss/progress" 
+//@import "bootstrap/scss/media" 
+//@import "bootstrap/scss/list-group" 
+//@import "bootstrap/scss/close" 
+//@import "bootstrap/scss/toasts" 
+//@import "bootstrap/scss/modal" 
+//@import "bootstrap/scss/tooltip" 
+//@import "bootstrap/scss/popover" 
+//@import "bootstrap/scss/carousel" 
+//@import "bootstrap/scss/spinners" 
+@import "bootstrap/scss/utilities" 
+//@import "bootstrap/scss/print" 
+
+
+// Custom
+
+$layout-breakpoint-small: 400px
+$font-family-headers: "Roboto" 
+$font-family-body: "Open Sans"
+$primary-color: #147eff
+$font-color: #444
+
+body
+  font-family: $font-family-body
+  font-size: .9rem
+  font-color: $font-color
+
+.logo
+  max-width: 200px
+
+.breadcrumb 
+  li
+    list-style: none
+    display: inline
+  ul
+    padding-left: 0
+
+a
+  position: relative
+
+.hashlink 
+  font-size: .8rem !important
+  position: relative
+  bottom: 3px
+  color: gray
+  &:hover
+    color: black
+
+.highlight pre 
+  padding: 0.5rem
+  border-radius: 5px 
+
+.content 
+  table 
+    @extend .table
+ 
+  img 
+    @extend .img-fluid
+
+h1, h2, h3, h4, h5, h6 
+  font-family: $font-family-headers
+  scroll-margin-top: 5rem
+  margin-top: 1rem
+
+.navbar-light .navbar-nav .nav-link
+  color: $font-color
+
+nav 
+  ul 
+    list-style-type: none
+    padding-left: 0
+    ul
+      padding-left: 1rem
+
+// responsive left nav with show/hide and animated triangle
+@media (max-width: 650px)    
+  // triangle psuedo-element
+  %triangle
+      content: ""
+      display: inline-block
+      position: relative
+      top: 2px
+      width: 0
+      height: 0
+      border-style: solid
+      border-width: 6px 0 6px 8px
+      margin-left: .5rem
+      border-color: transparent transparent transparent $font-color
+      transform: rotate(0deg)
+  .menu-label
+    cursor: pointer
+    position: relative
+    &:after 
+      @extend %triangle
+      transition: transform 500ms
+  .open
+    &:after
+      @extend %triangle
+      transform: rotate(90deg)  
+
+// At larger sizes, make the left nav always visible and remove toggle ability so that menu doesn't unintentionally disappear if toggled closed and screen gets larger while display: none is applied above. Overrides js in assets/js/app.js.
+@media (min-width: 650px)
+  ul#leftnav
+    display: block !important
+
+
+.breadcrumb a
+  color: $font-color
+  text-decoration: none
+  &:hover
+    color: $primary-color
+
+.btn-primary
+  background-color: gray
+  border: none
+
+.td-content, body
+  blockquote.callout
+    padding: 0.4rem 0.4rem 0.4rem 1rem
+    border: 1px solid #eee
+    border-left-width: 0.5em
+    background: #fff
+    color: #000
+    margin-top: 0.5em
+    margin-bottom: 0.5em
+
+  blockquote.callout
+    border-radius: calc(1em/3)
+
+  .callout.caution
+    border-left-color: #f0ad4e
+
+  .callout.note
+    border-left-color: #428bca
+
+  .callout.warning
+    border-left-color: #d9534f
+
+  h1:first-of-type + blockquote.callout
+    margin-top: 1.5em
+
+  // Search styles
+  .gsc-control-cse
+    background-color: transparent
+    border: none
+    padding: 0
+
+  // remove fuzzy Google default background image on input
+  .gsc-control-cse input
+    background: none !important
+
+  @media (min-width: 994px) 
+    .gsc-control-cse
+      margin-left: 1rem
+      min-width: 320px
+
+  // place top navbar items to the right. Remove these styles to place them left.
+  .mr-auto
+    margin-left: auto
+    margin-right: 0 !important
+
+  ul.navbar-nav
+    justify-content: space-evenly
+
+  @media (min-width: 500px) 
+    ul.navbar-nav
+      justify-content: center
+
+  .nav-container li
+    padding: 0 1rem
+
+  .navbar-nav 
+    flex-direction: inherit
+  
+  .navbar .container
+    padding: 0
+
+  @media (max-width: 650px) 
+    .col-8 
+      flex: 0 0 100%
+      max-width: 100%
+
+  // styles for the page toc  
+  .toc 
+    border-left: 2px solid #ddd
+    padding-left: .5rem
+    font-size: .85rem
+    a
+      color: $font-color
+      &:hover
+        color: $primary-color
+        text-decoration: none
+
+.jumbotron 
+  .container
+    padding-left: 0
+
+@media (min-width: 576px)
+  .jumbotron
+    padding: 2rem 1rem
+  
+// make main container width wider at different breakpoints to take advantage of screen real estate
+.container 
+  box-sizing: border-box
+
+@media (min-width: 576px)
+  .container-md, .container-sm, .container 
+    max-width: 1500px
+
+// responsive left nav
+
+.section-nav
+  border-left: solid 4px #ddd
+  padding-left: 0
+  font-size: .85rem
+  p
+    padding-left: 1rem
+  button
+    margin-left: 1rem
+
+.menu-list
+  padding-left: 1rem
+  ul
+    padding-left: .4rem
+  a
+    color: $font-color
+    &:hover
+      text-decoration: none
+      color: $primary-color
+
+@media (max-width: 650px) 
+  .menu-list
+    a
+      display: block
+      padding: .3rem
+
+// sticky footer
+html, body 
+  height: 100%
+
+body 
+  display: flex
+  flex-direction: column
+
+.content 
+  flex: 1 0 auto
+ 
+footer 
+  flex-shrink: 0
+  box-sizing: border-box
+  width: 100%
+  padding: 2rem 0
+  a
+    color: lighten($primary-color, 30%)
+    text-decoration: none
+
+
+  
+// styles for copy button on code snippets
+.highlight 
+    position: relative
+
+.highlight pre 
+    padding-right: 75px
+
+.highlight-copy-btn 
+    position: absolute
+    top: 7px
+    right: 7px
+    border: 0
+    border-radius: 4px
+    font-size: 0.8rem
+    color: #fff
+    background-color: #777
+    min-width: 55px
+
+.highlight-copy-btn:hover 
+    background-color: #666

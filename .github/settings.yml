@@ -1,0 +1,85 @@
+# For documentation on settings, see https://github.com/apps/settings
+
+repository:
+  # For options, see https://docs.github.com/en/rest/reference/repos#update-a-repository
+
+  # The name of the repository. Changing this will rename the repository
+  name: hugo-netlify-starter
+
+  # A short description of the repository that will show up on GitHub
+  description: Static website template for CNCF projects
+
+  # A URL with more information about the repository
+  homepage: https://cncf-hugo-starter.netlify.com/
+  
+collaborators:
+  # For options, see https://docs.github.com/en/rest/reference/repos#add-a-repository-collaborator
+  - username: caniszczyk
+    permission: admin
+  - username: celestehorgan
+    permission: admin
+  - username: chalin
+    permission: admin
+  - username: nate-double-u
+    permission: admin
+  - username: sftim
+    permission: admin
+
+# Labels: define labels for Issues and Pull Requests
+labels:
+  - name: cleanup
+    color: 1ebcd8
+  - name: e1-hours
+    description: "Effort: < 8 hrs"
+    color: d9b38c
+  - name: e2-days
+    description: "Effort: < 5 days"
+    color: cc9966
+  - name: e3-weeks
+    description: "Effort: < 4 weeks"
+    color: bf8040
+  - name: e4-months
+    description: "Effort: 1+ months"
+    color: 996633
+  - name: infrastructure
+    color: 696969
+  - name: p0-critical
+    color: B60205
+  - name: p1-high
+    color: D93F0B
+  - name: p2-medium
+    color: FBCA04
+  - name: p3-low
+    color: FEF2C0
+  - name: e0-minutes
+    description: "Effort: < 60 min"
+    color: e6ccb3
+  # GitHub default labels
+  - name: bug
+    description: "Something isn't working"
+    color: d73a4a
+  - name: documentation
+    description: Improvements or additions to documentation
+    color: 0075ca
+  - name: duplicate
+    description: This issue or pull request already exists
+    color: cfd3d7
+  - name: enhancement
+    description: New feature or request
+    color: a2eeef
+  - name: good first issue
+    description: Good for newcomers
+    color: 7057ff
+  - name: help wanted
+    description: Extra attention is needed
+    color: 008672
+  - name: invalid
+    description: "This doesn't seem right"
+    color: e4e669
+  - name: question
+    description: Further information is requested
+    color: d876e3
+  - name: wontfix
+    description: This will not be worked on
+    color: ffffff
+
