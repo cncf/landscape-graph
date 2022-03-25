@@ -4,13 +4,13 @@ repository:
   # For options, see https://docs.github.com/en/rest/reference/repos#update-a-repository
 
   # The name of the repository. Changing this will rename the repository
-  name: hugo-netlify-starter
+  name: landscape-graph
 
   # A short description of the repository that will show up on GitHub
-  description: Static website template for CNCF projects
+  description: Landscape data --> Graph Database (Neo4j)
 
   # A URL with more information about the repository
-  homepage: https://cncf-hugo-starter.netlify.com/
+  homepage: https://graph.cncf.io
   
 collaborators:
   # For options, see https://docs.github.com/en/rest/reference/repos#add-a-repository-collaborator
@@ -23,6 +23,8 @@ collaborators:
   - username: nate-double-u
     permission: admin
   - username: sftim
+    permission: admin
+  - username: halcyondude
     permission: admin
 
 # Labels: define labels for Issues and Pull Requests
