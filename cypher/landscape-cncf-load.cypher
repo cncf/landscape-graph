@@ -1,32 +1,4 @@
-# CNCF Landscape Graph
-
-_construction zone_ :construction:
-
-While we remodel the facilities, join us in extending a big thanks to GitHub OCTO :)
-
-https://flatgithub.com/cncf/landscape-graph/blob/main/landscape-items.json
-
-## Neo4J Graph Database Setup
-
-<details><summary>Constraints</summary><p>
-```Cypher
-CREATE CONSTRAINT IF NOT EXISTS FOR (n:Card) REQUIRE n.name IS UNIQUE;
-CREATE CONSTRAINT IF NOT EXISTS FOR (n:Category) REQUIRE n.name IS UNIQUE;
-CREATE CONSTRAINT IF NOT EXISTS FOR (n:Headquarters) REQUIRE n.name IS UNIQUE;
-CREATE CONSTRAINT IF NOT EXISTS FOR (n:Industry) REQUIRE n.name IS UNIQUE;
-CREATE CONSTRAINT IF NOT EXISTS FOR (n:Language) REQUIRE n.name IS UNIQUE;
-CREATE CONSTRAINT IF NOT EXISTS FOR (n:License) REQUIRE n.name IS UNIQUE;
-CREATE CONSTRAINT IF NOT EXISTS FOR (n:Organization) REQUIRE n.name IS UNIQUE;
-CREATE CONSTRAINT IF NOT EXISTS FOR (n:Path) REQUIRE n.name IS UNIQUE;
-CREATE CONSTRAINT IF NOT EXISTS FOR (n:Project) REQUIRE n.name IS UNIQUE;
-CREATE CONSTRAINT IF NOT EXISTS FOR (n:Relation) REQUIRE n.relation IS UNIQUE;
-CREATE CONSTRAINT IF NOT EXISTS FOR (n:Repo) REQUIRE n.name IS UNIQUE;
-
-</p></details>
-
-<details><summary>Load Landscape Data</summary><p>
-
-```Cypher
+//load.json(landscape.cncf.io) items.json
 CALL apoc.load.json("https://landscape.cncf.io/data/items.json") YIELD value
 MERGE (c:Card {name: value.name})
 ON CREATE SET
@@ -91,6 +63,3 @@ UNWIND value.repos as repo
    MERGE (c)-[:OWNS_REPO]->(r)
 
 return count(*)
-```
-
-</p></details>
