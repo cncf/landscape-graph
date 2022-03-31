@@ -16,7 +16,7 @@ collaborators:
   # For options, see https://docs.github.com/en/rest/reference/repos#add-a-repository-collaborator
   - username: caniszczyk
     permission: admin
-  - username: celestehorgan
+  - username: jeefy
     permission: admin
   - username: chalin
     permission: admin
