@@ -1,10 +1,15 @@
 # CNCF Landscape Graph
 
-_construction zone_ :construction:
+:construction:
+While we remodel the facilities, join us in extending a big thanks the GitHubNext team :)
 
-While we remodel the facilities, join us in extending a big thanks to GitHub OCTO :)
+https://flatgithub.com/halcyondude/landscape-graph/blob/main/landscape-items.json
 
-https://flatgithub.com/cncf/landscape-graph/blob/main/landscape-items.json
+More info: https://next.github.com/projects/flat-data
+
+---
+
+TODO: diagram
 
 ## Neo4J Graph Database
 
@@ -67,7 +72,7 @@ WITH c, value
 MERGE(ossl:License { name: value.license })
    MERGE (c)-[:HAS_LICENSE]->(ossl)
 
-MERGE(hq:HeadquarterS { name: value.headquarters })
+MERGE(hq:Headquarters { name: value.headquarters })
     MERGE(c)-[:HAS_HEADQUARTERS]->(hq)
 
 // sandbox | incubating | graduated
@@ -81,7 +86,7 @@ MERGE(p:Path {name: value.path})
     MERGE(c)-[:IN_PATH]->(p)
 
 MERGE(cat:Category {name: value.category})
-    MERGE(c)-[:IN_CATEGORY]->(c)
+    MERGE(c)-[:IN_CATEGORY]->(cat)
 
 // false || bronze/silver/gold/platinum
 MERGE(m:Member {name: value.member})

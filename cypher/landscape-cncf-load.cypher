@@ -24,7 +24,7 @@ WITH c, value
 MERGE(ossl:License { name: value.license })
    MERGE (c)-[:HAS_LICENSE]->(ossl)
 
-MERGE(hq:HeadquarterS { name: value.headquarters })
+MERGE(hq:Headquarters { name: value.headquarters })
     MERGE(c)-[:HAS_HEADQUARTERS]->(hq)
 
 // sandbox | incubating | graduated
@@ -38,7 +38,7 @@ MERGE(p:Path {name: value.path})
     MERGE(c)-[:IN_PATH]->(p)
 
 MERGE(cat:Category {name: value.category})
-    MERGE(c)-[:IN_CATEGORY]->(c)
+    MERGE(c)-[:IN_CATEGORY]->(cat)
 
 // false || bronze/silver/gold/platinum
 MERGE(m:Member {name: value.member})
