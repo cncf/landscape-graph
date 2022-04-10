@@ -6,6 +6,7 @@ on:
   push:
     paths:
       - .github/workflows/flat.yml
+      - ./deno/clean-landscape-json.ts
 jobs:
   scheduled:
     runs-on: ubuntu-latest
@@ -21,3 +22,4 @@ jobs:
         with:
           http_url: https://landscape.cncf.io/data/items.json
           downloaded_filename: landscape-items.json
+          postprocess: ./clean-landscape-json.ts
