@@ -28,9 +28,7 @@ for (let i = 0; i < landscape.length; i++)
     }
 }
 
-let p = path.parse(filename);
-p.name = 'clean-' + p.name;
-const newfile = p.dir + '/' + p.name + p.ext
+let newfile: string = "landscape-items-clean.json"
 
 console.log('Writing cleaned up landscape file: ' + newfile)
 
