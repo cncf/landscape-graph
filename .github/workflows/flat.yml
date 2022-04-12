@@ -6,7 +6,7 @@ on:
   push:
     paths:
       - .github/workflows/flat.yml
-      - ./deno/clean-landscape-json.ts
+      - ./clean-landscape-json.ts
 jobs:
   scheduled:
     runs-on: ubuntu-latest
