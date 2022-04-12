@@ -19,11 +19,18 @@ for (let i = 0; i < landscape.length; i++)
     }
 
     //
+    // LICENSE contains "NotOpenSource" as a license type
+    //
+    if (card['license'] === 'NotOpenSource') {
+        delete card['license']
+    }
+
+    //
     // RELATION := { false, sandbox, member, incubating, graduated, archived }
     // strip false and member, as both are duplicative.
     //
-    let val = card['relation'];
-    if( false === val || 'member' === val ) {
+    let relVal = card['relation'];
+    if( false === relVal || 'member' === relVal ) {
         delete card['relation'];
     }
 }
