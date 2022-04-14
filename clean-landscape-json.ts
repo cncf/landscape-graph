@@ -1,5 +1,4 @@
-import { readJSON, writeJSON } from 'https://deno.land/x/flat/mod.ts';
-import * as path from "https://deno.land/std/path/mod.ts";
+import { readJSON, writeJSON } from "https://deno.land/x/flat@0.0.15/mod.ts";
 
 const filename = Deno.args[0]; // Same name as downloaded_filename
 
@@ -8,7 +7,7 @@ const landscape = await readJSON(filename);
 
 for (let i = 0; i < landscape.length; i++) 
 {
-    let card = landscape[i];
+    const card = landscape[i];
 
     //
     // MEMBER := { false, Platinum, Nonprofit, Silver, Gold, End User Supporter, Academic }
@@ -29,14 +28,18 @@ for (let i = 0; i < landscape.length; i++)
     // RELATION := { false, sandbox, member, incubating, graduated, archived }
     // strip false and member, as both are duplicative.
     //
-    let relVal = card['relation'];
+    const relVal = card['relation'];
     if( false === relVal || 'member' === relVal ) {
         delete card['relation'];
     }
+
+    // TODO: re-write dates to by Cypher friendly!
 }
 
 let newfile: string = "landscape-items-clean.json"
 
 console.log('Writing cleaned up landscape file: ' + newfile)
 
-await writeJSON(newfile, landscape, null, 2)
+// strip out all null or empty values
+const cleanedLandscape = JSON.parse(JSON.stringify(landscape, (key, value) => value === null || value === '' ? undefined : value));
+await writeJSON(newfile, cleanedLandscape, null, 2)
