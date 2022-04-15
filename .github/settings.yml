@@ -26,6 +26,8 @@ collaborators:
     permission: admin
   - username: halcyondude
     permission: admin
+  - username: carolynvs
+    permission: write
 
 # Labels: define labels for Issues and Pull Requests
 labels:
