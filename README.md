@@ -61,6 +61,10 @@ Using the [data][seeddata] underlying the existing landscape as input, a Labeled
 [neo]: https://neo4j.com
 [cypherdev]: https://neo4j.com/developer/cypher/
 
+## Landscape Graph Data Model
+
+![landscape-graph-data-model](image-md/landscape-graph-model-beta.png)
+
 ### Neo4J Graph Database
 
 ![neo4j-graphic](image-md/neo4j-card.png)
