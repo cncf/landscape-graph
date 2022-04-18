@@ -1,5 +1,14 @@
 # CNCF Landscape Graph
 
+:warning: Initial, open, active development. :warning:  
+
+Join us @ [#landscape-graph][lg-slack]. Here's our [plan][lg-plan].
+
+[lg-slack]: https://cloud-native.slack.com/archives/C03BXBYFMQS
+[lg-plan]: https://github.com/orgs/cncf/projects/7
+
+---
+
 In November of 2018 there were 25 CNCF projects.
 
 At the time [Ayrat Khayretdinov][archyufa] published the "[Beginner's Guide to the CNCF Landscape][guide]." It opened with:
@@ -39,12 +48,11 @@ This is perfect when we know what we're looking for (specifically).
 
 Often, we need to understand how a project interacts with others, how it's changing over time, and who's enabling it's continued success. We want to understand what alternatives exist, or how complementary projects might be combined in purpose-fit or novel ways. This is how projects and ecosystems grow to meet the business challenges that face modern organizations irrespective of domain.
 
-Graphs can facilitate rich analysis of our vibrant and dynamic communities, the humans they comprise, and clusters of contribution and thought leadership.
-
+Graphs can facilitate rich analysis of our vibrant and dynamic communities, the humans they comprise, and clusters of contribution and thought leadership they produce.
 
 ## How can a graph help us?
 
-Current List --> [Quests and Questions][quest].  Please [add YOUR questions][GQ]. They are the reason for this.
+Current [Quests and Questions][quest].  Please [add your own][GQ]; they are the reason for this!
 
 [quest]: https://github.com/orgs/cncf/projects/7/views/5
 [GQ]: https://github.com/cncf/landscape-graph/issues/new?assignees=&labels=Questions+for+Graph&template=question-for-graph.md&title=I+want+to+...+so+that+I+can+...
@@ -138,7 +146,13 @@ On its influences and roots:
 
 ## How to Contribute
 
-Help :smile: -->  https://github.com/cncf/landscape-graph/issues/14
+* Join us @ [#landscape-graph][lg-slack].
+* Review our current [plan][lg-plan].
+* Help us [make this better][lg-cguide] :)
+
+[lg-slack]: https://cloud-native.slack.com/archives/C03BXBYFMQS
+[lg-plan]: https://github.com/orgs/cncf/projects/7
+[lg-cguide]: https://github.com/cncf/landscape-graph/issues/14
 
 ## License
 
