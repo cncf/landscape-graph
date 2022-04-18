@@ -1,0 +1,33 @@
+# docker-compose.yml
+version: "3.9"
+networks:
+  neo4j_user:
+services:
+  neo4j:
+    image: neo4j:latest
+    ports:
+      - 7474:7474 # http://0.0.0.0:7474/
+      - 7687:7687 # bolt
+    expose:
+      - 7474
+      - 7687
+    volumes:
+      - neo4j_data:/data
+    networks:
+      - neo4j_user
+    healthcheck:
+        test: wget http://localhost:7474 || exit 1
+        interval: 1s
+        timeout: 10s
+        retries: 20
+        start_period: 3s
+  app:
+    build: .
+    depends_on:
+      neo4j:
+        condition: service_healthy
+    networks:
+      - neo4j_user
+
+volumes:
+  neo4j_data:
