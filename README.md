@@ -37,22 +37,19 @@ With a single well placed click wealth of data can be summoned.
 
 This is perfect when we know what we're looking for (specifically).
 
-Often, we need to understand how a project interacts with others, how it's changing over time, and who's enabling it's continued success. We want to understand what alternatives exist, or how complementary projects might be combined in purpose-fit or novel ways.
+Often, we need to understand how a project interacts with others, how it's changing over time, and who's enabling it's continued success. We want to understand what alternatives exist, or how complementary projects might be combined in purpose-fit or novel ways. This is how projects and ecosystems grow to meet the business challenges that face modern organizations irrespective of domain.
 
-This is how projects and ecosystems grow to meet the business challenges that face modern organizations irrespective of domain.
+Graphs can facilitate rich analysis of our vibrant and dynamic communities, the humans they comprise, and clusters of contribution and thought leadership.
+
 
 ## How can a graph help us?
 
-Current List --> [Quests and Questions][quest]
-
-Please [add YOUR questions][GQ]. They are the reason for this.
+Current List --> [Quests and Questions][quest].  Please [add YOUR questions][GQ]. They are the reason for this.
 
 [quest]: https://github.com/orgs/cncf/projects/7/views/5
 [GQ]: https://github.com/cncf/landscape-graph/issues/new?assignees=&labels=Questions+for+Graph&template=question-for-graph.md&title=I+want+to+...+so+that+I+can+...
 
 ### Questions
-
-* Rich analysis of our vibrant and dynamic communities, the humans they comprise, and clusters of contribution and thought leadership.
 
 * for a set of projects, for all repos by release, show package dependency trees, overlaid with current CVE announcements w/ reporting and alerting as necessary.
 
