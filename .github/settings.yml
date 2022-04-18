@@ -58,6 +58,9 @@ labels:
   - name: e0-minutes
     description: "Effort: < 60 min"
     color: e6ccb3
+  - name: "Questions for Graph"
+    description: Questions landscape-graph can inform
+    color: 5319e7
   # GitHub default labels
   - name: bug
     description: "Something isn't working"
