@@ -2,7 +2,9 @@
 
 :warning: Initial, open, active development. :warning:  
 
-Join us @ [#landscape-graph][lg-slack]. Here's our [plan][lg-plan].
+_Roadmap planning in-process._
+
+Join us @ [#landscape-graph][lg-slack]. Here's our [current activities][lg-plan]. Formal plan and [roadmap](https://github.com/cncf/landscape-graph/issues/46) are in progress.
 
 [lg-slack]: https://cloud-native.slack.com/archives/C03BXBYFMQS
 [lg-plan]: https://github.com/orgs/cncf/projects/7
@@ -79,13 +81,33 @@ Current [Quests and Questions][quest].  Please [add your own][GQ]; they are the 
 
 ## Technical TLDR
 
-| Component | What
-| --------  | ----
-| Neo4j     | Graph Database
-| Neo4j ETL | <https://neo4j.com/labs/etl-tool>
-| gitbase   | Git history as MySQL, [src-d/gitbase](https://github.com/src-d/gitbase)
-| JavaFX    | UI, 3d, [openjfx.io](https://openjfx.io)
-| Quarkus   | AoT, minify, Dev UX, [quarkus.io](https://quarkus.io)
+### GRANDstack (<https://grandstack.io>)
+
+_source: [grandstack.io/docs/...](https://grandstack.io/docs/getting-started-neo4j-graphql)_
+
+GRANDstack is a combination of technologies that work together to enable developers to build data intensive full stack applications. The components of GRANDstack are:
+
+* **G**raphQL -  A new paradigm for building APIs, GraphQL is a way of describing data and enabling clients to query it.
+* **R**eact   -  A JavaScript library for building component based reusable user interfaces.
+* **A**pollo  -  A suite of tools that work together to create great GraphQL workflows.
+* **N**eo4j **D**atabase - The native graph database that allows you to model, store, and query your data the same way you think about it: as a graph.
+
+Here's how it all fits together in the context of a movie search app:
+
+
+![grand-arch](image-md/grandstack_architecture.png)
+
+
+There are a few additional tools and frameworks used. (TODO: [#27](https://github.com/cncf/landscape-graph/issues/27))
+
+
+| **Component**         | **What it is**
+| ---                   | --- 
+| Neo4j GraphQL Library | <https://neo4j.com/product/graphql-library> ([dev blog](https://neo4j.com/developer-blog/announcing-the-release-of-the-neo4j-graphql-library-3-0-0/))
+| Neo4j ETL Tool        | <https://neo4j.com/labs/etl-tool>
+| gitbase               | Git history as MySQL, [src-d/gitbase](https://github.com/src-d/gitbase)
+| JavaFX                | UI, 3d, [openjfx.io](https://openjfx.io)
+| Quarkus               | AoT, minify, Dev UX, [quarkus.io](https://quarkus.io)
 
 Using the [data][seeddata] underlying the existing landscape as input, a Labeled Property Graph ([LPG][lpg]) is constructed using [Cypher][ocypher] (SQL for Graphs), resulting in a [Neo4j][neo] graph database.
 
@@ -101,7 +123,7 @@ Using the [data][seeddata] underlying the existing landscape as input, a Labeled
 
 ## Graph Data Science Algorithms ("Why Neo4j?")
 
-https://neo4j.com/developer/graph-data-science/graph-algorithms
+<https://neo4j.com/developer/graph-data-science/graph-algorithms>
 
 Graph Databases “perform the join on insert” instead of query time. No joins or table scans required.
 
