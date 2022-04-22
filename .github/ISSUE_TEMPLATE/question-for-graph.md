@@ -2,7 +2,7 @@
 name: Question for Graph
 about: A question we can answer with Graph Data Science applied to the Landscape.
 title: I want to ... so that I can ...
-labels: Questions for Graph
+labels: "Q for graph"
 assignees: ''
 
 ---
