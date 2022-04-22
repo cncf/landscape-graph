@@ -94,20 +94,22 @@ GRANDstack is a combination of technologies that work together to enable develop
 
 Here's how it all fits together in the context of a movie search app:
 
-
 ![grand-arch](image-md/grandstack_architecture.png)
 
+### Additional tools and frameworks
 
-There are a few additional tools and frameworks used. (TODO: [#27](https://github.com/cncf/landscape-graph/issues/27))
-
+_TODO: [#27](https://github.com/cncf/landscape-graph/issues/27)_
 
 | **Component**         | **What it is**
 | ---                   | --- 
-| Neo4j GraphQL Library | <https://neo4j.com/product/graphql-library> ([dev blog](https://neo4j.com/developer-blog/announcing-the-release-of-the-neo4j-graphql-library-3-0-0/))
-| Neo4j ETL Tool        | <https://neo4j.com/labs/etl-tool>
+| Neo4j GraphQL Library | [{neo}/product/graphql-library](<https://neo4j.com/product/graphql-library>), ([dev blog](https://neo4j.com/developer-blog/announcing-the-release-of-the-neo4j-graphql-library-3-0-0/))
+| Neo4j ETL Tool        | [{neo}/labs/etl-tool](<https://neo4j.com/labs/etl-tool>)
+| Neo4j ETL Tool        | [{neo}/labs/kafka](<https://neo4j.com/labs/kafka>), [{gh}/neo4j-contrib/neo4j-streams](https://github.com/neo4j-contrib/neo4j-streams)
 | gitbase               | Git history as MySQL, [src-d/gitbase](https://github.com/src-d/gitbase)
 | JavaFX                | UI, 3d, [openjfx.io](https://openjfx.io)
 | Quarkus               | AoT, minify, Dev UX, [quarkus.io](https://quarkus.io)
+
+## Landscape Graph Data Model
 
 Using the [data][seeddata] underlying the existing landscape as input, a Labeled Property Graph ([LPG][lpg]) is constructed using [Cypher][ocypher] (SQL for Graphs), resulting in a [Neo4j][neo] graph database.
 
@@ -116,8 +118,6 @@ Using the [data][seeddata] underlying the existing landscape as input, a Labeled
 [ocypher]: https://opencypher.org
 [neo]: https://neo4j.com
 [cypherdev]: https://neo4j.com/developer/cypher/
-
-## Landscape Graph Data Model
 
 ![landscape-graph-data-model](db/model/Landscape-CNCF-GM.png)
 
@@ -134,7 +134,7 @@ that we’ve learned from ad/fin/security tech, big data, ml, etc.
 
 ## Graph Data Science Algorithm Types
 
-Docs --> https://neo4j.com/docs/graph-data-science/current
+Docs --> <https://neo4j.com/docs/graph-data-science/current>
 
 | Type                              | Definition |
 | --------                          | --------   |
@@ -143,7 +143,7 @@ Docs --> https://neo4j.com/docs/graph-data-science/current
 | [Community Detection][CommD]      | Evaluate how a group is clustered or partitioned, as well as its tendency to strengthen or break apart |
 | [Similarity][Similar]             | Help calculate the similarity of nodes |
 | [Topological link prediction][TP] | Determine the closeness of pairs of nodes |
-| [Node Embeddings][Embed]          | Ccompute vector representations of nodes in a graph. |
+| [Node Embeddings][Embed]          | Compute vector representations of nodes in a graph. |
 | [Node Classification][NC]         | Uses machine learning to predict the classification of nodes. |
 | [Link prediction][LP]             | Use machine learning to predict new links between pairs of nodes. |
 
@@ -151,7 +151,7 @@ Docs --> https://neo4j.com/docs/graph-data-science/current
 [Central]: https://neo4j.com/docs/graph-data-science/current/algorithms/centrality
 [CommD]:   https://neo4j.com/docs/graph-data-science/current/algorithms/community
 [Similar]: https://neo4j.com/docs/graph-data-science/current/algorithms/similarity
-[TP]:    https://neo4j.com/docs/graph-data-science/current/algorithms/linkprediction
+[TP]:      https://neo4j.com/docs/graph-data-science/current/algorithms/linkprediction
 [Embed]:   https://neo4j.com/docs/graph-data-science/current/algorithms/node-embeddings
 [NC]:      https://neo4j.com/docs/graph-data-science/current/algorithms/ml-models/node-classification
 [LP]:      https://neo4j.com/docs/graph-data-science/current/algorithms/ml-models/linkprediction
@@ -178,6 +178,6 @@ On its influences and roots:
 
 ## License
 
-This repository contains data received from Crunchbase. This data is not licensed pursuant to the Apache License. It is subject to Crunchbase’s Data Access Terms, available at https://data.crunchbase.com/docs/terms, and is only permitted to be used with Linux Foundation landscape projects.
+This repository contains data received from Crunchbase. This data is not licensed pursuant to the Apache License. It is subject to Crunchbase’s Data Access Terms, available at <https://data.crunchbase.com/docs/terms>, and is only permitted to be used with Linux Foundation landscape projects.
 
 Everything else is under the Apache License, Version 2.0, except for project and product logos, which are generally copyrighted by the company that created them, and are simply cached here for reliability.
