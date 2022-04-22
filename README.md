@@ -57,7 +57,7 @@ Graphs can facilitate rich analysis of our vibrant and dynamic communities, the 
 Current [Quests and Questions][quest].  Please [add your own][GQ]; they are the reason for this!
 
 [quest]: https://github.com/orgs/cncf/projects/7/views/5
-[GQ]: https://github.com/cncf/landscape-graph/issues/new?assignees=&labels=Questions+for+Graph&template=question-for-graph.md&title=I+want+to+...+so+that+I+can+...
+[GQ]: https://github.com/cncf/landscape-graph/issues/new?assignees=&labels=Q+for+graph&template=question-for-graph.md&title=I+want+to+...+so+that+I+can+...
 
 ### Questions
 
