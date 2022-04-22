@@ -33,7 +33,10 @@ collaborators:
 labels:
   - name: cleanup
     color: 1ebcd8
-  - name: e1-hours
+  - name: e0-minutes
+    description: "Effort: < 60 min"
+    color: e6ccb3
+- name: e1-hours
     description: "Effort: < 8 hrs"
     color: d9b38c
   - name: e2-days
@@ -55,10 +58,7 @@ labels:
     color: FBCA04
   - name: p3-low
     color: FEF2C0
-  - name: e0-minutes
-    description: "Effort: < 60 min"
-    color: e6ccb3
-  - name: "Questions for Graph"
+  - name: "Q for graph"
     description: Questions landscape-graph can inform
     color: 5319e7
   # GitHub default labels
