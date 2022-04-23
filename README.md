@@ -101,7 +101,7 @@ Here's how it all fits together in the context of a movie search app:
 _TODO: [#27](https://github.com/cncf/landscape-graph/issues/27)_
 
 | **Component**         | **What it is**
-| ---                   | --- 
+| ---                   | ---
 | Neo4j GraphQL Library | [{neo}/product/graphql-library](<https://neo4j.com/product/graphql-library>), ([dev blog](https://neo4j.com/developer-blog/announcing-the-release-of-the-neo4j-graphql-library-3-0-0/))
 | Neo4j ETL Tool        | [{neo}/labs/etl-tool](<https://neo4j.com/labs/etl-tool>)
 | Neo4j ETL Tool        | [{neo}/labs/kafka](<https://neo4j.com/labs/kafka>), [{gh}/neo4j-contrib/neo4j-streams](https://github.com/neo4j-contrib/neo4j-streams)
@@ -119,7 +119,7 @@ Using the [data][seeddata] underlying the existing landscape as input, a Labeled
 [neo]: https://neo4j.com
 [cypherdev]: https://neo4j.com/developer/cypher/
 
-![landscape-graph-data-model](db/model/Landscape-CNCF-GM.png)
+![landscape-graph-data-model](db/core/generated/landscape-graph-core.png)
 
 ## Graph Data Science Algorithms ("Why Neo4j?")
 
