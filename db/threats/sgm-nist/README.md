@@ -1,4 +1,4 @@
-# Sub-Graph Pack: sgp-nist
+# Sub-Graph Module: sgm-nist
 
 https://www.cve.org
 https://github.com/CVEProject/cve-schema
