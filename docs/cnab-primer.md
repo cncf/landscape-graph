@@ -14,6 +14,10 @@
 >
 > CNAB can also be used for packaging other distributed applications, such as IoT or edge computing.
 
+## How is a CNAB bundle stored in an OCI image?
+
+![](cnab-oci-format.png)
+
 ## Who created this?
 
 > ... [Microsoft][blog-ms], [Docker][blog-docker], HashiCorp, Bitnami, [Pivotal][blog-pivotal], and many others created Cloud Native Application Bundles (CNAB). CNAB is an open source cloud-agnostic package format specification for bundling and installing distributed applications.

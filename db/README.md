@@ -8,70 +8,80 @@
 
 ctx->allTheThings.ToMarkdown();
 
-## Sub-Graph Packs (SGP)
+## Sub-Graph Modules (SGM)
+
+### SGM Goals
+
+* facilitate interactive, dynamic expansion of the graph using [core](core) as nucleus and/or seed.
+* enable collaboration in parallel while ensuring viability of standalone tests.
+* work with a broad, arbitrary set of targets, environments, toolchains, and compositional frameworks
+* provide an extensible mechanism for new Entities, and new types of Entites to be added to landscape-graph
+* able to be easily distributed on existing transports.  
+  * OCI is a great fit. https://github.com/cnabio/cnab-to-oci 
 
 
+### Types of Sub-Graph Modules (SGM)
 
+All "base" types derive from a singular shared root, base type.
 
-### Types of Packs
+Each of these is an Interface, acting as a base class with shared properties.
 
+| base types           | derived types |
+| ---                  | --- |
+| [blogs](blogs)       | CNCF, thenewstack, medium.*, LinkedIn Posts, ... |
+| [boards](boards)     | GH Discuss, StackOverflow |
+| [core](core)         | Core Data Model |
+| [corp](corp)         | crunchbase, yahoofinance |
+| [email](email)       | cncf project lists, k8s lists |
+| [packages](packages) | brew, choco, crate, deb, deno, go, maven, npm, pip, rpm |
+| [rtc](rtc)           | slack, discord, gitter |
+| [social](social)     | twitter, linkedin |
+| [threats](threats)   | nist |
+| [videos](videos)     | youtube |
 
+Each module will have the following:
 
-* blogs
-* boards
-* core
-* corp
-* email
-* packages
-* rtc
-* social
-* threats
-* videos
-
-
-
-
-Each pack will have the following:
-
+* base metadata (name, version, ...)
 * GraphQL Schema, deriving from the base type.
 * png, svg, .json (arrows.app :))
 * Description / Documentation covering entities
+* sample data, patterns, and queries
+* CI
 
 ```shell
 .
 ├── blogs
-│   └── sgp-blogcncf
+│   └── sgm-blogcncf
 ├── boards
-│   ├── sgp-ghdiscuss
-│   └── sgp-stackoverflow
+│   ├── sgm-ghdiscuss
+│   └── sgm-stackoverflow
 ├── core
 │   └── generated
 ├── corp
-│   ├── sgp-crunchbase
-│   └── sgp-yahoofinance
+│   ├── sgm-crunchbase
+│   └── sgm-yahoofinance
 ├── email
 ├── packages
-│   ├── sgp-brew
-│   ├── sgp-choco
-│   ├── sgp-crate
-│   ├── sgp-deb
-│   ├── sgp-deno
-│   ├── sgp-go
-│   ├── sgp-maven
-│   ├── sgp-npm
-│   ├── sgp-pip
-│   └── sgp-rpm
+│   ├── sgm-brew
+│   ├── sgm-choco
+│   ├── sgm-crate
+│   ├── sgm-deb
+│   ├── sgm-deno
+│   ├── sgm-go
+│   ├── sgm-maven
+│   ├── sgm-npm
+│   ├── sgm-pip
+│   └── sgm-rpm
 ├── rtc
-│   ├── sgp-discord
-│   └── sgp-slack
+│   ├── sgm-discord
+│   └── sgm-slack
 ├── social
-│   ├── sgp-linkedin
-│   └── sgp-twitter
+│   ├── sgm-linkedin
+│   └── sgm-twitter
 ├── threats
-│   └── sgp-nist
+│   └── sgm-nist
 └── videos
-    └── sgp-youtube
-
+    └── sgm-youtube
 ```
 
 ## How GraphQL Interfaces Work
