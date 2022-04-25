@@ -14,6 +14,10 @@
 >
 > CNAB can also be used for packaging other distributed applications, such as IoT or edge computing.
 
+## How is a CNAB bundle stored in an OCI image?
+
+![](cnab-oci-format.png)
+
 ## Who created this?
 
 > ... [Microsoft][blog-ms], [Docker][blog-docker], HashiCorp, Bitnami, [Pivotal][blog-pivotal], and many others created Cloud Native Application Bundles (CNAB). CNAB is an open source cloud-agnostic package format specification for bundling and installing distributed applications.
@@ -71,43 +75,12 @@
 
 ### VS Code Extensions
 
-<details>
-  <summary>Duffle</summary>
-   
-    ```shell
-    Name: Duffle
-    Id: ms-kubernetes-tools.duffle-vscode
-    Description: Build and deploy Cloud Native Application Bundles with Duffle
-    Version: 0.3.0
-    Publisher: Microsoft
-    VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=ms-kubernetes-tools.duffle-vscode
-    ```
-    
-</details>
 
-<details>
-  <summary>Duffle Coat</summary>
-   
-    ```shell
-    Name: Duffle Coat
-    Id: ms-kubernetes-tools.duffle-coat
-    Description: Generates CNAB self-installers
-    Version: 0.3.4
-    Publisher: Microsoft
-    VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=ms-kubernetes-tools.duffle-coat    ```
-    
-</details>
-
-<details>
-  <summary>Porter</summary>
-   
-    ```shell
-    Name: Porter
-    Id: getporter.porter-vscode
-    Description: Package your application artifact, client tools, configuration and deployment logic together as a versioned bundle that you can distribute, and then install with a single command
-    Version: 0.0.3
-    Publisher: Porter
-    VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=getporter.porter-vscode
-    ```
-    
-</details>
+```
+Name: Porter
+Id: getporter.porter-vscode
+Description: Package your application artifact, client tools, configuration and deployment logic together as a versioned bundle that you can distribute, and then install with a single command
+Version: 0.0.3
+Publisher: Porter
+VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=getporter.porter-vscode
+```
