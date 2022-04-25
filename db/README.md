@@ -10,6 +10,27 @@ ctx->allTheThings.ToMarkdown();
 
 ## Sub-Graph Packs (SGP)
 
+
+
+
+### Types of Packs
+
+
+
+* blogs
+* boards
+* core
+* corp
+* email
+* packages
+* rtc
+* social
+* threats
+* videos
+
+
+
+
 Each pack will have the following:
 
 * GraphQL Schema, deriving from the base type.
@@ -53,7 +74,7 @@ Each pack will have the following:
 
 ```
 
-## How Interfaces Work
+## How GraphQL Interfaces Work
 
 https://neo4j.com/docs/graphql-manual/current/type-definitions/interfaces/#_directive_inheritance
 
