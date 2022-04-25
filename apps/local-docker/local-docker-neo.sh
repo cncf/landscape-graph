@@ -38,7 +38,8 @@ function docker-stop-rm-if-exists()
 #
 # Variables
 #
-LANDSCAPE_BASE=$HOME/landscape/neo4j
+LANDSCAPE_ROOT=$HOME/landscape
+LANDSCAPE_BASE=$LANDSCAPE_ROOT/neo4j
 CONTAINER_NAME=landscape-graph
 NEO4J_USERNAME=neo4j
 NEO4J_PASSWORD=landscape
@@ -52,7 +53,9 @@ docker-stop-rm-if-exists "$CONTAINER_NAME"
 docker-ps-pretty
 
 # nuke anything left in mounted dirs
+sudo chown $USER:$USER -R ~/landscape/neo4j
 rm -rf $LANDSCAPE_BASE
+tree-pretty $LANDSCAPE_ROOT
 
 # create mount points
 mkdir -p $LANDSCAPE_BASE/data
@@ -61,7 +64,8 @@ mkdir -p $LANDSCAPE_BASE/import
 mkdir -p $LANDSCAPE_BASE/plugins
 
 # copy cleaned up landscape json --> import directory
-cp -fv ../../landscape-items-clean.json $LANDSCAPE_BASE/import
+export LANDSCAPE_GIT_REPO_ROOT=$(git rev-parse --show-toplevel)
+cp -fv $LANDSCAPE_GIT_REPO_ROOT/landscape-items-clean.json $LANDSCAPE_BASE/import
 tree-pretty "$LANDSCAPE_BASE"
 
 echo "presently running in docker:"
@@ -94,6 +98,7 @@ docker run \
     --env NEO4J_apoc_import_file_enabled=true \
     --env NEO4J_apoc_export_file_enabled=true \
     --env NEO4J_dbms_security_procedures_unrestricted=apoc.\\\*,gds.\\\* \
+    --env NEO4J_dbms_logs_debug_level=INFO \
     neo4j:latest
 
 docker-ps-pretty
@@ -104,12 +109,19 @@ do \
     echo "waiting 1s for bolt to appear"; \
     sleep 1; \
 done
-echo '*** neo4j online!'
+echo "*** neo4j online!"
 
 # launch Cypher Shell in container, execute cypher
 cat load-clean-landscape.cypher \
 | docker exec --interactive landscape-graph cypher-shell -u $NEO4J_USERNAME -p $NEO4J_PASSWORD
 
+echo ""
+echo "open http://localhost:7474 ($NEO4J_USERNAME/$NEO4J_PASSWORD)"
+echo ""
+
+#
+# TODO Nuke this
+#
 # docker run \
 #   --user $(id -u):$(id -g) \
 #   --name "${CONTAINER}" \
