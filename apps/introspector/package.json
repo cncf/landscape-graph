@@ -1,0 +1,19 @@
+{
+  "name": "introspector",
+  "version": "1.0.0",
+  "description": "",
+  "main": "introspect-landscape.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@neo4j/graphql": "^3.1.0",
+    "@neo4j/introspector": "^1.0.1",
+    "apollo-server": "^3.6.7",
+    "graphql": "^16.4.0",
+    "neo4j-driver": "^4.4.5"
+  }
+}
