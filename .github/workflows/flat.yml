@@ -31,45 +31,8 @@ jobs:
           neo4j-uri: ${{secrets.NEO4J_AURA_URI}}
           filename: 'landscape-items-clean.json'
           cypher-query: >
-              CREATE CONSTRAINT IF NOT EXISTS FOR (n:Card) REQUIRE n.name IS UNIQUE;
-              CREATE CONSTRAINT IF NOT EXISTS FOR (n:Category) REQUIRE n.name IS UNIQUE;
-              CREATE CONSTRAINT IF NOT EXISTS FOR (n:Headquarters) REQUIRE n.name IS UNIQUE;
-              CREATE CONSTRAINT IF NOT EXISTS FOR (n:Industry) REQUIRE n.name IS UNIQUE;
-              CREATE CONSTRAINT IF NOT EXISTS FOR (n:Language) REQUIRE n.name IS UNIQUE;
-              CREATE CONSTRAINT IF NOT EXISTS FOR (n:License) REQUIRE n.name IS UNIQUE;
-              CREATE CONSTRAINT IF NOT EXISTS FOR (n:Org) REQUIRE n.name IS UNIQUE;
-              CREATE CONSTRAINT IF NOT EXISTS FOR (n:Path) REQUIRE n.name IS UNIQUE;
-              CREATE CONSTRAINT IF NOT EXISTS FOR (n:Project) REQUIRE n.name IS UNIQUE;
-              CREATE CONSTRAINT IF NOT EXISTS FOR (n:Relation) REQUIRE n.relation IS UNIQUE;
-              CREATE CONSTRAINT IF NOT EXISTS FOR (n:Repo) REQUIRE n.name IS UNIQUE;
-
-              CREATE INDEX IF NOT EXISTS FOR (n:Card) ON (n.name);
-              CREATE INDEX IF NOT EXISTS FOR (n:Card) ON (n.license);
-              CREATE INDEX IF NOT EXISTS FOR (n:Card) ON (n.member);
-              CREATE INDEX IF NOT EXISTS FOR (n:Category) ON (n.name);
-              CREATE INDEX IF NOT EXISTS FOR (n:Headquarters) ON (n.name);
-              CREATE INDEX IF NOT EXISTS FOR (n:Industry) ON (n.name);
-              CREATE INDEX IF NOT EXISTS FOR (n:Language) ON (n.name);
-              CREATE INDEX IF NOT EXISTS FOR (n:License) ON (n.name);
-              CREATE INDEX IF NOT EXISTS FOR (n:Org) ON (n.name);
-              CREATE INDEX IF NOT EXISTS FOR (n:Path) ON (n.name);
-              CREATE INDEX IF NOT EXISTS FOR (n:Project) ON (n.name);
-              CREATE INDEX IF NOT EXISTS FOR (n:Relation) ON (n.name);
-              CREATE INDEX IF NOT EXISTS FOR (n:Repo) ON (n.name);
-
-              // load the json, which is a simple array, one entry per card.  
-              // "YIELD" is the iterator pattern.
-              // CALL apoc.load.json("file:///landscape-items-clean.json")
-              // YIELD value
-              
               UNWIND $value AS value
               
-              // TODO: get this working
-              // WITH apoc.map.clean(value, [], [""]) as cleanedItems
-              // WITH $keysToKeepInCards + $keysBecomingNodes as keysToKeep 
-              // WITH apoc.map.fromLists($keysToKeep, apoc.map.values(value, $keysToKeep)) as allTheCards
-              // RETURN allTheCards
-
               MERGE (c:Card {name: value.name})
               SET c += value { 
                   .bestPracticeBadgeId, 
@@ -117,20 +80,34 @@ jobs:
               MERGE (r:Repo {url: repo.url}) // TODO: should parse out an org/repo id for this
               MERGE (c)-[:OWNS_REPO]->(r)
 
-              ;
+              RETURN *, count(*)
 
+      - name: Assign OSS Licenses to Projects
+        uses: johnymontana/flat-graph@v1.1
+        with:
+          neo4j-user: ${{secrets.NEO4J_AURA_USER}}
+          neo4j-password: ${{secrets.NEO4J_AURA_PASSWORD}}
+          neo4j-uri: ${{secrets.NEO4J_AURA_URI}}
+          filename: 'landscape-items-clean.json'
+          cypher-query: >
               MATCH(card:Card)
               WHERE card.license IS NOT NULL
               MERGE(proj:Project {name: card.name})
               MERGE(ossl:License { name: card.license })
               MERGE (c)-[:IS_PROJECT]->(proj)
               MERGE (p)-[:HAS_LICENSE]->(ossl)
+              RETURN *, count(*) 
 
-              ;
-
+      - name: Assign Membership Types to Members
+        uses: johnymontana/flat-graph@v1.1
+        with:
+          neo4j-user: ${{secrets.NEO4J_AURA_USER}}
+          neo4j-password: ${{secrets.NEO4J_AURA_PASSWORD}}
+          neo4j-uri: ${{secrets.NEO4J_AURA_URI}}
+          filename: 'landscape-items-clean.json'
+          cypher-query: >
               MATCH(c:Card)
               WHERE c.member IS NOT NULL
               MERGE(m:Membership {name: c.member})
               MERGE(c)-[:IS_MEMBERTYPE]->(m)
-
-              return *, count(*)
+              RETURN *, count(*)
