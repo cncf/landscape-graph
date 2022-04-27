@@ -80,7 +80,7 @@ jobs:
               MERGE (r:Repo {url: repo.url}) // TODO: should parse out an org/repo id for this
               MERGE (c)-[:OWNS_REPO]->(r)
 
-              RETURN *, count(*)
+              RETURN c.name, c.homepage_url, c.description
 
       - name: Assign OSS Licenses to Projects
         uses: johnymontana/flat-graph@v1.1
@@ -96,7 +96,7 @@ jobs:
               MERGE(ossl:License { name: card.license })
               MERGE (c)-[:IS_PROJECT]->(proj)
               MERGE (p)-[:HAS_LICENSE]->(ossl)
-              RETURN *, count(*) 
+              RETURN p.name, ossl.name
 
       - name: Assign Membership Types to Members
         uses: johnymontana/flat-graph@v1.1
@@ -110,4 +110,4 @@ jobs:
               WHERE c.member IS NOT NULL
               MERGE(m:Membership {name: c.member})
               MERGE(c)-[:IS_MEMBERTYPE]->(m)
-              RETURN *, count(*)
+              RETURN c.name, m.name
