@@ -104,7 +104,7 @@ _TODO: [#27](https://github.com/cncf/landscape-graph/issues/27)_
 | ---                   | --- 
 | Neo4j GraphQL Library | [{neo}/product/graphql-library](<https://neo4j.com/product/graphql-library>), ([dev blog](https://neo4j.com/developer-blog/announcing-the-release-of-the-neo4j-graphql-library-3-0-0/))
 | Neo4j ETL Tool        | [{neo}/labs/etl-tool](<https://neo4j.com/labs/etl-tool>)
-| Neo4j ETL Tool        | [{neo}/labs/kafka](<https://neo4j.com/labs/kafka>), [{gh}/neo4j-contrib/neo4j-streams](https://github.com/neo4j-contrib/neo4j-streams)
+| Neo4j Streams         | [{neo}/labs/kafka](<https://neo4j.com/labs/kafka>), [{gh}/neo4j-contrib/neo4j-streams](https://github.com/neo4j-contrib/neo4j-streams)
 | gitbase               | Git history as MySQL, [src-d/gitbase](https://github.com/src-d/gitbase)
 | JavaFX                | UI, 3d, [openjfx.io](https://openjfx.io)
 | Quarkus               | AoT, minify, Dev UX, [quarkus.io](https://quarkus.io)
