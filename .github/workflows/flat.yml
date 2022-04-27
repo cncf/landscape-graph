@@ -1,4 +1,4 @@
-name: data
+name: Import landscape.cncf.io dataset, publish to Neo4j Aura
 on:
   schedule:
     - cron: 0 0 * * *
@@ -23,3 +23,91 @@ jobs:
           http_url: https://landscape.cncf.io/data/items.json
           downloaded_filename: landscape-items.json
           postprocess: ./clean-landscape-json.ts
+      - name: Import to Neo4j Aura
+        uses: johnymontana/flat-graph@v1.1
+        with:
+          neo4j-user: ${{secrets.NEO4J_AURA_USER}}
+          neo4j-password: ${{secrets.NEO4J_AURA_PASSWORD}}
+          neo4j-uri: ${{secrets.NEO4J_AURA_URI}}
+          filename: 'landscape-items-clean.json'
+          cypher-query: >
+              UNWIND $value AS value
+              
+              MERGE (c:Card {name: value.name})
+              SET c += value { 
+                  .bestPracticeBadgeId, 
+                  .bestPracticePercentage, 
+                  .commitsThisYear, 
+                  .contributorsCount, 
+                  .crunchbase, 
+                  .description, 
+                  .homepage_url, 
+                  .isSubsidiaryProject, 
+                  .logo,
+                  .oss,
+                  .repo_url, 
+                  .stars, 
+                  .twitter,
+                  .license,
+                  .member
+              }  
+              WITH c, value
+
+              MERGE(org:Organization { name: value.organization })
+              MERGE(c)-[:IN_ORGANIZATION]->(org)
+
+              MERGE(p:Path {name: value.path})
+              MERGE(c)-[:IN_PATH]->(p)
+
+              MERGE(cat:Category {name: value.category})
+              MERGE(c)-[:IN_CATEGORY]->(cat)
+
+              MERGE(hq:Headquarters { name: value.headquarters })
+              MERGE(c)-[:BASED_IN]->(hq)
+
+              WITH c, value
+              UNWIND value.industries as industry
+              MERGE (i:Industry {name: industry})
+              MERGE (c)-[:IN_INDUSTRY]->(i)
+
+              WITH c, value
+              UNWIND value.github_data.languages as language
+              MERGE (l:Language {name: language.name})
+              MERGE (c)-[:USES_LANGUAGE]->(l)
+
+              WITH c, value
+              UNWIND value.repos as repo
+              MERGE (r:Repo {url: repo.url}) // TODO: should parse out an org/repo id for this
+              MERGE (c)-[:OWNS_REPO]->(r)
+
+              RETURN *, count(*)
+
+      - name: Assign OSS Licenses to Projects
+        uses: johnymontana/flat-graph@v1.1
+        with:
+          neo4j-user: ${{secrets.NEO4J_AURA_USER}}
+          neo4j-password: ${{secrets.NEO4J_AURA_PASSWORD}}
+          neo4j-uri: ${{secrets.NEO4J_AURA_URI}}
+          filename: 'landscape-items-clean.json'
+          cypher-query: >
+              MATCH(card:Card)
+              WHERE card.license IS NOT NULL
+              MERGE(proj:Project {name: card.name})
+              MERGE(ossl:License { name: card.license })
+              MERGE (c)-[:IS_PROJECT]->(proj)
+              MERGE (p)-[:HAS_LICENSE]->(ossl)
+              RETURN *, count(*) 
+
+      - name: Assign Membership Types to Members
+        uses: johnymontana/flat-graph@v1.1
+        with:
+          neo4j-user: ${{secrets.NEO4J_AURA_USER}}
+          neo4j-password: ${{secrets.NEO4J_AURA_PASSWORD}}
+          neo4j-uri: ${{secrets.NEO4J_AURA_URI}}
+          filename: 'landscape-items-clean.json'
+          cypher-query: >
+              MATCH(c:Card)
+              WHERE c.member IS NOT NULL
+              MERGE(m:Membership {name: c.member})
+              MERGE(c)-[:IS_MEMBERTYPE]->(m)
+              RETURN *, count(*)
