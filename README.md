@@ -36,7 +36,7 @@ Today there are 5.4 million humans using Kubernetes and the landscape continues 
 
 ## We have a "good" problem
 
-The [CNCF Landscape][landscape] aggregates summary data from GitHub, Crunchbase, Yahoo Finance, Twitter, and other sources while providing the ability quickly find, filter, and group the more than 1000 Cards and is updated daily, automatically. It continues to work as designed.
+The [CNCF Landscape][landscape] aggregates summary data from GitHub, Crunchbase, Yahoo Finance, Twitter, and other sources while providing the ability quickly find, filter, and group the more than 1000 Cards across numerous dimensions.  It is automagically updated daily. It continues to work as designed.
 
 [landscape]: https://landscape.cncf.io
 
