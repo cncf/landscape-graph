@@ -1,0 +1,22 @@
+name: dump
+on: [push]
+
+jobs:
+  debug:
+    name: Debug
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v2
+
+    - name: Set up secret file
+      env:
+        PASS: ${{ secrets.NEO4J_AURA_PASSWORD }}
+        URI: ${{ secrets.NEO4J_AURA_URI }}
+      run: |
+        echo $PASS >> secrets.txt
+        echo $URI >> secrets.txt
+
+    - name: Run tmate
+      uses: mxschmitt/action-tmate@v2
