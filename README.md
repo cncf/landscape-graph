@@ -42,7 +42,9 @@ The [CNCF Landscape][landscape] aggregates summary data from GitHub, Crunchbase,
 
 ![landscape-all](image-md/2022-04-18-landscape.png)
 
-With a single well placed click wealth of data can be summoned.
+With a single well placed click a wealth of data can be summoned. 
+
+Here's the "Card" for [Neo4j](https://neo4j.com)
 
 ![neo4j-card](image-md/neo4j-card.png)
 
