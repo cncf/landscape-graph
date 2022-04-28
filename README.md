@@ -176,7 +176,7 @@ On its influences and roots:
 
 [lg-slack]: https://cloud-native.slack.com/archives/C03BXBYFMQS
 [lg-plan]: https://github.com/orgs/cncf/projects/7
-[lg-cguide]: https://github.com/cncf/landscape-graph/issues/14
+[lg-cguide]: https://github.com/orgs/cncf/projects/7/views/6
 
 ## License
 
