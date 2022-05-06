@@ -33,11 +33,8 @@ function docker-stop-rm-if-exists()
 ### Begin Festivities
 ###
 
-#set -x
+set -x
 
-#
-# Variables
-#
 LANDSCAPE_ROOT=$HOME/landscape
 LANDSCAPE_BASE=$LANDSCAPE_ROOT/neo4j
 CONTAINER_NAME=landscape-graph
@@ -45,15 +42,13 @@ NEO4J_USERNAME=neo4j
 NEO4J_PASSWORD=landscape
 
 echo "*** $CONTAINER_NAME: Using $LANDSCAPE_BASE for docker mount points (/data, /logs, /import, /plugins)"
-echo ""
-warn-user "THIS WILL OBLITERATE ANYTHING EXISTING IN $LANDSCAPE_BASE + stop/rm docker container"
 
 docker-ps-pretty
 docker-stop-rm-if-exists "$CONTAINER_NAME"
 docker-ps-pretty
 
 # nuke anything left in mounted dirs
-sudo chown $USER:$USER -R ~/landscape/neo4j
+sudo chown $USER:$USER -R $LANDSCAPE_BASE
 rm -rf $LANDSCAPE_BASE
 tree-pretty $LANDSCAPE_ROOT
 
@@ -71,13 +66,17 @@ tree-pretty "$LANDSCAPE_BASE"
 echo "presently running in docker:"
 docker-ps-pretty
 
-warn-user "...last chance beforoe docker run ... neo4j"
+warn-user "...last chance before docker run neo4j!"
 echo "*** LAUNCHING NEO4J @ $LANDSCAPE_BASE"
 
 ######################################################################
 # handy extras
 #     --env NEO4J_AUTH=none \
 # --env NEO4JLABS_PLUGINS='["apoc", "graph-data-science", "bloom"]'
+
+# TODO: fix this on MacOS even though we set docker user, it'll still fail (oddly)
+#        when running as the correct user, docker for mac does this https://github.com/docker/for-mac/issues/2657 (maybe?)
+#        so for now without setting --user, it'll chown as neo4j user the import mount point, requiring a chown to nuke it 
 #    --user="$(id -u):$(id -g)" \
 ######################################################################
 
@@ -99,15 +98,19 @@ docker run \
     --env NEO4J_apoc_export_file_enabled=true \
     --env NEO4J_dbms_security_procedures_unrestricted=apoc.\\\*,gds.\\\* \
     --env NEO4J_dbms_logs_debug_level=INFO \
+    --env NEO4J_dbms_ssl_policy_bolt_client_auth=NONE \
+    --env NEO4j_dbms_connector_bolt_tls__level=IGNORE \
     neo4j:latest
+
+#     --env NEO4J_dbms_connector_bolt_listen__address=0.0.0.0:7867 \
 
 docker-ps-pretty
 
 # launch Cypher Shell in container, execute cypher
 until echo 'match (n) return count (n);' | docker exec --interactive landscape-graph cypher-shell -u $NEO4J_USERNAME -p $NEO4J_PASSWORD; \
 do \
-    echo "waiting 1s for bolt to appear"; \
-    sleep 1; \
+    echo "waiting 10s for bolt to appear, typically takes 40s-60s on a MB Pro"; \
+    sleep 10; \
 done
 echo "*** neo4j online!"
 
@@ -116,12 +119,10 @@ cat load-clean-landscape.cypher \
 | docker exec --interactive landscape-graph cypher-shell -u $NEO4J_USERNAME -p $NEO4J_PASSWORD
 
 echo ""
-echo "open http://localhost:7474 ($NEO4J_USERNAME/$NEO4J_PASSWORD)"
+echo "===> http://localhost:7474 ($NEO4J_USERNAME/$NEO4J_PASSWORD)"
 echo ""
 
-#
-# TODO Nuke this
-#
+
 # docker run \
 #   --user $(id -u):$(id -g) \
 #   --name "${CONTAINER}" \
@@ -131,6 +132,8 @@ echo ""
 #   --publish ${NEO_HTTP}:${NEO_HTTP} \
 #   --publish ${NEO_BOLT}:${NEO_BOLT} \
 #   --env NEO4JLABS_PLUGINS="${NEO_PLUGINS}" \
+# dbms.connector.bolt.address=0.0.0.0:7687
+#   --env NEO4J_dbms_connector_bolt_listen__address=0.0.0.0:7867 \
 #   --env NEO4J_dbms_connector_https_listen__address=0.0.0.0:${NEO_HTTPS} \
 #   --env NEO4J_dbms_connector_http_listen__address=0.0.0.0:${NEO_HTTP} \
 #   --env NEO4J_dbms_connector_bolt_listen__address=0.0.0.0:${NEO_BOLT} \
