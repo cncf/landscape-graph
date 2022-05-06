@@ -1,11 +1,13 @@
 name: "Semantic Pull Requests"
 
 on:
-  pull_request_target:
+  pull_request:
     types:
       - opened
       - edited
       - synchronize
+    branches:
+      - "main"
 
 jobs:
   main:
