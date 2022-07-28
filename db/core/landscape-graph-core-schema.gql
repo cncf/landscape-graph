@@ -1,0 +1,209 @@
+type Card {
+  name: someCard
+  isAProject: Project @relationship(type: "IS_A", direction: OUT)
+  isAMember: Member @relationship(type: "IS_A", direction: OUT)
+  inCatCategory: Category @relationship(type: "IN_CAT", direction: OUT)
+}
+
+type Project {
+  name: someProject
+  cardIsA: Card @relationship(type: "IS_A", direction: IN)
+  usesLicense: License @relationship(type: "USES", direction: OUT)
+  usesLanguage: Language @relationship(type: "USES", direction: OUT)
+  ownsGitrepo: GitRepo @relationship(type: "OWNS", direction: OUT)
+  inScopeTagrp: TAGrp @relationship(type: "IN_SCOPE", direction: OUT)
+  isPlvlPlvl: PLvl @relationship(type: "IS_PLVL", direction: OUT)
+  inCatCategory: Category @relationship(type: "IN_CAT", direction: OUT)
+  projroleServed: ProjRole @relationship(type: "SERVED", direction: IN)
+}
+
+type Member {
+  name: someMember
+  cardIsA: Card @relationship(type: "IS_A", direction: IN)
+  isMlvlMlvl: MLvl @relationship(type: "IS_MLVL", direction: OUT)
+  memberOfEugrp: EUGrp @relationship(type: "MEMBER_OF", direction: OUT)
+  ownsOrganization: Organization @relationship(type: "OWNS", direction: OUT)
+  inCatCategory: Category @relationship(type: "IN_CAT", direction: OUT)
+}
+
+type License {
+  name: someLicense
+  projectUses: Project @relationship(type: "USES", direction: IN)
+}
+
+type Language {
+  name: someLanguage
+  projectUses: Project @relationship(type: "USES", direction: IN)
+}
+
+type GitRepo {
+  name: someGitRepo
+  projectOwns: Project @relationship(type: "OWNS", direction: IN)
+  partOfGitorg: GitOrg @relationship(type: "PART_OF", direction: OUT)
+  personIsMaintainer: Person @relationship(type: "IS_MAINTAINER", direction: IN)
+  branchPartOf: Branch @relationship(type: "PART_OF", direction: IN)
+}
+
+type GitOrg {
+  name: someGitOrg
+  gitrepoPartOf: GitRepo @relationship(type: "PART_OF", direction: IN)
+}
+
+type TAGrp {
+  name: someTAGrp
+  projectInScope: Project @relationship(type: "IN_SCOPE", direction: IN)
+  tagroleServed: TagRole  @relationship(type: "SERVED", direction: IN)
+}
+
+type Person {
+  name: somePerson
+  isMaintainerGitrepo: GitRepo @relationship(type: "IS_MAINTAINER", direction: OUT)
+  authoredCommit: Commit @relationship(type: "AUTHORED", direction: OUT)
+  reviewedPr: PR @relationship(type: "REVIEWED", direction: OUT)
+  approvedPr: PR @relationship(type: "APPROVED", direction: OUT)
+  createdPr: PR @relationship(type: "CREATED", direction: OUT)
+  hasRoleTagrole: TagRole  @relationship(type: "HAS_ROLE", direction: OUT)
+  hasRoleEurole: EuRole @relationship(type: "HAS_ROLE", direction: OUT)
+  hasRoleProjrole: ProjRole @relationship(type: "HAS_ROLE", direction: OUT)
+  hasRoleTocrole: TocRole @relationship(type: "HAS_ROLE", direction: OUT)
+  isBoardOrganization: Organization @relationship(type: "IS_BOARD", direction: OUT)
+  isEmployeeInvestor: Investor  @relationship(type: "IS_EMPLOYEE", direction: OUT)
+  postedTweet: Tweet @relationship(type: "POSTED", direction: OUT)
+  postedBlog: Blog @relationship(type: "POSTED", direction: OUT)
+  postedLipost: LIPost  @relationship(type: "POSTED", direction: OUT)
+  organizationEmployed: Organization @relationship(type: "EMPLOYED", direction: IN)
+}
+
+type Commit {
+  name: someCommit
+  personAuthored: Person @relationship(type: "AUTHORED", direction: IN)
+  partOfBranch: Branch @relationship(type: "PART_OF", direction: OUT)
+  prContains: PR @relationship(type: "CONTAINS", direction: IN)
+}
+
+type Branch {
+  name: someBranch
+  commitPartOf: Commit @relationship(type: "PART_OF", direction: IN)
+  partOfGitrepo: GitRepo @relationship(type: "PART_OF", direction: OUT)
+  prChanged: PR @relationship(type: "CHANGED", direction: IN)
+}
+
+type EUGrp {
+  name: someEUGrp
+  memberMemberOf: Member @relationship(type: "MEMBER_OF", direction: IN)
+  euroleServed: EuRole @relationship(type: "SERVED", direction: IN)
+}
+
+type PR {
+  name: somePR
+  personReviewed: Person @relationship(type: "REVIEWED", direction: IN)
+  personApproved: Person @relationship(type: "APPROVED", direction: IN)
+  personCreated: Person @relationship(type: "CREATED", direction: IN)
+  containsCommit: Commit @relationship(type: "CONTAINS", direction: OUT)
+  changedBranch: Branch @relationship(type: "CHANGED", direction: OUT)
+}
+
+type Category {
+  name: someCategory
+  cardInCat: Card @relationship(type: "IN_CAT", direction: IN)
+  projectInCat: Project @relationship(type: "IN_CAT", direction: IN)
+  memberInCat: Member @relationship(type: "IN_CAT", direction: IN)
+}
+
+type MLvl {
+  name: someMLvl
+  memberIsMlvl: Member @relationship(type: "IS_MLVL", direction: IN)
+}
+
+type PLvl {
+  name: somePLvl
+  projectIsPlvl: Project @relationship(type: "IS_PLVL", direction: IN)
+}
+
+type Organization {
+  name: someOrganization
+  memberOwns: Member @relationship(type: "OWNS", direction: IN)
+  personIsBoard: Person @relationship(type: "IS_BOARD", direction: IN)
+  isSubOrganization: Organization @relationship(type: "IS_SUB", direction: OUT)
+  organizationIsSub: Organization @relationship(type: "IS_SUB", direction: IN)
+  operatesInIndustry: Industry  @relationship(type: "OPERATES_IN", direction: OUT)
+  employedPerson: Person @relationship(type: "EMPLOYED", direction: OUT)
+  hqInCity: City @relationship(type: "HQ_IN", direction: OUT)
+  fundingFunded: Funding @relationship(type: "FUNDED", direction: IN)
+}
+
+type Industry  {
+  name: someIndustry
+  organizationOperatesIn: Organization @relationship(type: "OPERATES_IN", direction: IN)
+}
+
+type Investor  {
+  name: someInvestor
+  personIsEmployee: Person @relationship(type: "IS_EMPLOYEE", direction: IN)
+  fundedFunding: Funding @relationship(type: "FUNDED", direction: OUT)
+}
+
+type Funding {
+  name: someFunding
+  investorFunded: Investor  @relationship(type: "FUNDED", direction: IN)
+  fundedOrganization: Organization @relationship(type: "FUNDED", direction: OUT)
+}
+
+type TagRole  {
+  name: someTagRole
+  personHasRole: Person @relationship(type: "HAS_ROLE", direction: IN)
+  servedTagrp: TAGrp @relationship(type: "SERVED", direction: OUT)
+}
+
+type EuRole {
+  name: someEuRole
+  personHasRole: Person @relationship(type: "HAS_ROLE", direction: IN)
+  servedEugrp: EUGrp @relationship(type: "SERVED", direction: OUT)
+}
+
+type ProjRole {
+  name: someProjRole
+  personHasRole: Person @relationship(type: "HAS_ROLE", direction: IN)
+  servedProject: Project @relationship(type: "SERVED", direction: OUT)
+}
+
+type TocRole {
+  name: someTocRole
+  personHasRole: Person @relationship(type: "HAS_ROLE", direction: IN)
+  servedToc: TOC  @relationship(type: "SERVED", direction: OUT)
+}
+
+type TOC  {
+  name: Technical Oversight Committee
+  tocroleServed: TocRole @relationship(type: "SERVED", direction: IN)
+}
+
+type City {
+  name: someCity
+  organizationHqIn: Organization @relationship(type: "HQ_IN", direction: IN)
+}
+
+type Tweet {
+  name: someTweet
+  personPosted: Person @relationship(type: "POSTED", direction: IN)
+  containsTagHashtag: Hashtag @relationship(type: "CONTAINS_TAG", direction: OUT)
+}
+
+type Blog {
+  name: someBlog
+  personPosted: Person @relationship(type: "POSTED", direction: IN)
+  containsTagHashtag: Hashtag @relationship(type: "CONTAINS_TAG", direction: OUT)
+}
+
+type LIPost  {
+  name: someLIPost
+  personPosted: Person @relationship(type: "POSTED", direction: IN)
+  containsTagHashtag: Hashtag @relationship(type: "CONTAINS_TAG", direction: OUT)
+}
+
+type Hashtag {
+  name: someHashtag
+  tweetContainsTag: Tweet @relationship(type: "CONTAINS_TAG", direction: IN)
+  blogContainsTag: Blog @relationship(type: "CONTAINS_TAG", direction: IN)
+  lipostContainsTag: LIPost  @relationship(type: "CONTAINS_TAG", direction: IN)
+}
