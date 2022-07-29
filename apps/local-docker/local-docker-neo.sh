@@ -33,7 +33,7 @@ function docker-stop-rm-if-exists()
 ### Begin Festivities
 ###
 
-set -x
+# set -x
 
 LANDSCAPE_ROOT=$HOME/landscape
 LANDSCAPE_BASE=$LANDSCAPE_ROOT/neo4j
