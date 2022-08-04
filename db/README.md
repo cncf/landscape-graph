@@ -32,6 +32,7 @@ Each of these is an Interface, acting as a base class with shared properties.
 | ---                  | --- |
 | [blogs](blogs)       | CNCF, thenewstack, medium.*, LinkedIn Posts, ... |
 | [boards](boards)     | GH Discuss, StackOverflow |
+| [cncf](cncf)         | Member, Project, License, TAG, EUG, TOC, Organizations, ...
 | [core](core)         | Core Data Model |
 | [corp](corp)         | crunchbase, yahoofinance |
 | [email](email)       | cncf project lists, k8s lists |

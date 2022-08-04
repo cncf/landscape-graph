@@ -1,0 +1,215 @@
+"""
+Member: CNCF Member Organization
+
+TODO: This needs a better relationship name: (Member)->[OWNS]->(Organization)
+"""
+type Member {
+  id: ID! @id
+  name: String! @unique
+  categories: [Category!]! @relationship(type: "IN_CAT", direction: OUT)
+
+  cncfMemberships: [MembershipType!]! @relationship(type: "CNCF_MEMBER", direction: OUT)
+  endUserGroups: [EUG!]! @relationship(type: "MEMBER_OF", direction: OUT)
+  organizations: [Organization!]! @relationship(type: "OWNS", direction: OUT)
+}
+
+"""
+Project: CNCF Open Source Project (Sandbox, Incubating, Graduated, Archived)
+"""
+type Project {
+  id: ID! @id
+  name: String! @unique
+  categories: [Category!]! @relationship(type: "IN_CAT", direction: OUT)
+  
+  projectLevels: [ProjectPhase!]! @relationship(type: "IS_PLVL", direction: OUT)
+  licenses: [License!]! @relationship(type: "USES", direction: OUT)
+  languages: [Language!]! @relationship(type: "USES", direction: OUT)
+  tags: [TAG!]! @relationship(type: "IN_SCOPE", direction: OUT)
+
+  projRoles: [Person!]! @relationship(type: "SERVED_IN_ROLE", properties: "ServedInRole", direction: IN)
+}
+
+"""
+Category
+
+TODO: add (maybe?) "union CategorizedEntity = Member | Project"
+"""
+type Category {
+  id: ID! @id
+  name: String! @unique
+  
+  members: [Member!]! @relationship(type: "IN_CAT", direction: IN)
+  projects: [Project!]! @relationship(type: "IN_CAT", direction: IN)
+}
+
+"""
+License: TODO doc
+"""
+type License {
+  id: ID! @id
+  name: String! @unique
+
+  projects: [Project!]! @relationship(type: "USES", direction: IN)
+}
+
+"""
+Language: TODO doc
+"""
+type Language {
+  id: ID! @id
+  name: String! @unique
+
+  projects: [Project!]! @relationship(type: "USES", direction: IN)
+}
+
+enum ROLE_TYPE {
+  TOC
+  TECHNICAL_ADVISORY_GROUP
+  END_USER_GROUP
+  PROJECT
+}
+
+enum ROLE_POSITION {
+  CHAIR
+  TECHNICAL_LEAD
+}
+
+interface ServedInRole @relationshipProperties {
+  roleType: ROLE_TYPE!
+  rolePosition: ROLE_POSITION!
+  from: Date
+  to: Date
+}
+
+"""
+TOC: Technical Oversight Committee
+"""
+type TOC  {
+  id: ID! @id
+  name: String! @unique
+  
+  rolePersons: [Person!]! @relationship(type: "SERVED_IN_ROLE", properties: "ServedInRole", direction: IN)
+  communityPersons: [Person!]! @relationship(type: "IS_COMMUNITY_MEMBER", direction: IN)
+}
+
+"""
+TAG: Technical Advisory Group: TODO doc
+"""
+type TAG {
+  id: ID! @id
+  name: String! @unique
+  
+  projectsInScope: [Project!]! @relationship(type: "IN_SCOPE", direction: IN)
+  
+  rolePersons: [Person!]! @relationship(type: "SERVED_IN_ROLE", properties: "ServedInRole", direction: IN)
+  communityPersons: [Person!]! @relationship(type: "IS_COMMUNITY_MEMBER", direction: IN)
+
+}
+
+"""
+EUG: End User Group
+"""
+type EUG {
+  id: ID! @id
+  name: String! @unique
+  
+  members: Member @relationship(type: "MEMBER_OF", direction: IN)
+
+  rolePersons: [Person!]! @relationship(type: "SERVED_IN_ROLE", properties: "ServedInRole", direction: IN)
+}
+
+"""
+Person: human
+"""
+type Person {
+  id: ID! @id
+  name: String! @unique
+  
+  tagRoles: [TAG!]! @relationship(type: "SERVED_IN_ROLE", properties: "ServedInRole", direction: OUT)
+  eugRoles: [EUG!]! @relationship(type: "SERVED_IN_ROLE", properties: "ServedInRole", direction: OUT)
+  tocRoles: [TOC!]! @relationship(type: "SERVED_IN_ROLE", properties: "ServedInRole", direction: OUT)
+  projRoles: [Project!]! @relationship(type: "SERVED_IN_ROLE", properties: "ServedInRole", direction: OUT)
+  
+  boards: [Organization!]! @relationship(type: "IS_BOARD", direction: OUT)
+  
+  employers: [Organization!]! @relationship(type: "EMPLOYED", direction: IN)
+}
+
+enum MembershipTypes
+{
+  PLATINUM
+  GOLD
+  SILVER
+  ACADEMIC
+  END_USER_SUPPORTER
+  NONPROFIT
+}
+
+"""
+MembershipType: {Silver, Gold, Platinum, Academic, End User Supporter, Non-Profit}
+
+TODO: add date for transition to a membership type to the relationship"
+"""
+type MembershipType {
+  id: ID! @id
+  membershipType: MembershipTypes! @unique
+
+  members: [Member!]! @relationship(type: "CNCF_MEMBER", direction: IN)
+}
+
+enum ProjectPhases {
+  GRADUATED
+  INCUBATING
+  SANDBOX
+  ARCHIVED
+}
+
+"""
+ProjectPhase: Sandbox, Incubation, Graduated, Archived
+"""
+type ProjectPhase {
+  id: ID! @id
+  projectPhase: ProjectPhases! @unique
+  
+  projects: [Project!]! @relationship(type: "IS_PLVL", direction: IN)
+}
+
+"""
+Organization
+"""
+type Organization {
+  id: ID! @id
+  name: String! @unique
+  
+  ownedBy: Member! @relationship(type: "OWNS", direction: IN)
+  board: [Person!]! @relationship(type: "IS_BOARD", direction: IN)
+  
+  parentOrg: Organization @relationship(type: "IS_SUB", direction: IN)
+  subOrgs: [Organization!]! @relationship(type: "IS_SUB", direction: OUT)
+  
+  industries: [Industry!]!  @relationship(type: "OPERATES_IN", direction: OUT)
+  employees: [Person!]! @relationship(type: "EMPLOYED", direction: OUT)
+  headquarters: [City!]! @relationship(type: "HQ_IN", direction: OUT)
+}
+
+"""
+Industry
+"""
+type Industry  {
+  id: ID! @id
+  name: String! @unique
+  
+  organizations: [Organization!]! @relationship(type: "OPERATES_IN", direction: IN)
+}
+
+"""
+City
+"""
+type City {
+  id: ID! @id
+  name: String! @unique
+
+  state: String!
+  country: String!
+  organizations: [Organization!]! @relationship(type: "HQ_IN", direction: IN)
+}
