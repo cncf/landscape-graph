@@ -174,7 +174,7 @@ type TocRole {
 }
 
 type TOC  {
-  name: Technical Oversight Committee
+  name: TOC
   tocroleServed: TocRole @relationship(type: "SERVED", direction: IN)
 }
 
