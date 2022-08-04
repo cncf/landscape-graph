@@ -4,6 +4,8 @@
 
 ![core-png](core/generated/landscape-graph-core.png)
 
+![supergraph-10k-sketch](landscape-graph-supergraph-10k-sketch.jpg)
+
 ### Entities
 
 **TODO: ctx->allTheThings.ToMarkdown();**
