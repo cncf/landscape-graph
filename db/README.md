@@ -1,5 +1,11 @@
 # Graph Data Model
 
+## How this works
+
+![diag-neo4j-graphql-library](diag-neo4j-graphql-library.svg)
+
+(source: https://neo4j.com/developer/graphql/#_the_neo4j_graphql_library)
+
 ## Core Data Model
 
 ![core-png](core/generated/landscape-graph-core.png)
