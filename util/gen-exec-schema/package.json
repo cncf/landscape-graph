@@ -1,8 +1,8 @@
 {
-  "name": "@cncfgraph/generate-schema",
+  "name": "@cncfgraph/gen-exec-schema",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Generate an executable schema from GraphQL type definitions",
+  "main": "gen-exec-schema.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
