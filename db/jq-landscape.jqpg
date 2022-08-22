@@ -1,0 +1,12 @@
+jq '.[]'
+../landscape-items-clean.json
+
+jq '.[] | select(.member)'
+../landscape-items-clean.json
+
+jq '.[] | select(.project)'
+../landscape-items-clean.json
+
+
+jq '.[2] | select(.member)'
+../landscape-items-clean.json
