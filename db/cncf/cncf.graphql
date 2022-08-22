@@ -4,7 +4,7 @@ Member: CNCF Member Organization
 TODO: This needs a better relationship name: (Member)->[OWNS]->(Organization)
 """
 type Member {
-  id: ID! @id
+  memberId: ID! @id
   name: String! @unique
   categories: [Category!]! @relationship(type: "IN_CAT", direction: OUT)
 
@@ -14,11 +14,38 @@ type Member {
 }
 
 """
+MembershipTypes 
+"""
+enum MembershipTypes
+{
+  PLATINUM
+  GOLD
+  SILVER
+  ACADEMIC
+  END_USER_SUPPORTER
+  NONPROFIT
+}
+
+"""
+MembershipType
+
+TODO: add date for transition to a membership type to the relationship"
+"""
+type MembershipType {
+  membershipTypeId: ID! @id
+  membershipType: MembershipTypes! @unique
+
+  members: [Member!]! @relationship(type: "CNCF_MEMBER", direction: IN)
+}
+
+
+"""
 Project: CNCF Open Source Project (Sandbox, Incubating, Graduated, Archived)
 """
 type Project {
-  id: ID! @id
+  projectId: ID! @id
   name: String! @unique
+
   categories: [Category!]! @relationship(type: "IN_CAT", direction: OUT)
   
   projectLevels: [ProjectPhase!]! @relationship(type: "IS_PLVL", direction: OUT)
@@ -30,36 +57,36 @@ type Project {
 }
 
 """
+ProjectPhases
+"""
+enum ProjectPhases {
+  GRADUATED
+  INCUBATING
+  SANDBOX
+  ARCHIVED
+}
+
+"""
+ProjectPhase: Sandbox, Incubation, Graduated, Archived
+"""
+type ProjectPhase {
+  projectPhaseId: ID! @id
+  projectPhase: ProjectPhases! @unique
+  
+  projects: [Project!]! @relationship(type: "IS_PLVL", direction: IN)
+}
+
+"""
 Category
 
 TODO: add (maybe?) "union CategorizedEntity = Member | Project"
 """
 type Category {
-  id: ID! @id
+  categoryId: ID! @id
   name: String! @unique
   
   members: [Member!]! @relationship(type: "IN_CAT", direction: IN)
   projects: [Project!]! @relationship(type: "IN_CAT", direction: IN)
-}
-
-"""
-License: TODO doc
-"""
-type License {
-  id: ID! @id
-  name: String! @unique
-
-  projects: [Project!]! @relationship(type: "USES", direction: IN)
-}
-
-"""
-Language: TODO doc
-"""
-type Language {
-  id: ID! @id
-  name: String! @unique
-
-  projects: [Project!]! @relationship(type: "USES", direction: IN)
 }
 
 enum ROLE_TYPE {
@@ -85,7 +112,7 @@ interface ServedInRole @relationshipProperties {
 TOC: Technical Oversight Committee
 """
 type TOC  {
-  id: ID! @id
+  tocId: ID! @id
   name: String! @unique
   
   rolePersons: [Person!]! @relationship(type: "SERVED_IN_ROLE", properties: "ServedInRole", direction: IN)
@@ -96,7 +123,7 @@ type TOC  {
 TAG: Technical Advisory Group: TODO doc
 """
 type TAG {
-  id: ID! @id
+  tagId: ID! @id
   name: String! @unique
   
   projectsInScope: [Project!]! @relationship(type: "IN_SCOPE", direction: IN)
@@ -110,7 +137,7 @@ type TAG {
 EUG: End User Group
 """
 type EUG {
-  id: ID! @id
+  eugId: ID! @id
   name: String! @unique
   
   members: Member @relationship(type: "MEMBER_OF", direction: IN)
@@ -122,7 +149,7 @@ type EUG {
 Person: human
 """
 type Person {
-  id: ID! @id
+  personId: ID! @id
   name: String! @unique
   
   tagRoles: [TAG!]! @relationship(type: "SERVED_IN_ROLE", properties: "ServedInRole", direction: OUT)
@@ -135,50 +162,31 @@ type Person {
   employers: [Organization!]! @relationship(type: "EMPLOYED", direction: IN)
 }
 
-enum MembershipTypes
-{
-  PLATINUM
-  GOLD
-  SILVER
-  ACADEMIC
-  END_USER_SUPPORTER
-  NONPROFIT
+"""
+License: TODO doc
+"""
+type License {
+  licenseId: ID! @id
+  name: String! @unique
+
+  projects: [Project!]! @relationship(type: "USES", direction: IN)
 }
 
 """
-MembershipType: {Silver, Gold, Platinum, Academic, End User Supporter, Non-Profit}
-
-TODO: add date for transition to a membership type to the relationship"
+Language: TODO doc
 """
-type MembershipType {
-  id: ID! @id
-  membershipType: MembershipTypes! @unique
+type Language {
+  languageId: ID! @id
+  name: String! @unique
 
-  members: [Member!]! @relationship(type: "CNCF_MEMBER", direction: IN)
-}
-
-enum ProjectPhases {
-  GRADUATED
-  INCUBATING
-  SANDBOX
-  ARCHIVED
-}
-
-"""
-ProjectPhase: Sandbox, Incubation, Graduated, Archived
-"""
-type ProjectPhase {
-  id: ID! @id
-  projectPhase: ProjectPhases! @unique
-  
-  projects: [Project!]! @relationship(type: "IS_PLVL", direction: IN)
+  projects: [Project!]! @relationship(type: "USES", direction: IN)
 }
 
 """
 Organization
 """
 type Organization {
-  id: ID! @id
+  organizationId: ID! @id
   name: String! @unique
   
   ownedBy: Member! @relationship(type: "OWNS", direction: IN)
@@ -192,11 +200,13 @@ type Organization {
   headquarters: [City!]! @relationship(type: "HQ_IN", direction: OUT)
 }
 
+
+
 """
 Industry
 """
 type Industry  {
-  id: ID! @id
+  industryId: ID! @id
   name: String! @unique
   
   organizations: [Organization!]! @relationship(type: "OPERATES_IN", direction: IN)
@@ -206,7 +216,7 @@ type Industry  {
 City
 """
 type City {
-  id: ID! @id
+  cityId: ID! @id
   name: String! @unique
 
   state: String!

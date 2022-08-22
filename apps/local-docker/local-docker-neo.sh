@@ -114,9 +114,12 @@ do \
 done
 echo "*** neo4j online!"
 
-# launch Cypher Shell in container, execute cypher
-cat load-clean-landscape.cypher \
-| docker exec --interactive landscape-graph cypher-shell -u $NEO4J_USERNAME -p $NEO4J_PASSWORD
+# local backdoor to init db, wait for bolt, but not actually load anything
+if [[] -z "${APP_DOCKER_NEO4J_DO_NOT_LOAD}" ]]; then
+    # launch Cypher Shell in container, execute cypher
+    cat load-clean-landscape.cypher \
+    | docker exec --interactive landscape-graph cypher-shell -u $NEO4J_USERNAME -p $NEO4J_PASSWORD
+fi
 
 echo ""
 echo "===> http://localhost:7474 ($NEO4J_USERNAME/$NEO4J_PASSWORD)"

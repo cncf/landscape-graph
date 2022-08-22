@@ -9,7 +9,20 @@ function section-banner()
     echo "----------------"
 }
 
+
 SRC=../landscape-items-clean.json
+
+section-banner "CNCF Members --> members.json"
+jq '.[] | select(.member)' $SRC > members.json
+
+section-banner "CNCF Projects --> projects.json"
+jq '.[] | select(.project)' $SRC > projects.json
+
+# section-banner "CNCF Members: just the first member [2]: Ansible"
+# jq '.[1] | select(.name == "Ansible")' $SRC > members-one.json
+
+# section-banner "CNCF Projects: just the first"
+# jq '.[1] | select(.project)' $SRC > projects-one.json
 
 section-banner ".member"
 jq '.[] | .member | select(. != null)' $SRC | sort -u
@@ -25,3 +38,4 @@ jq '.[] | .landscape | select(. != null)' $SRC | sort -u
 
 section-banner ".category"
 jq '.[] | .category | select(. != null)' $SRC | sort -u
+
