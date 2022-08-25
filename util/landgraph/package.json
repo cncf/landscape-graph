@@ -18,5 +18,8 @@
     "dotenv": "^16.0.1",
     "graphql": "^16.5.0",
     "neo4j-driver": "^4.4.7"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^2.11.6"
   }
 }
