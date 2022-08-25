@@ -4,8 +4,7 @@
   "description": "Generate an executable schema from GraphQL type definitions",
   "main": "landgraph.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "codegen": "graphql-codegen --config codegen.yml"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
@@ -19,12 +18,5 @@
     "dotenv": "^16.0.1",
     "graphql": "^16.5.0",
     "neo4j-driver": "^4.4.7"
-  },
-  "devDependencies": {
-    "@graphql-codegen/cli": "2.11.6",
-    "@graphql-codegen/typescript": "2.7.3",
-    "@graphql-codegen/typescript-document-nodes": "2.3.3",
-    "@graphql-codegen/typescript-resolvers": "2.7.3",
-    "@graphql-codegen/introspection": "2.2.1"
   }
 }
