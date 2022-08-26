@@ -1,5 +1,6 @@
 //
-// gen-exec-schema.js : Generate executable schema from GraphQL type definitions
+// landgraph.js : Generate executable schema from GraphQL type definitions
+//                Optionally serve GraphQL endpoint and local UI
 //
 
 function handlesig(signal) {
@@ -37,14 +38,6 @@ require('dotenv').config();
 
 const optionDefinitions = [
   { 
-    name: 'help',    alias: 'h', type: Boolean, 
-    description: 'Display this usage guide.'
-  },
-  { 
-    name: 'verbose', alias: 'v', type: Boolean, 
-    description: 'Enable verbose output' 
-  },
-  { 
     name: 'sdl',     alias: 's', type: String, defaultOption: true,
     description: 'SDL (entities) input file', typeLabel: '<file>'
   },
@@ -55,6 +48,14 @@ const optionDefinitions = [
   {
     name: 'gserve',  alias: 'g', type: Boolean,
     description: 'Launch Apollo Server endpoint (documentation, query builder, etc)'
+  },
+  { 
+    name: 'help',    alias: 'h', type: Boolean, 
+    description: 'Display this usage guide.'
+  },
+  { 
+    name: 'verbose', alias: 'v', type: Boolean, 
+    description: 'Enable verbose output' 
   }
 ]
 
@@ -63,7 +64,7 @@ const options = commandLineArgs(optionDefinitions)
 if (options.help || options ) {
   const usage = commandLineUsage([
     {
-      header: 'generate-executable-schema',
+      header: 'landgraph',
       content: 'SDL entities --> GraphQL \"executable schema\" for neo4j-graphql'
     },
     {
@@ -87,12 +88,17 @@ if (options.help || options ) {
   }
 }
 
-if(options.sdl) {
-  sdlFile = path.join(BASE_SDL_PATH, options.sdl);
-  if(!fs.existsSync(sdlFile)) {
-    console.log('ERROR: '+ sdlFile + ' does not exist');
-    process.exit(2);
-  }
+if(!options.sdl) {
+  // no SDL file, nothing to do.
+  console.log('no --sdl file passed, nothing to do!');
+  process.exit(2);
+}
+
+
+sdlFile = path.join(BASE_SDL_PATH, options.sdl);
+if(!fs.existsSync(sdlFile)) {
+  console.log('ERROR: '+ sdlFile + ' does not exist');
+  process.exit(2);
 }
 
 var typeDefs = String(fs.readFileSync(sdlFile, { encoding: 'utf-8'}));
@@ -101,7 +107,7 @@ if(options.verbose) {
   console.log('GraphQL (SDL) type definitions');
   console.log('------------------------------');
   console.log(typeDefs)
-}
+}  
 
 // Connect to Neo4j (creds and uri in .env file)
 const driver = neo4j.driver(

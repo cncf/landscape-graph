@@ -14,7 +14,6 @@
     "apollo-server": "^3.10.1",
     "command-line-args": "^5.2.1",
     "command-line-usage": "^6.1.3",
-    "dockly": "^3.22.2",
     "dotenv": "^16.0.1",
     "graphql": "^16.5.0",
     "neo4j-driver": "^4.4.7"
