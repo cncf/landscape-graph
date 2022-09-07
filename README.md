@@ -2,14 +2,40 @@
 
 :warning: Initial, open, active development. :warning:  
 
-_Roadmap planning in-process._
-
 Join us @ [#landscape-graph][lg-slack]. Here's our [current activities][lg-plan]. Formal plan and [roadmap](https://github.com/cncf/landscape-graph/issues/46) are in progress.
 
 [lg-slack]: https://cloud-native.slack.com/archives/C03BXBYFMQS
 [lg-plan]: https://github.com/orgs/cncf/projects/7
 
 ---
+
+![](image-md/lego-gd2f918e73_640.png)
+
+Often, we need to understand how an open source project interacts with others, how it's changing over time, and who's enabling it's continued success. We want to understand what alternatives exist, or how complementary projects might be combined in purpose-fit or novel ways. We might want to dive in and contribute! This is how projects and ecosystems grow to meet business challenges facing modern organizations.
+
+## Landscape Graph Data Model
+
+Graphs can facilitate rich analysis of our vibrant and dynamic communities, the humans they comprise, and the clusters of contribution and thought leadership they produce.
+
+Using the [data][seeddata] underlying the existing landscape as input, a Labeled Property Graph ([LPG][lpg]) is constructed using [Cypher][ocypher] (SQL for Graphs), resulting in a [Neo4j][neo] graph database.
+
+[seeddata]: https://landscape.cncf.io/data/items.json
+[lpg]: https://neo4j.com/blog/rdf-triple-store-vs-labeled-property-graph-difference
+[ocypher]: https://opencypher.org
+[neo]: https://neo4j.com
+[cypherdev]: https://neo4j.com/developer/cypher/
+
+Here's the schema:
+
+![landscape-graph-data-model](db/core/generated/landscape-graph-core.png)
+
+<!-- TODO: add graphic for transition-->
+
+<!-- TODO: add definitions for KG, Ontology, taxonomy, somewhere-->
+
+---
+
+## "Origin Story"
 
 In November of 2018 there were 25 CNCF projects.
 
@@ -42,44 +68,11 @@ The [CNCF Landscape][landscape] aggregates summary data from GitHub, Crunchbase,
 
 ![landscape-all](image-md/2022-04-18-landscape.png)
 
-With a single well placed click a wealth of data can be summoned. 
-
-Here's the "Card" for [Neo4j](https://neo4j.com)
+With a single well placed click a wealth of data can be summoned. Here's the "Card" for [Neo4j](https://neo4j.com)
 
 ![neo4j-card](image-md/neo4j-card.png)
 
 This is perfect when we know what we're looking for (specifically).
-
-Often, we need to understand how a project interacts with others, how it's changing over time, and who's enabling it's continued success. We want to understand what alternatives exist, or how complementary projects might be combined in purpose-fit or novel ways. This is how projects and ecosystems grow to meet the business challenges that face modern organizations irrespective of domain.
-
-Graphs can facilitate rich analysis of our vibrant and dynamic communities, the humans they comprise, and clusters of contribution and thought leadership they produce.
-
-## How can a graph help us?
-
-Current [Quests and Questions][quest].  Please [add your own][GQ]; they are the reason for this!
-
-[quest]: https://github.com/orgs/cncf/projects/7/views/5
-[GQ]: https://github.com/cncf/landscape-graph/issues/new?assignees=&labels=Q+for+graph&template=question-for-graph.md&title=I+want+to+...+so+that+I+can+...
-
-### Questions
-
-* for a set of projects, for all repos by release, show package dependency trees, overlaid with current CVE announcements w/ reporting and alerting as necessary.
-
-* for a set of projects' contributors, who employed them whilst they contributed? Who funded those organizations? Who owns them? What else did they invest in?
-
-* How does investment flow through the Landscape? Who maintains what? Who uses it?
-
-* Identify communities. Understand how they interact. Comprehend how they collaborate with each other.
-
-* Grok groupings of frequent code review <-> author interactions across projects.
-
-* Facilitate generation of Dora metrics in-rears from historical GitHub data for all CNCF projects. ([more on DORA](https://medium.com/@halcyondude/on-measuring-developer-productivity-9a81a50175da)).
-
-* Are popularity and market cap correlated?
-
-* What companies are using which projects? What vendors support that?
-
-* What happened in Twitter last week related to my project?
 
 ## Technical TLDR
 
@@ -109,18 +102,6 @@ _TODO: [#27](https://github.com/cncf/landscape-graph/issues/27)_
 | gitbase               | Git history as MySQL, [src-d/gitbase](https://github.com/src-d/gitbase)
 | JavaFX                | UI, 3d, [openjfx.io](https://openjfx.io)
 | Quarkus               | AoT, minify, Dev UX, [quarkus.io](https://quarkus.io)
-
-## Landscape Graph Data Model
-
-Using the [data][seeddata] underlying the existing landscape as input, a Labeled Property Graph ([LPG][lpg]) is constructed using [Cypher][ocypher] (SQL for Graphs), resulting in a [Neo4j][neo] graph database.
-
-[seeddata]: https://landscape.cncf.io/data/items.json
-[lpg]: https://neo4j.com/blog/rdf-triple-store-vs-labeled-property-graph-difference
-[ocypher]: https://opencypher.org
-[neo]: https://neo4j.com
-[cypherdev]: https://neo4j.com/developer/cypher/
-
-![landscape-graph-data-model](db/core/generated/landscape-graph-core.png)
 
 ## Graph Data Science Algorithms ("Why Neo4j?")
 
