@@ -152,7 +152,7 @@ On its influences and roots:
 
 * Join us @ [#landscape-graph][lg-slack].
 * Review our current [plan][lg-plan].
-* Help us [make this better][lg-cguide] :)
+* Help us to [make this better][lg-cguide] :)
 
 [lg-slack]: https://cloud-native.slack.com/archives/C03BXBYFMQS
 [lg-plan]: https://github.com/orgs/cncf/projects/7
