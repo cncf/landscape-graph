@@ -27,7 +27,6 @@
 * able to be easily distributed on existing transports.  
   * OCI is a great fit. https://github.com/cnabio/cnab-to-oci 
 
-
 ### Types of Sub-Graph Modules (SGM)
 
 All "base" types derive from a singular shared root, base type.
@@ -44,6 +43,7 @@ Each of these is an Interface, acting as a base class with shared properties.
 | [email](email)       | cncf project lists, k8s lists |
 | [packages](packages) | brew, choco, crate, deb, deno, go, maven, npm, pip, rpm |
 | [rtc](rtc)           | slack, discord, gitter |
+| [scm](scm)           | git, gharchive |
 | [social](social)     | twitter, linkedin |
 | [threats](threats)   | nist |
 | [videos](videos)     | youtube |
@@ -84,6 +84,9 @@ Each module will have the following:
 ├── rtc
 │   ├── sgm-discord
 │   └── sgm-slack
+├── scm
+│   ├── sgm-git
+│   └── sgm-gharchive
 ├── social
 │   ├── sgm-linkedin
 │   └── sgm-twitter
