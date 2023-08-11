@@ -2,19 +2,15 @@
 
 ## How this works
 
-![diag-neo4j-graphql-library](diag-neo4j-graphql-library.svg)
+![diagram-graphql-cypher](graphql-cypherdb.svg)
 
-(source: https://neo4j.com/developer/graphql/#_the_neo4j_graphql_library)
+[source](https://neo4j.com/developer/graphql/#_the_neo4j_graphql_library)
 
 ## Core Data Model
 
 ![core-png](core/generated/landscape-graph-core.png)
 
 ![supergraph-10k-sketch](landscape-graph-supergraph-10k-sketch.jpg)
-
-### Entities
-
-**TODO: ctx->allTheThings.ToMarkdown();**
 
 ## Sub-Graph Modules (SGM)
 
@@ -40,13 +36,13 @@ Each of these is an Interface, acting as a base class with shared properties.
 | [cncf](cncf)         | Member, Project, License, TAG, EUG, TOC, Organizations, ...
 | [core](core)         | Core Data Model |
 | [corp](corp)         | crunchbase, yahoofinance |
-| [email](email)       | cncf project lists, k8s lists |
 | [packages](packages) | brew, choco, crate, deb, deno, go, maven, npm, pip, rpm |
 | [rtc](rtc)           | slack, discord, gitter |
 | [scm](scm)           | git, gharchive |
-| [social](social)     | twitter, linkedin |
+| [social](social)     | email lists, twitter, linkedin |
 | [threats](threats)   | nist |
 | [videos](videos)     | youtube |
+
 
 Each module will have the following:
 
@@ -59,39 +55,42 @@ Each module will have the following:
 
 ```shell
 .
+├── A
+├── B
 ├── blogs
-│   └── sgm-blogcncf
+│   └── sgm-blogcncf
 ├── boards
-│   ├── sgm-ghdiscuss
-│   └── sgm-stackoverflow
+│   ├── sgm-ghdiscuss
+│   └── sgm-stackoverflow
+├── cncf
 ├── core
-│   └── generated
+│   └── generated
 ├── corp
-│   ├── sgm-crunchbase
-│   └── sgm-yahoofinance
-├── email
+│   ├── sgm-crunchbase
+│   └── sgm-yahoofinance
 ├── packages
-│   ├── sgm-brew
-│   ├── sgm-choco
-│   ├── sgm-crate
-│   ├── sgm-deb
-│   ├── sgm-deno
-│   ├── sgm-go
-│   ├── sgm-maven
-│   ├── sgm-npm
-│   ├── sgm-pip
-│   └── sgm-rpm
+│   ├── sgm-brew
+│   ├── sgm-choco
+│   ├── sgm-crate
+│   ├── sgm-deb
+│   ├── sgm-deno
+│   ├── sgm-go
+│   ├── sgm-maven
+│   ├── sgm-npm
+│   ├── sgm-pip
+│   └── sgm-rpm
 ├── rtc
-│   ├── sgm-discord
-│   └── sgm-slack
+│   ├── sgm-discord
+│   └── sgm-slack
 ├── scm
-│   ├── sgm-git
-│   └── sgm-gharchive
+│   ├── sgm-git
+│   └── sgm-github
+├── sgm-template
 ├── social
-│   ├── sgm-linkedin
-│   └── sgm-twitter
+│   ├── sgm-linkedin
+│   └── sgm-twitter
 ├── threats
-│   └── sgm-nist
+│   └── sgm-nist
 └── videos
     └── sgm-youtube
 ```
