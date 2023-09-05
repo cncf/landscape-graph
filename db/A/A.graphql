@@ -1,3 +1,6 @@
+const { makeExecutableSchema, addMockFunctionsToSchema } = require('graphql-tools');
+
+const typeDefs =`
 type Query {
   a: A!
 }
@@ -7,3 +10,8 @@ type A @key(fields: "k") {
   v1: Int
   v2: String
 }
+`;
+
+const schema = makeExecutableSchema({ typeDefs });
+
+addMockFunctionsToSchema({ schema });
