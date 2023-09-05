@@ -14,4 +14,10 @@ The template can be downloaded from [here](https://gluonhq.com/download/intellij
 
 Once the IDE has been restarted, from within your editor, you may simply type `fxprop`, and a popup lets you choose the type of property you want. Once you press tab (or enter), the code for property is generated inside the editor. You can then immediately start typing the property name, and this will automatically update all the method names. Once you’ve done this, all you need to do is import the relevant classes.
 
+# Graph Database support
 
+Graph Database support plugin allows you to work with databases without leaving IDE.
+
+Plugin is developed and supported by Neueda Technologies.
+
+Github-:https://github.com/neueda/jetbrains-plugin-graph-database-support/
