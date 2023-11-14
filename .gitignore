@@ -64,11 +64,24 @@ data/sbom/downloaded-sboms/*
 
 
 .virtual_documents/
-.jupyter/
+node_modules/
+# *.arrow
+# *.csv
+*.gz
 
-# notebooks/cncf/landscape-summary.ipynb
-*.json.compact
-*.feather
-notebooks/cncf/generated/
-notebooks/cncf/out/
+_versions.env
+
+# icon archive
+.venv-icons/
+
+*.docker-build.log
+
+
+# guacsec/guac
+guac/guac-compose/container_files/pg
+
+data/sbom/downloaded-sboms/*
+
+
+
 
