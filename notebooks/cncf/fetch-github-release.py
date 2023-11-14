@@ -1,4 +1,3 @@
-import os
 from gql import gql, Client
 from gql.transport.requests import RequestsHTTPTransport
 from dataclasses import dataclass, asdict
@@ -94,7 +93,6 @@ def cli():
     args = parser.parse_args()
 
     try:
-        
         releases_df = fetch_all_releases(args.repos, args.token)
         print(releases_df)
     except Exception as e:
