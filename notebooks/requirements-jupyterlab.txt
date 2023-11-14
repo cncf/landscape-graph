@@ -104,3 +104,71 @@ pillow
 
 
 
+# ipykernel
+
+# dask
+dask-labextension
+
+# helpful
+jupyterlab-visualpython
+
+# https://github.com/bloomberg/ipydatagrid
+ipydatagrid
+
+# https://plotly.com/python/getting-started/
+plotly
+
+# https://github.com/bokeh/bokeh
+bokeh
+
+# https://github.com/altair-viz/altair
+altair
+
+jupyter-resource-usage
+
+# graph vizualization library
+ipycytoscape
+
+# sql blocks
+# jupysql
+
+# bidirectional sync .py <-> .ipynb
+jupytext
+
+jupyterthemes
+
+# jupyter-archive
+# jupyterlab-github
+
+jupyterlab-favorites
+jupyterlab-recents
+jupyterlab-spellchecker
+
+# local interactive automagic dashboards
+voila
+
+# Language Server Protocol (LSP) packages
+# python-lsp-black: code formatting using Black.
+# pyls-memestra: detecting the use of deprecated APIs.
+# python-lsp-ruff: Extensive and fast linting using ruff.
+
+jupyter-lsp
+jupyter-server
+
+# https://github.com/google/yapf
+# https://github.com/python-rope/rope
+# https://github.com/PyCQA/pycodestyle
+python-lsp-server[yapf,rope,pycodestyle]
+
+# pylsp-mypy: MyPy type checking for Python >=3.7.
+pylsp-mypy
+
+# pyls-isort: code formatting using isort (automatic import sorting).
+pyls-isort
+
+# pylsp-rope: Extended refactoring capabilities using Rope.
+pylsp-rope
+
+# extremely opinionated, YMMV
+# python-lsp-black
+
