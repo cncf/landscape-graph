@@ -1,0 +1,68 @@
+{"repo_name":"chaos-mesh\/chaos-mesh","release_name":"v2.6.2","release_date":"2023-08-23 06:40:12+00:00","language":"Go"}
+{"repo_name":"chaos-mesh\/chaos-mesh","release_name":"v2.6.1","release_date":"2023-06-28 07:54:06+00:00","language":"Go"}
+{"repo_name":"chaos-mesh\/chaos-mesh","release_name":"v2.6.0","release_date":"2023-05-31 03:52:21+00:00","language":"Go"}
+{"repo_name":"chaos-mesh\/chaos-mesh","release_name":"v2.5.2","release_date":"2023-04-13 08:48:24+00:00","language":"Go"}
+{"repo_name":"chaos-mesh\/chaos-mesh","release_name":"v2.5.1","release_date":"2023-01-14 02:32:58+00:00","language":"Go"}
+{"repo_name":"chaos-mesh\/chaos-mesh","release_name":"v2.5.0","release_date":"2022-11-22 11:35:17+00:00","language":"Go"}
+{"repo_name":"chaos-mesh\/chaos-mesh","release_name":"v2.5.0-beta.1","release_date":"2022-11-21 11:57:01+00:00","language":"Go"}
+{"repo_name":"chaos-mesh\/chaos-mesh","release_name":"v2.5.0-beta.0","release_date":"2022-11-21 11:36:52+00:00","language":"Go"}
+{"repo_name":"chaos-mesh\/chaos-mesh","release_name":"v2.4.3","release_date":"2022-11-20 08:20:18+00:00","language":"Go"}
+{"repo_name":"chaos-mesh\/chaos-mesh","release_name":"v2.5.0-alpha.1","release_date":"2022-11-11 11:42:10+00:00","language":"Go"}
+{"repo_name":"chaos-mesh\/chaos-mesh","release_name":"v2.5.0-alpha.0","release_date":"2022-11-10 08:51:07+00:00","language":"Go"}
+{"repo_name":"chaos-mesh\/chaos-mesh","release_name":"v2.4.2","release_date":"2022-11-07 08:19:38+00:00","language":"Go"}
+{"repo_name":"chaos-mesh\/chaos-mesh","release_name":"v2.3.3","release_date":"2022-11-07 08:13:08+00:00","language":"Go"}
+{"repo_name":"cortexproject\/cortex","release_name":"Cortex 1.15.3","release_date":"2023-06-23 04:38:47+00:00","language":"Go"}
+{"repo_name":"cortexproject\/cortex","release_name":"Cortex 1.15.2","release_date":"2023-05-10 20:22:29+00:00","language":"Go"}
+{"repo_name":"cortexproject\/cortex","release_name":"Cortex 1.15.1","release_date":"2023-04-28 04:30:48+00:00","language":"Go"}
+{"repo_name":"cortexproject\/cortex","release_name":"Cortex 1.15.0","release_date":"2023-04-20 02:50:34+00:00","language":"Go"}
+{"repo_name":"cortexproject\/cortex","release_name":"Cortex 1.15.0-rc.2","release_date":"2023-04-12 16:15:36+00:00","language":"Go"}
+{"repo_name":"cortexproject\/cortex","release_name":"Cortex 1.15.0-rc.1","release_date":"2023-04-01 19:09:23+00:00","language":"Go"}
+{"repo_name":"cortexproject\/cortex","release_name":"Cortex 1.15.0-rc.0","release_date":"2023-03-28 01:02:08+00:00","language":"Go"}
+{"repo_name":"cortexproject\/cortex","release_name":"Cortex 1.14.1","release_date":"2022-12-18 19:35:27+00:00","language":"Go"}
+{"repo_name":"cortexproject\/cortex","release_name":"Cortex 1.13.2","release_date":"2022-12-18 19:17:25+00:00","language":"Go"}
+{"repo_name":"cortexproject\/cortex","release_name":"Cortex 1.14.0","release_date":"2022-12-02 23:51:47+00:00","language":"Go"}
+{"repo_name":"cortexproject\/cortex","release_name":"Cortex 1.14.0-rc.1","release_date":"2022-11-19 02:57:59+00:00","language":"Go"}
+{"repo_name":"cortexproject\/cortex","release_name":"Cortex 1.14.0-rc.0 ","release_date":"2022-11-16 01:16:34+00:00","language":"Go"}
+{"repo_name":"litmuschaos\/litmus","release_name":"3.0.0","release_date":"2023-10-04 14:09:48+00:00","language":"Go"}
+{"repo_name":"litmuschaos\/litmus","release_name":"3.0.0-beta12","release_date":"2023-09-15 13:11:19+00:00","language":"Go"}
+{"repo_name":"litmuschaos\/litmus","release_name":"3.0.0-beta11","release_date":"2023-08-16 11:24:44+00:00","language":"Go"}
+{"repo_name":"litmuschaos\/litmus","release_name":"3.0.0-beta10","release_date":"2023-07-20 05:35:34+00:00","language":"Go"}
+{"repo_name":"litmuschaos\/litmus","release_name":"3.0.0-beta9","release_date":"2023-07-06 12:12:44+00:00","language":"Go"}
+{"repo_name":"litmuschaos\/litmus","release_name":"3.0.0-beta8","release_date":"2023-06-20 06:55:52+00:00","language":"Go"}
+{"repo_name":"litmuschaos\/litmus","release_name":"3.0.0-beta7","release_date":"2023-05-17 10:31:36+00:00","language":"Go"}
+{"repo_name":"litmuschaos\/litmus","release_name":"3.0.0-beta6","release_date":"2023-04-18 14:39:44+00:00","language":"Go"}
+{"repo_name":"litmuschaos\/litmus","release_name":"3.0.0-beta5","release_date":"2023-03-15 08:24:34+00:00","language":"Go"}
+{"repo_name":"litmuschaos\/litmus","release_name":"3.0.0-beta4","release_date":"2023-02-15 13:54:10+00:00","language":"Go"}
+{"repo_name":"litmuschaos\/litmus","release_name":"3.0.0-beta3","release_date":"2023-01-13 12:25:15+00:00","language":"Go"}
+{"repo_name":"litmuschaos\/litmus","release_name":"3.0.0-beta2","release_date":"2022-12-15 16:23:34+00:00","language":"Go"}
+{"repo_name":"litmuschaos\/litmus","release_name":"3.0-beta1","release_date":"2022-11-16 15:25:31+00:00","language":"Go"}
+{"repo_name":"open-telemetry\/opentelemetry-java","release_name":"Version 1.31.0","release_date":"2023-10-06 20:57:59+00:00","language":"Java"}
+{"repo_name":"open-telemetry\/opentelemetry-java","release_name":"Version 1.30.1","release_date":"2023-09-11 16:09:45+00:00","language":"Java"}
+{"repo_name":"open-telemetry\/opentelemetry-java","release_name":"Version 1.30.0","release_date":"2023-09-08 16:40:15+00:00","language":"Java"}
+{"repo_name":"open-telemetry\/opentelemetry-java","release_name":"Version 1.29.0","release_date":"2023-08-11 16:23:10+00:00","language":"Java"}
+{"repo_name":"open-telemetry\/opentelemetry-java","release_name":"Version 1.28.0","release_date":"2023-07-07 12:31:36+00:00","language":"Java"}
+{"repo_name":"open-telemetry\/opentelemetry-java","release_name":"Version 1.27.0","release_date":"2023-06-09 17:01:01+00:00","language":"Java"}
+{"repo_name":"open-telemetry\/opentelemetry-java","release_name":"Version 1.26.0","release_date":"2023-05-05 20:02:01+00:00","language":"Java"}
+{"repo_name":"open-telemetry\/opentelemetry-java","release_name":"Version 1.25.0","release_date":"2023-04-07 14:47:42+00:00","language":"Java"}
+{"repo_name":"open-telemetry\/opentelemetry-java","release_name":"Version 1.24.0","release_date":"2023-03-10 17:26:49+00:00","language":"Java"}
+{"repo_name":"open-telemetry\/opentelemetry-java","release_name":"Version 1.23.1","release_date":"2023-02-15 20:43:51+00:00","language":"Java"}
+{"repo_name":"open-telemetry\/opentelemetry-java","release_name":"Version 1.23.0","release_date":"2023-02-10 20:35:49+00:00","language":"Java"}
+{"repo_name":"open-telemetry\/opentelemetry-java","release_name":"Version 1.22.0","release_date":"2023-01-06 15:16:08+00:00","language":"Java"}
+{"repo_name":"open-telemetry\/opentelemetry-java","release_name":"Version 1.21.0","release_date":"2022-12-09 20:02:52+00:00","language":"Java"}
+{"repo_name":"open-telemetry\/opentelemetry-java","release_name":"Version 1.20.1","release_date":"2022-11-15 20:25:53+00:00","language":"Java"}
+{"repo_name":"open-telemetry\/opentelemetry-java","release_name":"Version 1.20.0","release_date":"2022-11-11 19:23:03+00:00","language":"Java"}
+{"repo_name":"thanos-io\/thanos","release_name":"v0.32.5","release_date":"2023-10-19 04:31:03+00:00","language":"Go"}
+{"repo_name":"thanos-io\/thanos","release_name":"v0.32.4","release_date":"2023-10-02 08:02:03+00:00","language":"Go"}
+{"repo_name":"thanos-io\/thanos","release_name":"v0.32.3","release_date":"2023-09-20 07:45:37+00:00","language":"Go"}
+{"repo_name":"thanos-io\/thanos","release_name":"v0.32.2","release_date":"2023-08-31 14:13:13+00:00","language":"Go"}
+{"repo_name":"thanos-io\/thanos","release_name":"v0.32.1","release_date":"2023-08-28 11:45:21+00:00","language":"Go"}
+{"repo_name":"thanos-io\/thanos","release_name":"v0.32.0","release_date":"2023-08-23 13:55:57+00:00","language":"Go"}
+{"repo_name":"thanos-io\/thanos","release_name":"v0.32.0-rc.1","release_date":"2023-08-21 09:08:12+00:00","language":"Go"}
+{"repo_name":"thanos-io\/thanos","release_name":"v0.32.0-rc.0","release_date":"2023-08-16 11:39:56+00:00","language":"Go"}
+{"repo_name":"thanos-io\/thanos","release_name":"v0.31.0","release_date":"2023-03-23 10:32:53+00:00","language":"Go"}
+{"repo_name":"thanos-io\/thanos","release_name":"v0.31.0-rc.1","release_date":"2023-03-13 11:50:07+00:00","language":"Go"}
+{"repo_name":"thanos-io\/thanos","release_name":"v0.31.0-rc.0","release_date":"2023-02-24 15:26:55+00:00","language":"Go"}
+{"repo_name":"thanos-io\/thanos","release_name":"v0.30.2","release_date":"2023-01-31 20:28:40+00:00","language":"Go"}
+{"repo_name":"thanos-io\/thanos","release_name":"v0.30.1","release_date":"2023-01-04 19:00:39+00:00","language":"Go"}
+{"repo_name":"thanos-io\/thanos","release_name":"v0.30.0","release_date":"2023-01-03 14:42:53+00:00","language":"Go"}
+{"repo_name":"thanos-io\/thanos","release_name":"v0.30.0-rc.0","release_date":"2022-12-21 17:22:13+00:00","language":"Go"}
