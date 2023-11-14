@@ -85,3 +85,7 @@ data/sbom/downloaded-sboms/*
 
 
 
+.venv*
+.ipynb_checkpoints/
+.env
+
