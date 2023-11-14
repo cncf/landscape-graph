@@ -1,7 +1,13 @@
-# ignore system files
+.venv*
+.venv
+venv
+ve-*
+venv-ipynb
+.venv-ipynb
+*.svg
+.vscode/
+.env
 .DS_Store
-node_modules
-.mvn
 .idea
 .vscode
 
@@ -9,11 +15,24 @@ node_modules
 .venv
 
 .virtual_documents/
-.jupyter/
+node_modules/
+# *.arrow
+# *.csv
+*.gz
 
-# notebooks/cncf/landscape-summary.ipynb
-*.json.compact
-*.feather
-notebooks/cncf/generated/
-notebooks/cncf/out/
+_versions.env
+
+# icon archive
+.venv-icons/
+
+*.docker-build.log
+
+
+# guacsec/guac
+guac/guac-compose/container_files/pg
+
+data/sbom/downloaded-sboms/*
+
+
+
 
