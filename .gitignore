@@ -8,3 +8,5 @@ node_modules
 .venv-ipynb
 .venv
 
+.virtual_documents/
+.jupyter/
