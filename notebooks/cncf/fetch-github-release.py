@@ -1,9 +1,13 @@
+import os
 from gql import gql, Client
 from gql.transport.requests import RequestsHTTPTransport
 from dataclasses import dataclass, asdict
 import pandas as pd
 from typing import List
 import argparse
+
+from dotenv import load_dotenv
+load_dotenv()
 
 # Data class for releases
 @dataclass
@@ -78,7 +82,7 @@ def fetch_all_releases(repos: List[str], github_token: str) -> pd.DataFrame:
     all_releases = []
     for repo in repos:
         owner, name = repo.split('/')
-        releases = fetch_releases_for_repo(owner, name, github_token)a00  
+        releases = fetch_releases_for_repo(owner, name, github_token)
         all_releases.extend(releases)
     return pd.DataFrame([asdict(release) for release in all_releases])
 
@@ -90,6 +94,7 @@ def cli():
     args = parser.parse_args()
 
     try:
+        
         releases_df = fetch_all_releases(args.repos, args.token)
         print(releases_df)
     except Exception as e:
@@ -97,6 +102,12 @@ def cli():
 
 # Main execution
 if __name__ == "__main__":
-    cli()
-else:
-    fetch_all_releases('prometheus/prometheus', 'open-telemetry/opentelemetry-collector']]
+    debugmode = True
+    if debugmode:
+        token = os.environ.get("GITHUB_TOKEN")
+        if token is None:
+            raise ValueError("Please set the GITHUB_TOKEN environment variable.")
+        else:
+            fetch_all_releases(['prometheus/prometheus', 'open-telemetry/opentelemetry-collector'], token)
+    else:
+        cli()

@@ -9,7 +9,7 @@ jupyterlab-visualpython
 # https://github.com/bloomberg/ipydatagrid
 ipydatagrid
 
-# https://plotly.com/python/getting-started/
+# https://plotly.com/python/getting-started/`
 plotly
 
 # https://github.com/bokeh/bokeh
