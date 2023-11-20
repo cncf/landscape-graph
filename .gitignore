@@ -48,3 +48,5 @@ data/sbom/downloaded-sboms/*
 
 
 
+.virtual_documents/
+.jupyter/
