@@ -50,3 +50,7 @@ data/sbom/downloaded-sboms/*
 
 .virtual_documents/
 .jupyter/
+
+# notebooks/cncf/landscape-summary.ipynb
+*.json.compact
+
