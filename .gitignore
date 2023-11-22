@@ -10,3 +10,7 @@ node_modules
 
 .virtual_documents/
 .jupyter/
+
+# notebooks/cncf/landscape-summary.ipynb
+*.json.compact
+
