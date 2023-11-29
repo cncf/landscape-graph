@@ -1,0 +1,8 @@
+Provisioning
+Runtime
+Orchestration & Management
+App Definition and Development
+Platform
+Serverless
+Observability and Analysis
+Wasm
