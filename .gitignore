@@ -13,4 +13,7 @@ node_modules
 
 # notebooks/cncf/landscape-summary.ipynb
 *.json.compact
+*.feather
+notebooks/cncf/generated/
+notebooks/cncf/out/
 
