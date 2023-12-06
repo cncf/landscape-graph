@@ -55,19 +55,22 @@ def safe_set_index(df:         pd.DataFrame,
 
     return df
 
-def split_org_repo(df:      pd.DataFrame, 
-                   colname: str,
-                   drop:    bool = False,
+def split_org_repo(df:               pd.DataFrame, 
+                   colname:          str,
+                   drop:             bool = False,
                    newcol_org_name:  str = 'org_name',
-                   newcol_repo_name: str = 'repo_name') -> pd.DataFrame:
-    '''split_org_repo(df, colname) - org_name/repo_name --> org_name, repo_name'''
+                   newcol_repo_name: str = 'repo_name',
+                   multi_idx:        bool = False) -> pd.DataFrame:
+    '''split_org_repo(df, colname) - org_name/repo_name --> org_name, repo_named'''
     
     if colname is None:
         raise ValueError('split_org_repo: missing colname!')
 
+    # df['tmp'] = df[colname].copy()
+    # df_newcols = df['tmp'].str.split(pat='/', n=1, expand=True)
+
     # https://swdevnotes.com/python/2022/extract-data-from-json-in-pandas-dataframe/
     # expand=True returns a dataframe  which we can rename columns on
-    
     df_newcols = df[colname].copy().str.split(pat='/', n=1, expand=True)
     df_newcols.rename(columns={0: newcol_org_name, 1: newcol_repo_name}, inplace=True)
 
@@ -76,9 +79,46 @@ def split_org_repo(df:      pd.DataFrame,
 
     df = pd.concat([df,df_newcols], axis=1)
 
+    if multi_idx:
+        safe_set_index(df, idx_wanted=[newcol_org_name, newcol_repo_name])
+    else:
+        safe_set_index(df, idx_wanted=[colname])
+
     return df
 
-def compare_dataframes(df1: pd.DataFrame, df2: pd.DataFrame):
+
+def load_repos(fname: str, splitcols: bool=False, lowercase: bool=False) -> pd.DataFrame:
+    '''Load repos from a file'''
+
+    if not os.path.exists(fname):
+        raise FileNotFoundError(errno.ENOENT, os.strerror(errno.ENOENT), fname)
+    
+    with open(fname, 'r') as f:
+        df = pd.DataFrame(f.readlines(), columns=['name'])
+
+    # strip comments (note '~' negation in selector)
+    df = df[~df['name'].astype(str).str.startswith('#')]
+
+    # clean up trailing newlines and where OSRB API returns a trailing slash
+    df.name = df.name.str.rstrip(to_strip='\n')
+    df.name = df.name.str.rstrip(to_strip='/')
+
+    if lowercase:
+        df.name = df.name.str.lower()
+
+    # {name: someOrg/someRepo} --> { name: 'someOrg/someRepo', org_name = 'someOrg', repo_name = 'someRepo'
+    if splitcols:
+        df = split_org_repo(df, colname='name', multi_idx=True)
+    else:
+        # split_org_repo handles setting the index and sorting
+        safe_set_index(df, idx_wanted=['name'])
+    return df
+
+
+def compare_dataframes(df1: pd.DataFrame, 
+                       df2: pd.DataFrame, 
+                       generate_viz: bool = True) -> pd.DataFrame:
+    
     # Calculate memory usage
     memory_df1 = df1.memory_usage(deep=True, index=False)
     memory_df2 = df2.memory_usage(deep=True, index=False)
@@ -98,6 +138,7 @@ def compare_dataframes(df1: pd.DataFrame, df2: pd.DataFrame):
     # Calculate memory reduction
     comparison['Memory Reduction'] = comparison['Original Memory'] - comparison['Cleaned Memory']
     comparison['Memory Reduction Ratio'] = comparison['Memory Reduction'] / comparison['Original Memory']
+    display(comparison)
 
     total_reduction = comparison['Memory Reduction'].sum()
 
@@ -105,30 +146,31 @@ def compare_dataframes(df1: pd.DataFrame, df2: pd.DataFrame):
     print(f"Total memory usage of cleaned dataframe: {memory_df2.sum()}")
     print(f"Total memory reduction: {total_reduction}")
 
-    comparison_melted = comparison[['Cleaned Memory', 'Memory Reduction']].reset_index().melt(id_vars='index')
+    if generate_viz:
+        comparison_melted = comparison[['Cleaned Memory', 'Memory Reduction']].reset_index().melt(id_vars='index')
 
-    num_bars = comparison_melted['index'].nunique()
-    bar_height = 20
-    chart_height = num_bars * bar_height
-    
-    chart = alt.Chart(comparison_melted).mark_bar().encode(
-        x=alt.X('value:Q', title='Memory (bytes)'),
-        y=alt.Y('index:N', title='Column'),
-        color='variable:N',
-        order=alt.Order(
-        'variable:N',
-        sort='ascending'
-        ),
-        tooltip=['index:N', 'variable:N', 'value:Q']
+        num_bars = comparison_melted['index'].nunique()
+        bar_height = 20
+        chart_height = num_bars * bar_height
+        
+        chart = alt.Chart(comparison_melted).mark_bar().encode(
+            x=alt.X('value:Q', title='Memory (bytes)'),
+            y=alt.Y('index:N', title='Column'),
+            color='variable:N',
+            order=alt.Order(
+            'variable:N',
+            sort='ascending'
+            ),
+            tooltip=['index:N', 'variable:N', 'value:Q']
+        ).properties(
+            width=800,
+            height=chart_height,
+            title='Original Memory Footprint := Cleaned Footprint + Reduction'
+        ).interactive()
 
-    ).properties(
-        width=800,
-        height=chart_height,
-        title='Original Memory Footprint := Cleaned Footprint + Reduction'
-    ).interactive()
+        chart.display()
 
-    chart.display()
-    display(comparison)
+    return comparison
 
 # def unique_counts(df: pd.DataFrame) -> pd.DataFrame:
 #     df_ret = df.from_records(
@@ -264,7 +306,7 @@ def clean_dataframe(df: pd.DataFrame, categorical_threshold: float = 0.05) -> pd
     return df
 
 def update_dataframe(dfs, event_type, batch_data):
-    """Update DataFrame for a specific event type with new batch data."""
+    """Update a specific event type's dataframe with new batch data."""
 
     data_dicts = [json.loads(item) for item in batch_data]
     # print(batch_data)
@@ -364,6 +406,7 @@ def process_file(input_file_path: str, org_names: set[str], output_base_dir: str
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 def process_day(args):
+    """ """
     day, orgs_included, log_dict, verbose = args
     results = []
     logging.info(f'Start processing day: {day}')
@@ -394,11 +437,15 @@ def process_days(days: list[str], orgs_included: set[str], verbose=False):
     logging.info('Finished PoolManager')
     for day, status in log_dict.items():
         logging.info(f'Day: {day}, Status: {status}')
+
+    
 ###
 
 pd.set_option('display.max_rows', 512)
 pd.set_option('display.max_columns', 512)
 pd.set_option('display.width', 512)
+
+
 
 OUT_DIR='generated'
 
@@ -413,17 +460,30 @@ CNCF_PROJECTS_FNAME_ROOT=f'{OUT_DIR}/{CNCF_PROJECTS_FNAME_BASE}'
 GHA_SOURCE_DIR=os.path.expanduser('~/gharchive-kcna23')
 GHA_TARGET_DIR=os.path.expanduser('~/gharchive-cncf')
 
-def main():
-    # all generated output files land here
 
-    print (f'cwd: {os.getcwd()}')
+def get_cncf_orgs() -> set[str]:
+    '''get_cncf_orgs() - return set of all CNCF orgs'''
 
-    #cncf_project_feather = os.path.join(os.getcwd(), 'notebooks', 'cncf', f'{CNCF_PROJECTS_FNAME_ROOT}.feather')
+    # load .feather file generated by previous notebook(s)
     cncf_project_feather = os.path.join(os.getcwd(), 'notebooks', 'cncf', f'{CNCF_PROJECTS_FNAME_ROOT}.feather')
     print(cncf_project_feather)
-    
+
+    if not os.path.exists(cncf_project_feather):
+        raise FileNotFoundError(f"{cncf_project_feather} not found.")
+
     df_projects = pd.read_feather(cncf_project_feather)
     orgs_included = set(df_projects['org_name'].str.lower().unique())
+    return orgs_included
+
+def main():
+    print (f'cwd: {os.getcwd()}')
+
+    # TODO: add argparse to allow for orgs_included to be specified on the command line
+    
+    orgs_included: set[str] = get_cncf_orgs()
+
+    
+    
     print(f'orgs_included: {orgs_included}')
 
     days = discover_days(GHA_SOURCE_DIR)
