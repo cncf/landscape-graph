@@ -1,6 +1,6 @@
 # CNCF Landscape Graph
 
-:warning: Initial, open, active development. :warning:  
+Initial, open, active development.
 
 Join us @ [#landscape-graph][lg-slack]. Here's our [current activities][lg-plan]. Formal plan and [roadmap](https://github.com/cncf/landscape-graph/issues/46) are in progress.
 
