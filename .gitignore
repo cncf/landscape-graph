@@ -4,3 +4,7 @@ node_modules
 .mvn
 .idea
 .vscode
+
+.venv-ipynb
+.venv
+
