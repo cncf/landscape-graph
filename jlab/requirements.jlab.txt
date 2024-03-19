@@ -1,0 +1,244 @@
+ipython
+
+# dask
+dask-labextension
+
+# https://github.com/bloomberg/ipydatagrid
+ipydatagrid
+
+# https://plotly.com/python/getting-started/
+plotly
+
+# plotly uses this for write_image()
+kaleido
+
+# diagnostics
+line_profiler
+memory_profiler
+jupyter-resource-usage
+
+# notebook rendering
+jupyterlab-quarto
+
+# notebook diffs
+nbdime
+
+#
+# graphs
+#
+
+# useful to grok
+
+# https://medium.com/@technologydata25/connect-neo4j-to-jupyter-notebook-c178f716d6d5
+# https://nicolewhite.github.io/neo4j-jupyter/hello-world.html
+# https://github.com/neo4j-graph-analytics/graph-algorithms-notebooks
+# https://plotly.com/python/network-graphs/
+# https://community.neo4j.com/t/neo4jupyter-is-it-still-working/53584
+
+
+# https://github.com/versae/ipython-cypher
+# http://ipython-cypher.readthedocs.org
+#
+# dependency for ipython-cypher
+neo4jrestclient
+
+# %load_ext cypher --> %cypher (and %%cypher) magics
+ipython-cypher
+
+
+#
+## https://github.com/cytoscape/ipycytoscape
+#
+
+# https://ipycytoscape.readthedocs.io/
+# https://github.com/joseberlines/BerlinDataScienceOpenTechSchoolMeetup/blob/main/cyto_from_scratch_1.ipynb
+ipycytoscape
+
+
+# https://github.com/neo4j/neo4j-python-driver?tab=readme-ov-file#neo4j-bolt-driver-for-python
+# https://github.com/neo4j/neo4j-python-driver?tab=readme-ov-file#further-information
+neo4j
+
+#                                       #
+##                                     ##
+###                                   ###
+#### https://neomodel.readthedocs.io ####
+###                                   ###
+##                                     ##
+#                                       #
+
+# official OGM for Neo4j
+neomodel
+neomodel[extras]
+
+#
+## Cypherless Queries (https://neomodel.readthedocs.io/en/latest/queries.html#advanced-queries)1
+#
+
+# Neomodel contains an API for querying sets of nodes without having to write cypher
+# This is useful for simple queries, or queries that are not possible in cypher
+
+#
+## Complex looksups w/ 'Q' Objects https://neomodel.readthedocs.io/en/latest/queries.html#complex-lookups-with-q-objects
+#
+
+# Query objects - caveat emptor - Cypher is more succinct, and one less thing to debug
+
+#
+## Cypher Queries (https://neomodel.readthedocs.io/en/latest/cypher.html#cypher-queries)
+#
+
+# You may handle more complex queries via cypher. 
+# Each StructuredNode provides an ‘inflate’ class method, this inflates nodes to their class. 
+# It is your responsibility to make sure nodes get inflated as the correct type
+
+#
+## Pandas Integration (https://neomodel.readthedocs.io/en/latest/cypher.html#pandas)
+#
+
+# from neomodel import db
+# from neomodel.integration.pandas import to_dataframe, to_series
+# df = to_dataframe(db.cypher_query("MATCH (a:Person) RETURN a.name AS name, a.born AS born"))
+# series = to_series(db.cypher_query("MATCH (a:Person) RETURN a.name AS name"))
+
+#
+## Utilities (https://neomodel.readthedocs.io/en/latest/cypher.html#utilities)
+#
+
+## Deletes all nodes and relationships.
+## Optionally, can drop all constraints and/or indexes. It preserves the default lookup indexes
+
+# clear_neo4j_database(db, clear_constraints=False, clear_indexes=False)
+
+## Change database password (you will need to call db.set_connection(...) to reset connection)
+
+# change_neo4j_password(db, user, new_password)
+
+
+# https://github.com/altair-viz/altair
+altair
+
+# https://github.com/altair-viz/altair_saver
+altair_saver
+
+altair_viewer
+
+# handle large data sets w/ altair (https://altair-viz.github.io/user_guide/faq.html#maxrowserror-how-can-i-plot-large-datasets)
+vegafusion[embed]
+
+# https://vegafusion.io/supported_environments.html#jupyterlab
+vegafusion-jupyter
+#
+## Jaal
+#
+
+dash
+jaal
+panel
+
+# https://github.com/imohitmayank/jaal
+
+# Jaal is a python based interactive network visualizing tool built using Dash and Visdcc. Along with the basic features, 
+# Jaal also provides multiple option to play with the network data such as searching graph, filtering and even 
+# coloring nodes and edges in the graph. And all of this within 2 lines of codes :)
+
+# https://towardsdatascience.com/introducing-jaal-interacting-with-network-made-easy-124173bb4fa
+
+# Background (same author)
+# https://towardsdatascience.com/visualizing-networks-in-python-d70f4cbeb259
+# https://github.com/imohitmayank/got_network_viz_python
+
+
+
+# local interactive automagic dashboards
+voila
+
+# quality of life
+jupyter-archive
+jupytext
+jupyterthemes
+jupyterlab-github
+jupyterlab-favorites
+jupyterlab-recents
+jupyterlab-spellchecker
+jupyterlab-visualpython
+jupyterlab-system-monitor
+lckr_jupyterlab_variableinspector
+
+#
+# Language Server Protocol (LSP) packages
+#
+
+# https://pypi.org/project/jupyterlab-lsp/  (reproducing for clarity)
+#
+# (Optional, Linux/OSX-only) As a security measure by default Jupyter server 
+# only allows access to files under the Jupyter root directory (the place where 
+# you launch the Jupyter server). Thus, in order to allow jupyterlab-lsp to navigate 
+# to external files such as packages installed system-wide or to libraries inside 
+# a virtual environment (conda, pip, ...) this access control mechanism needs to 
+# be circumvented: inside your Jupyter root directory create a 
+# symlink named .lsp_symlink pointing to your system root /.
+#
+# ln -s / .lsp_symlink
+#
+# As this symlink is a hidden file the Jupyter server must be instructed to serve
+#  hidden files. Either use the appropriate command line flag:
+#
+# jupyter lab --ContentsManager.allow_hidden=True
+#
+# or, alternatively, set the corresponding setting inside your jupyter_server_config.py.
+#
+# Help in implementing a custom ContentsManager which will enable navigating 
+# to external files without the symlink is welcome.
+jupyter-lsp
+jupyterlab-lsp
+python-lsp-server[all]
+jupyter-server
+
+pyls-isort
+
+# pylsp-rope: Extended refactoring capabilities using Rope.
+pylsp-rope
+
+# AI - Added section in this file
+# See using-jupyterlab-ai.md for more details
+
+# jupyter_ai depends on jupyter_ai_magics, so installing jupyter_ai automatically installs jupyter_ai_magics.
+jupyter_ai
+jupyter_ai_magics
+
+# used by huggingface image models
+pillow
+
+#####
+
+#
+##
+### The following packages are commented out for various reasons (compatibility issues, pending evaluation, etc.)
+##
+#
+
+# https://community.neo4j.com/t/farewell-py2neo-what-happens-now/64419
+# https://github.com/neo4j-contrib/py2neo
+# RIP: py2neo
+
+# relies on py2neo and is MIT and could be adapted to use neomodel
+# https://github.com/halcyondude/neo4jupyter
+# https://github.com/merqurio/neo4jupyter
+# https://pypi.org/project/neo4jupyter
+neo4jupyter
+
+
+#
+## https://networkx.org
+#
+
+# NetworkX is a Python package for the creation, manipulation, and study of the structure, dynamics, and functions of complex networks.
+# https://networkx.org/documentation/stable/
+#
+# this rabbit hole goes deep :)
+#
+# https://conference.scipy.org/proceedings/SciPy2008/paper_2/
+# https://conference.scipy.org/proceedings/SciPy2008/paper_2/full_text.pdf 
+#
+# networkx
