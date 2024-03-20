@@ -1,0 +1,244 @@
+
+File path:  /Users/matt/gharchive-cncf/cncf-parquet/ReleaseEvent-consolidated.parquet
+Created by: parquet-rs version 50.0.0
+Properties:
+  ARROW:schema: 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
+Schema:
+message arrow_schema {
+  optional binary actor.avatar_url (STRING);
+  optional binary actor.display_login (STRING);
+  optional binary actor.gravatar_id (STRING);
+  optional int64 actor.id;
+  optional binary actor.login (STRING);
+  optional binary actor.url (STRING);
+  optional binary created_at (STRING);
+  optional binary day (STRING);
+  optional binary id (STRING);
+  optional binary month (STRING);
+  optional binary org.avatar_url (STRING);
+  optional binary org.gravatar_id (STRING);
+  optional int64 org.id;
+  optional binary org.login (STRING);
+  optional binary org.url (STRING);
+  optional binary org_name (STRING);
+  optional binary payload.action (STRING);
+  optional group payload.release.assets (LIST) {
+    repeated group list {
+      optional group item {
+        optional binary browser_download_url (STRING);
+        optional binary content_type (STRING);
+        optional binary created_at (STRING);
+        optional int64 download_count;
+        optional int64 id;
+        optional binary label (STRING);
+        optional binary name (STRING);
+        optional binary node_id (STRING);
+        optional int64 size;
+        optional binary state (STRING);
+        optional binary updated_at (STRING);
+        optional group uploader {
+          optional binary avatar_url (STRING);
+          optional binary events_url (STRING);
+          optional binary followers_url (STRING);
+          optional binary following_url (STRING);
+          optional binary gists_url (STRING);
+          optional binary gravatar_id (STRING);
+          optional binary html_url (STRING);
+          optional int64 id;
+          optional binary login (STRING);
+          optional binary node_id (STRING);
+          optional binary organizations_url (STRING);
+          optional binary received_events_url (STRING);
+          optional binary repos_url (STRING);
+          optional boolean site_admin;
+          optional binary starred_url (STRING);
+          optional binary subscriptions_url (STRING);
+          optional binary type (STRING);
+          optional binary url (STRING);
+        }
+        optional binary url (STRING);
+      }
+    }
+  }
+  optional binary payload.release.assets_url (STRING);
+  optional binary payload.release.author.avatar_url (STRING);
+  optional binary payload.release.author.events_url (STRING);
+  optional binary payload.release.author.followers_url (STRING);
+  optional binary payload.release.author.following_url (STRING);
+  optional binary payload.release.author.gists_url (STRING);
+  optional binary payload.release.author.gravatar_id (STRING);
+  optional binary payload.release.author.html_url (STRING);
+  optional int64 payload.release.author.id;
+  optional binary payload.release.author.login (STRING);
+  optional binary payload.release.author.node_id (STRING);
+  optional binary payload.release.author.organizations_url (STRING);
+  optional binary payload.release.author.received_events_url (STRING);
+  optional binary payload.release.author.repos_url (STRING);
+  optional boolean payload.release.author.site_admin;
+  optional binary payload.release.author.starred_url (STRING);
+  optional binary payload.release.author.subscriptions_url (STRING);
+  optional binary payload.release.author.type (STRING);
+  optional binary payload.release.author.url (STRING);
+  optional binary payload.release.body (STRING);
+  optional binary payload.release.created_at (STRING);
+  optional boolean payload.release.draft;
+  optional binary payload.release.html_url (STRING);
+  optional int64 payload.release.id;
+  optional binary payload.release.name (STRING);
+  optional binary payload.release.node_id (STRING);
+  optional boolean payload.release.prerelease;
+  optional binary payload.release.published_at (STRING);
+  optional binary payload.release.tag_name (STRING);
+  optional binary payload.release.tarball_url (STRING);
+  optional binary payload.release.target_commitish (STRING);
+  optional binary payload.release.upload_url (STRING);
+  optional binary payload.release.url (STRING);
+  optional binary payload.release.zipball_url (STRING);
+  optional boolean public;
+  optional int64 repo.id;
+  optional binary repo.name (STRING);
+  optional binary repo.url (STRING);
+  optional binary repo_name (STRING);
+  optional binary repo_org_and_name (STRING);
+  optional binary type (STRING);
+  optional binary year (STRING);
+  optional binary payload.release.discussion_url (STRING);
+  optional boolean payload.release.is_short_description_html_truncated;
+  optional group payload.release.mentions (LIST) {
+    repeated group list {
+      optional group item {
+        optional binary avatar_url (STRING);
+        optional boolean avatar_user_actor;
+        optional binary login (STRING);
+        optional binary profile_name (STRING);
+        optional binary profile_url (STRING);
+      }
+    }
+  }
+  optional double payload.release.mentions_count;
+  optional binary payload.release.short_description_html (STRING);
+  optional double payload.release.reactions.+1;
+  optional double payload.release.reactions.-1;
+  optional double payload.release.reactions.confused;
+  optional double payload.release.reactions.eyes;
+  optional double payload.release.reactions.heart;
+  optional double payload.release.reactions.hooray;
+  optional double payload.release.reactions.laugh;
+  optional double payload.release.reactions.rocket;
+  optional double payload.release.reactions.total_count;
+  optional binary payload.release.reactions.url (STRING);
+}
+
+
+Row group 0:  count: 166766  391.67 B records  start: 4  total(compressed): 62.291 MB total(uncompressed):369.426 MB 
+--------------------------------------------------------------------------------
+                                                               type      encodings count     avg size   nulls   min / max
+actor.avatar_url                                               BINARY    G RB_     166766    0.76 B             "https://avatars.githubuse..." / "https://avatars.githubuse..."
+actor.display_login                                            BINARY    G RB_     166766    0.82 B     2731    "00Sheep00" / "zzzming"
+actor.gravatar_id                                              BINARY    G RB_     166766    0.00 B             "" / ""
+actor.id                                                       INT64     G RB_     166766    0.71 B             "354" / "159875083"
+actor.login                                                    BINARY    G RB_     166766    0.82 B             "00Sheep00" / "zzzming"
+actor.url                                                      BINARY    G RB_     166766    0.85 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+created_at                                                     BINARY    G RB_     166766    5.92 B             "2015-01-03T12:01:25Z" / "2024-03-16T19:45:08Z"
+day                                                            BINARY    G RB_     166766    0.55 B             "01" / "31"
+id                                                             BINARY    G RB_     166766    6.54 B             "10000075784" / "9999870790"
+month                                                          BINARY    G RB_     166766    0.39 B             "01" / "12"
+org.avatar_url                                                 BINARY    G RB_     166766    0.01 B             "https://avatars.githubuse..." / "https://avatars.githubuse..."
+org.gravatar_id                                                BINARY    G RB_     166766    0.00 B             "" / ""
+org.id                                                         INT64     G RB_     166766    0.01 B             "47359" / "116450972"
+org.login                                                      BINARY    G RB_     166766    0.01 B             "AthenZ" / "werf"
+org.url                                                        BINARY    G RB_     166766    0.01 B             "https://api.github.com/or..." / "https://api.github.com/or..."
+org_name                                                       BINARY    G RB_     166766    0.01 B             "AthenZ" / "werf"
+payload.action                                                 BINARY    G RB_     166766    0.00 B             "published" / "published"
+payload.release.assets.list.item.browser_download_url          BINARY    G RR_     294915    3.03 B     142224  "https://github.com/Google..." / "https://github.com/wasmCl..."
+payload.release.assets.list.item.content_type                  BINARY    G RR_     294915    0.16 B     142224  "application/epub+zip" / "video/mp4"
+payload.release.assets.list.item.created_at                    BINARY    G RR_     294915    1.75 B     142224  "2015-01-13T22:15:34Z" / "2024-03-16T10:11:29Z"
+payload.release.assets.list.item.download_count                INT64     G RR_     294915    0.09 B     142224  "0" / "58366"
+payload.release.assets.list.item.id                            INT64     G RR_     294915    2.12 B     142224  "378334" / "156995046"
+payload.release.assets.list.item.label                         BINARY    G RR_     294915    0.09 B     182688  "" / "serving.yaml"
+payload.release.assets.list.item.name                          BINARY    G RR_     294915    1.85 B     142224  "0.19.tar.gz" / "zynamics_binexport_9.pmc64"
+payload.release.assets.list.item.node_id                       BINARY    G RR_     294915    1.90 B     150632  "MDEyOlJlbGVhc2VBc3NldDE0M..." / "RA_kwDOLgAa0c4JWdvQ"
+payload.release.assets.list.item.size                          INT64     G RR_     294915    2.19 B     142224  "1" / "2121590745"
+payload.release.assets.list.item.state                         BINARY    G RR_     294915    0.08 B     142224  "uploaded" / "uploaded"
+payload.release.assets.list.item.updated_at                    BINARY    G RR_     294915    1.78 B     142224  "2015-01-13T22:15:44Z" / "2024-03-16T10:11:30Z"
+payload.release.assets.list.item.uploader.avatar_url           BINARY    G RR_     294915    0.19 B     142224  "https://avatars.githubuse..." / "https://avatars7.githubus..."
+payload.release.assets.list.item.uploader.events_url           BINARY    G RR_     294915    0.19 B     142224  "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.release.assets.list.item.uploader.followers_url        BINARY    G RR_     294915    0.19 B     142224  "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.release.assets.list.item.uploader.following_url        BINARY    G RR_     294915    0.19 B     142224  "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.release.assets.list.item.uploader.gists_url            BINARY    G RR_     294915    0.20 B     142224  "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.release.assets.list.item.uploader.gravatar_id          BINARY    G RR_     294915    0.08 B     142224  "" / ""
+payload.release.assets.list.item.uploader.html_url             BINARY    G RR_     294915    0.19 B     142224  "https://github.com/1duo" / "https://github.com/zzzming"
+payload.release.assets.list.item.uploader.id                   INT64     G RR_     294915    0.17 B     142224  "1270" / "161166621"
+payload.release.assets.list.item.uploader.login                BINARY    G RR_     294915    0.19 B     142224  "1duo" / "zzzming"
+payload.release.assets.list.item.uploader.node_id              BINARY    G RR_     294915    0.17 B     150632  "BOT_kgDOCY7hnw" / "U_kgDOCOKUcg"
+payload.release.assets.list.item.uploader.organizations_url    BINARY    G RR_     294915    0.19 B     142224  "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.release.assets.list.item.uploader.received_events_url  BINARY    G RR_     294915    0.19 B     142224  "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.release.assets.list.item.uploader.repos_url            BINARY    G RR_     294915    0.19 B     142224  "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.release.assets.list.item.uploader.site_admin           BOOLEAN   G RR_     294915    0.08 B     142224  "false" / "true"
+payload.release.assets.list.item.uploader.starred_url          BINARY    G RR_     294915    0.20 B     142224  "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.release.assets.list.item.uploader.subscriptions_url    BINARY    G RR_     294915    0.19 B     142224  "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.release.assets.list.item.uploader.type                 BINARY    G RR_     294915    0.08 B     142224  "Bot" / "User"
+payload.release.assets.list.item.uploader.url                  BINARY    G RR_     294915    0.19 B     142224  "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.release.assets.list.item.url                           BINARY    G RR_     294915    2.04 B     142224  "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.release.assets_url                                     BINARY    G RB_     166766    6.54 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.release.author.avatar_url                              BINARY    G RB_     166766    0.91 B             "https://avatars.githubuse..." / "https://avatars7.githubus..."
+payload.release.author.events_url                              BINARY    G RB_     166766    0.87 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.release.author.followers_url                           BINARY    G RB_     166766    0.87 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.release.author.following_url                           BINARY    G RB_     166766    0.87 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.release.author.gists_url                               BINARY    G RB_     166766    0.88 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.release.author.gravatar_id                             BINARY    G RB_     166766    0.00 B             "" / ""
+payload.release.author.html_url                                BINARY    G RB_     166766    0.84 B             "https://github.com/00Sheep00" / "https://github.com/zzzming"
+payload.release.author.id                                      INT64     G RB_     166766    0.71 B             "354" / "159875083"
+payload.release.author.login                                   BINARY    G RB_     166766    0.82 B             "00Sheep00" / "zzzming"
+payload.release.author.node_id                                 BINARY    G RB_     166766    0.71 B     15448   "BOT_kgDOBo87Qg" / "U_kgDOCYeACw"
+payload.release.author.organizations_url                       BINARY    G RB_     166766    0.87 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.release.author.received_events_url                     BINARY    G RB_     166766    0.87 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.release.author.repos_url                               BINARY    G RB_     166766    0.87 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.release.author.site_admin                              BOOLEAN   G RB_     166766    0.00 B             "false" / "true"
+payload.release.author.starred_url                             BINARY    G RB_     166766    0.87 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.release.author.subscriptions_url                       BINARY    G RB_     166766    0.87 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.release.author.type                                    BINARY    G RB_     166766    0.03 B             "Bot" / "User"
+payload.release.author.url                                     BINARY    G RB_     166766    0.85 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.release.body                                           BINARY    G RB_     166766    217.13 B   6538    "" / "🚨  This release contains..."
+payload.release.created_at                                     BINARY    G RB_     166766    5.49 B             "2006-01-05T21:30:02Z" / "2024-03-16T19:44:59Z"
+payload.release.draft                                          BOOLEAN   G RB_     166766    0.00 B             "false" / "true"
+payload.release.html_url                                       BINARY    G RB_     166766    4.57 B             "https://github.com/AthenZ..." / "https://github.com/werf/w..."
+payload.release.id                                             INT64     G RB_     166766    5.44 B             "800312" / "146904092"
+payload.release.name                                           BINARY    G RB_     166766    4.21 B     7385    "" / "🩹 0.5.1"
+payload.release.node_id                                        BINARY    G RB_     166766    5.34 B     15448   "MDc6UmVsZWFzZTE0MDA0MTAw" / "RE_kwDOLgAa0c4IwC-U"
+payload.release.prerelease                                     BOOLEAN   G RB_     166766    0.05 B             "false" / "true"
+payload.release.published_at                                   BINARY    G RB_     166766    5.92 B     44      "2015-01-03T12:01:25Z" / "2024-03-16T19:45:08Z"
+payload.release.tag_name                                       BINARY    G RB_     166766    3.60 B             "#155" / "ztka-0.2.0"
+payload.release.tarball_url                                    BINARY    G RB_     166766    4.56 B     44      "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.release.target_commitish                               BINARY    G RB_     166766    4.60 B             "0.0.1" / "zwei"
+payload.release.upload_url                                     BINARY    G RB_     166766    6.62 B             "https://uploads.github.co..." / "https://uploads.github.co..."
+payload.release.url                                            BINARY    G RB_     166766    6.33 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.release.zipball_url                                    BINARY    G RB_     166766    4.56 B     44      "https://api.github.com/re..." / "https://api.github.com/re..."
+public                                                         BOOLEAN   G RB_     166766    0.00 B             "true" / "true"
+repo.id                                                        INT64     G RB_     166766    0.30 B             "161001" / "771758801"
+repo.name                                                      BINARY    G RB_     166766    0.44 B             "AthenZ/athenz" / "werf/werf"
+repo.url                                                       BINARY    G RB_     166766    0.46 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+repo_name                                                      BINARY    G RB_     166766    0.40 B             "" / "zx"
+repo_org_and_name                                              BINARY    G RB_     166766    0.44 B             "AthenZ/athenz" / "werf/werf"
+type                                                           BINARY    G RB_     166766    0.00 B             "ReleaseEvent" / "ReleaseEvent"
+year                                                           BINARY    G RB_     166766    0.28 B             "2015" / "2024"
+payload.release.discussion_url                                 BINARY    G RB_     166766    0.03 B     166307  "https://github.com/apache..." / "https://github.com/uber/c..."
+payload.release.is_short_description_html_truncated            BOOLEAN   G RB_     166766    0.14 B     70907   "false" / "true"
+payload.release.mentions.list.item.avatar_url                  BINARY    G RR_     218347    1.05 B     153096  "https://avatars.githubuse..." / "https://avatars.githubuse..."
+payload.release.mentions.list.item.avatar_user_actor           BOOLEAN   G RR_     218347    0.11 B     153096  "false" / "true"
+payload.release.mentions.list.item.login                       BINARY    G RR_     218347    1.17 B     153096  "00xc" / "zzzzzzzzzy9"
+payload.release.mentions.list.item.profile_name                BINARY    G RR_     218347    1.07 B     161682  " Carson Yang" / "이규민"
+payload.release.mentions.list.item.profile_url                 BINARY    G RR_     218347    1.21 B     153096  "https://github.com/00xc" / "https://github.com/zzzzzz..."
+payload.release.mentions_count                                 DOUBLE    G RB_     166766    0.09 B     152838  "1.0" / "177.0"
+payload.release.short_description_html                         BINARY    G RB_     166766    32.28 B    73598   "" / "<ul> <li>Minimal supporte..."
+payload.release.reactions.+1                                   DOUBLE    G RB_     166766    0.00 B     166315  "-0.0" / "24.0"
+payload.release.reactions.-1                                   DOUBLE    G RB_     166766    0.00 B     166315  "-0.0" / "0.0"
+payload.release.reactions.confused                             DOUBLE    G RB_     166766    0.00 B     166315  "-0.0" / "0.0"
+payload.release.reactions.eyes                                 DOUBLE    G RB_     166766    0.00 B     166315  "-0.0" / "4.0"
+payload.release.reactions.heart                                DOUBLE    G RB_     166766    0.00 B     166315  "-0.0" / "10.0"
+payload.release.reactions.hooray                               DOUBLE    G RB_     166766    0.00 B     166315  "-0.0" / "13.0"
+payload.release.reactions.laugh                                DOUBLE    G RB_     166766    0.00 B     166315  "-0.0" / "4.0"
+payload.release.reactions.rocket                               DOUBLE    G RB_     166766    0.00 B     166315  "-0.0" / "7.0"
+payload.release.reactions.total_count                          DOUBLE    G RB_     166766    0.01 B     166315  "1.0" / "55.0"
+payload.release.reactions.url                                  BINARY    G RB_     166766    0.01 B     166315  "https://api.github.com/re..." / "https://api.github.com/re..."
+

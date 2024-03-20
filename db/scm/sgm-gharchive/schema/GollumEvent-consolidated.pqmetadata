@@ -1,0 +1,80 @@
+
+File path:  /Users/matt/gharchive-cncf/cncf-parquet/GollumEvent-consolidated.parquet
+Created by: parquet-rs version 50.0.0
+Properties:
+  ARROW:schema: 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
+Schema:
+message arrow_schema {
+  optional binary actor.avatar_url (STRING);
+  optional binary actor.display_login (STRING);
+  optional binary actor.gravatar_id (STRING);
+  optional int64 actor.id;
+  optional binary actor.login (STRING);
+  optional binary actor.url (STRING);
+  optional binary created_at (STRING);
+  optional binary day (STRING);
+  optional binary id (STRING);
+  optional binary month (STRING);
+  optional binary org.avatar_url (STRING);
+  optional binary org.gravatar_id (STRING);
+  optional int64 org.id;
+  optional binary org.login (STRING);
+  optional binary org.url (STRING);
+  optional binary org_name (STRING);
+  optional group payload.pages (LIST) {
+    repeated group list {
+      optional group item {
+        optional binary action (STRING);
+        optional binary html_url (STRING);
+        optional binary page_name (STRING);
+        optional binary sha (STRING);
+        optional binary summary (STRING);
+        optional binary title (STRING);
+      }
+    }
+  }
+  optional boolean public;
+  optional int64 repo.id;
+  optional binary repo.name (STRING);
+  optional binary repo.url (STRING);
+  optional binary repo_name (STRING);
+  optional binary repo_org_and_name (STRING);
+  optional binary type (STRING);
+  optional binary year (STRING);
+}
+
+
+Row group 0:  count: 77062  57.62 B records  start: 4  total(compressed): 4.234 MB total(uncompressed):12.175 MB 
+--------------------------------------------------------------------------------
+                                   type      encodings count     avg size   nulls   min / max
+actor.avatar_url                   BINARY    G RB_     77062     0.96 B             "https://avatars.githubuse..." / "https://avatars.githubuse..."
+actor.display_login                BINARY    G RB_     77062     1.00 B     6727    "007-frozenfire" / "zyyw"
+actor.gravatar_id                  BINARY    G RB_     77062     0.00 B             "" / ""
+actor.id                           INT64     G RB_     77062     0.88 B             "45" / "155133637"
+actor.login                        BINARY    G RB_     77062     1.07 B             "007-frozenfire" / "zyyw"
+actor.url                          BINARY    G RB_     77062     1.12 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+created_at                         BINARY    G RB_     77062     6.08 B             "2015-01-03T16:20:10Z" / "2024-03-16T21:39:09Z"
+day                                BINARY    G RB_     77062     0.42 B             "01" / "31"
+id                                 BINARY    G RB_     77062     7.05 B             "10001327954" / "9999979616"
+month                              BINARY    G RB_     77062     0.30 B             "01" / "12"
+org.avatar_url                     BINARY    G RB_     77062     0.02 B             "https://avatars.githubuse..." / "https://avatars.githubuse..."
+org.gravatar_id                    BINARY    G RB_     77062     0.00 B             "" / ""
+org.id                             INT64     G RB_     77062     0.01 B             "47359" / "99483952"
+org.login                          BINARY    G RB_     77062     0.02 B             "GoogleContainerTools" / "wasmCloud"
+org.url                            BINARY    G RB_     77062     0.02 B             "https://api.github.com/or..." / "https://api.github.com/or..."
+org_name                           BINARY    G RB_     77062     0.02 B             "GoogleContainerTools" / "wasmCloud"
+payload.pages.list.item.action     BINARY    G RR_     93748     0.10 B             "created" / "edited"
+payload.pages.list.item.html_url   BINARY    G RR_     93748     3.46 B             "/apache/incubator-fluo/wi..." / "https://github.com/wasmCl..."
+payload.pages.list.item.page_name  BINARY    G RR_     93748     2.97 B             "!!!!!!!!!!!HElP-(1.844.52..." / "🏠-Home"
+payload.pages.list.item.sha        BINARY    G RR_     93748     20.95 B            "0000a864e46593bf0a847780d..." / "ffff2294c7528de45bb74ac3a..."
+payload.pages.list.item.summary    BINARY    G RR_     93748     0.21 B     92079   "'relaying party' -> 'rely..." / "{#id} doesn't work from t..."
+payload.pages.list.item.title      BINARY    G RR_     93748     2.97 B             "! ! ! ! ! @ !!!!1 800 728..." / "🏠 Home"
+public                             BOOLEAN   G RB_     77062     0.00 B             "true" / "true"
+repo.id                            INT64     G RB_     77062     0.16 B             "196334" / "756673810"
+repo.name                          BINARY    G RB_     77062     0.25 B             "GoogleContainerTools/jib" / "wasmCloud/wasmCloud"
+repo.url                           BINARY    G RB_     77062     0.26 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+repo_name                          BINARY    G RB_     77062     0.23 B             "" / "zookeeper-operator"
+repo_org_and_name                  BINARY    G RB_     77062     0.25 B             "GoogleContainerTools/jib" / "wasmCloud/wasmCloud"
+type                               BINARY    G RB_     77062     0.00 B             "GollumEvent" / "GollumEvent"
+year                               BINARY    G RB_     77062     0.22 B             "2015" / "2024"
+
