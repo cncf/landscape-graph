@@ -1,0 +1,99 @@
+
+File path:  /Users/matt/gharchive-cncf/cncf-parquet/DeleteEvent-consolidated.parquet
+Created by: parquet-rs version 50.0.0
+Properties:
+  ARROW:schema: /////4AFAAAQAAAAAAAKAAwACgAJAAQACgAAABAAAAAAAQQACAAIAAAABAAIAAAABAAAABsAAAAYBQAA0AQAAJgEAABYBAAAKAQAAPgDAADIAwAAoAMAAHgDAABMAwAAGAMAAOQCAACwAgAAgAIAAFQCAAAkAgAA7AEAALwBAACEAQAAWAEAACQBAAD0AAAAxAAAAJQAAABcAAAAMAAAAAQAAABk+///FAAAAAwAAAAAAAEFDAAAAAAAAABU+///BAAAAHllYXIAAAAAjPv//xQAAAAMAAAAAAABBQwAAAAAAAAAfPv//wQAAAB0eXBlAAAAALT7//8UAAAADAAAAAAAAQUMAAAAAAAAAKT7//8RAAAAcmVwb19vcmdfYW5kX25hbWUAAADo+///FAAAAAwAAAAAAAEFDAAAAAAAAADY+///CQAAAHJlcG9fbmFtZQAAABT8//8UAAAADAAAAAAAAQUMAAAAAAAAAAT8//8IAAAAcmVwby51cmwAAAAAQPz//xQAAAAMAAAAAAABBQwAAAAAAAAAMPz//wkAAAByZXBvLm5hbWUAAABs/P//EAAAABgAAAAAAAECFAAAABD9//9AAAAAAAAAAQAAAAAHAAAAcmVwby5pZACc/P//FAAAAAwAAAAAAAEGDAAAAAAAAACM/P//BgAAAHB1YmxpYwAAxPz//xQAAAAMAAAAAAABBQwAAAAAAAAAtPz//xAAAABwYXlsb2FkLnJlZl90eXBlAAAAAPj8//8UAAAADAAAAAAAAQUMAAAAAAAAAOj8//8LAAAAcGF5bG9hZC5yZWYAJP3//xQAAAAMAAAAAAABBQwAAAAAAAAAFP3//xMAAABwYXlsb2FkLnB1c2hlcl90eXBlAFj9//8UAAAADAAAAAAAAQUMAAAAAAAAAEj9//8IAAAAb3JnX25hbWUAAAAAhP3//xQAAAAMAAAAAAABBQwAAAAAAAAAdP3//wcAAABvcmcudXJsAKz9//8UAAAADAAAAAAAAQUMAAAAAAAAAJz9//8JAAAAb3JnLmxvZ2luAAAA2P3//xAAAAAYAAAAAAABAhQAAAB8/v//QAAAAAAAAAEAAAAABgAAAG9yZy5pZAAACP7//xQAAAAMAAAAAAABBQwAAAAAAAAA+P3//w8AAABvcmcuZ3JhdmF0YXJfaWQAOP7//xQAAAAMAAAAAAABBQwAAAAAAAAAKP7//w4AAABvcmcuYXZhdGFyX3VybAAAaP7//xQAAAAMAAAAAAABBQwAAAAAAAAAWP7//wUAAABtb250aAAAAJD+//8UAAAADAAAAAAAAQUMAAAAAAAAAID+//8CAAAAaWQAALT+//8UAAAADAAAAAAAAQUMAAAAAAAAAKT+//8DAAAAZGF5ANj+//8UAAAADAAAAAAAAQUMAAAAAAAAAMj+//8KAAAAY3JlYXRlZF9hdAAABP///xQAAAAMAAAAAAABBQwAAAAAAAAA9P7//wkAAABhY3Rvci51cmwAAAAw////FAAAAAwAAAAAAAEFDAAAAAAAAAAg////CwAAAGFjdG9yLmxvZ2luAFz///8YAAAAIAAAAAAAAQIcAAAACAAMAAQACwAIAAAAQAAAAAAAAAEAAAAACAAAAGFjdG9yLmlkAAAAAJj///8UAAAADAAAAAAAAQUMAAAAAAAAAIj///8RAAAAYWN0b3IuZ3JhdmF0YXJfaWQAAADM////FAAAAAwAAAAAAAEFDAAAAAAAAAC8////EwAAAGFjdG9yLmRpc3BsYXlfbG9naW4AEAAUABAADgAPAAQAAAAIABAAAAAYAAAADAAAAAAAAQUQAAAAAAAAAAQABAAEAAAAEAAAAGFjdG9yLmF2YXRhcl91cmwAAAAA
+Schema:
+message arrow_schema {
+  optional binary actor.avatar_url (STRING);
+  optional binary actor.display_login (STRING);
+  optional binary actor.gravatar_id (STRING);
+  optional int64 actor.id;
+  optional binary actor.login (STRING);
+  optional binary actor.url (STRING);
+  optional binary created_at (STRING);
+  optional binary day (STRING);
+  optional binary id (STRING);
+  optional binary month (STRING);
+  optional binary org.avatar_url (STRING);
+  optional binary org.gravatar_id (STRING);
+  optional int64 org.id;
+  optional binary org.login (STRING);
+  optional binary org.url (STRING);
+  optional binary org_name (STRING);
+  optional binary payload.pusher_type (STRING);
+  optional binary payload.ref (STRING);
+  optional binary payload.ref_type (STRING);
+  optional boolean public;
+  optional int64 repo.id;
+  optional binary repo.name (STRING);
+  optional binary repo.url (STRING);
+  optional binary repo_name (STRING);
+  optional binary repo_org_and_name (STRING);
+  optional binary type (STRING);
+  optional binary year (STRING);
+}
+
+
+Row group 0:  count: 1048576  21.63 B records  start: 4  total(compressed): 21.633 MB total(uncompressed):80.985 MB 
+--------------------------------------------------------------------------------
+                     type      encodings count     avg size   nulls   min / max
+actor.avatar_url     BINARY    G RB_     1048576   0.54 B             "https://avatars.githubuse..." / "https://avatars.githubuse..."
+actor.display_login  BINARY    G RB_     1048576   0.56 B     14327   "00Sheep00" / "zzxwill"
+actor.gravatar_id    BINARY    G RB_     1048576   0.00 B             "" / ""
+actor.id             INT64     G RB_     1048576   0.53 B             "45" / "163059993"
+actor.login          BINARY    G RB_     1048576   0.56 B             "00Sheep00" / "zzxwill"
+actor.url            BINARY    G RB_     1048576   0.57 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+created_at           BINARY    G RB_     1048576   4.58 B             "2015-01-01T01:49:26Z" / "2024-03-16T23:59:38Z"
+day                  BINARY    G RB_     1048576   0.37 B             "01" / "31"
+id                   BINARY    G RB_     1048576   5.19 B             "10000022461" / "9999728947"
+month                BINARY    G RB_     1048576   0.26 B             "01" / "12"
+org.avatar_url       BINARY    G RB_     1048576   0.00 B             "https://avatars.githubuse..." / "https://avatars.githubuse..."
+org.gravatar_id      BINARY    G RB_     1048576   0.00 B             "" / ""
+org.id               INT64     G RB_     1048576   0.00 B             "124156" / "116450972"
+org.login            BINARY    G RB_     1048576   0.00 B             "OpenFunction" / "werf"
+org.url              BINARY    G RB_     1048576   0.00 B             "https://api.github.com/or..." / "https://api.github.com/or..."
+org_name             BINARY    G RB_     1048576   0.00 B             "OpenFunction" / "werf"
+payload.pusher_type  BINARY    G RB_     1048576   0.00 B             "deploy_key" / "user"
+payload.ref          BINARY    G RB_     1048576   7.70 B             "#119-dep-feedback" / "🦄"
+payload.ref_type     BINARY    G RB_     1048576   0.02 B             "branch" / "tag"
+public               BOOLEAN   G RB_     1048576   0.00 B             "true" / "true"
+repo.id              INT64     G RB_     1048576   0.09 B             "196334" / "772097055"
+repo.name            BINARY    G RB_     1048576   0.12 B             "OpenFunction/OpenFunction" / "werf/werf-guides"
+repo.url             BINARY    G RB_     1048576   0.13 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+repo_name            BINARY    G RB_     1048576   0.12 B             ".Net-Interactive-Kernels-ADS" / "zx"
+repo_org_and_name    BINARY    G RB_     1048576   0.12 B             "OpenFunction/OpenFunction" / "werf/werf-guides"
+type                 BINARY    G RB_     1048576   0.00 B             "DeleteEvent" / "DeleteEvent"
+year                 BINARY    G RB_     1048576   0.18 B             "2015" / "2024"
+
+Row group 1:  count: 599997  18.81 B records  start: 22685542  total(compressed): 10.765 MB total(uncompressed):44.129 MB 
+--------------------------------------------------------------------------------
+                     type      encodings count     avg size   nulls   min / max
+actor.avatar_url     BINARY    G RB_     599997    0.46 B             "https://avatars.githubuse..." / "https://avatars.githubuse..."
+actor.display_login  BINARY    G RB_     599997    0.48 B     8261    "0xTim" / "zzzwen"
+actor.gravatar_id    BINARY    G RB_     599997    0.00 B             "" / ""
+actor.id             INT64     G RB_     599997    0.45 B             "354" / "162361768"
+actor.login          BINARY    G RB_     599997    0.48 B             "0xTim" / "zzzwen"
+actor.url            BINARY    G RB_     599997    0.48 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+created_at           BINARY    G RB_     599997    4.23 B             "2015-01-01T17:50:14Z" / "2024-03-16T23:45:28Z"
+day                  BINARY    G RB_     599997    0.30 B             "01" / "31"
+id                   BINARY    G RB_     599997    5.09 B             "10000098824" / "9999954099"
+month                BINARY    G RB_     599997    0.22 B             "01" / "12"
+org.avatar_url       BINARY    G RB_     599997    0.00 B             "https://avatars.githubuse..." / "https://avatars.githubuse..."
+org.gravatar_id      BINARY    G RB_     599997    0.00 B             "" / ""
+org.id               INT64     G RB_     599997    0.00 B             "47359" / "109597321"
+org.login            BINARY    G RB_     599997    0.00 B             "AthenZ" / "whatwg"
+org.url              BINARY    G RB_     599997    0.00 B             "https://api.github.com/or..." / "https://api.github.com/or..."
+org_name             BINARY    G RB_     599997    0.00 B             "AthenZ" / "whatwg"
+payload.pusher_type  BINARY    G RB_     599997    0.00 B             "deploy_key" / "user"
+payload.ref          BINARY    G RB_     599997    6.01 B             "#" / "“serialize”"
+payload.ref_type     BINARY    G RB_     599997    0.03 B             "branch" / "tag"
+public               BOOLEAN   G RB_     599997    0.00 B             "true" / "true"
+repo.id              INT64     G RB_     599997    0.06 B             "160986" / "769052339"
+repo.name            BINARY    G RB_     599997    0.09 B             "AthenZ/athenz" / "whatwg/xhr"
+repo.url             BINARY    G RB_     599997    0.10 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+repo_name            BINARY    G RB_     599997    0.08 B             ".allstar" / "zookeeper"
+repo_org_and_name    BINARY    G RB_     599997    0.09 B             "AthenZ/athenz" / "whatwg/xhr"
+type                 BINARY    G RB_     599997    0.00 B             "DeleteEvent" / "DeleteEvent"
+year                 BINARY    G RB_     599997    0.16 B             "2015" / "2024"
+

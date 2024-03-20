@@ -17,6 +17,7 @@ display_banner() {
     echo "===================================="
     echo
 }
+display_banner
 
 display_help() {
     echo "Usage: $0 [options]"
@@ -29,6 +30,7 @@ display_help() {
     echo "  -h, --help                Display this help text"
     echo
 }
+
 
 SOURCE=""
 TARGET=""

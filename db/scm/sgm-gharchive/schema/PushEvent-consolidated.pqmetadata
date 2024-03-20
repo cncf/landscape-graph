@@ -1,0 +1,428 @@
+
+File path:  /Users/matt/gharchive-cncf/cncf-parquet/PushEvent-consolidated.parquet
+Created by: parquet-rs version 50.0.0
+Properties:
+  ARROW:schema: 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
+Schema:
+message arrow_schema {
+  optional binary actor.avatar_url (STRING);
+  optional binary actor.display_login (STRING);
+  optional binary actor.gravatar_id (STRING);
+  optional int64 actor.id;
+  optional binary actor.login (STRING);
+  optional binary actor.url (STRING);
+  optional binary created_at (STRING);
+  optional binary day (STRING);
+  optional binary id (STRING);
+  optional binary month (STRING);
+  optional binary org.avatar_url (STRING);
+  optional binary org.gravatar_id (STRING);
+  optional double org.id;
+  optional binary org.login (STRING);
+  optional binary org.url (STRING);
+  optional binary org_name (STRING);
+  optional binary payload.before (STRING);
+  optional group payload.commits (LIST) {
+    repeated group list {
+      optional group item {
+        optional group author {
+          optional binary email (STRING);
+          optional binary name (STRING);
+        }
+        optional boolean distinct;
+        optional binary message (STRING);
+        optional binary sha (STRING);
+        optional binary url (STRING);
+      }
+    }
+  }
+  optional int64 payload.distinct_size;
+  optional binary payload.head (STRING);
+  optional int64 payload.push_id;
+  optional binary payload.ref (STRING);
+  optional int64 payload.size;
+  optional boolean public;
+  optional int64 repo.id;
+  optional binary repo.name (STRING);
+  optional binary repo.url (STRING);
+  optional binary repo_name (STRING);
+  optional binary repo_org_and_name (STRING);
+  optional binary type (STRING);
+  optional binary year (STRING);
+  optional double payload.repository_id;
+}
+
+
+Row group 0:  count: 1048576  269.51 B records  start: 4  total(compressed): 269.510 MB total(uncompressed):970.124 MB 
+--------------------------------------------------------------------------------
+                                        type      encodings count     avg size   nulls   min / max
+actor.avatar_url                        BINARY    G RB_     1048576   0.41 B             "https://avatars.githubuse..." / "https://avatars.githubuse..."
+actor.display_login                     BINARY    G RB_     1048576   0.40 B     55595   "00Sheep00" / "zz-jason"
+actor.gravatar_id                       BINARY    G RB_     1048576   0.00 B             "" / ""
+actor.id                                INT64     G RB_     1048576   0.40 B             "188" / "159875083"
+actor.login                             BINARY    G RB_     1048576   0.41 B             "00Sheep00" / "zz-jason"
+actor.url                               BINARY    G RB_     1048576   0.41 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+created_at                              BINARY    G RB_     1048576   4.75 B             "2015-01-01T01:15:48Z" / "2024-03-16T23:39:02Z"
+day                                     BINARY    G RB_     1048576   0.26 B             "01" / "31"
+id                                      BINARY    G RB_     1048576   5.24 B             "10000063560" / "9999994752"
+month                                   BINARY    G RB_     1048576   0.19 B             "01" / "12"
+org.avatar_url                          BINARY    G RB_     1048576   0.00 B             "https://avatars.githubuse..." / "https://avatars.githubuse..."
+org.gravatar_id                         BINARY    G RB_     1048576   0.00 B             "" / ""
+org.id                                  DOUBLE    G RB_     1048576   0.00 B             "379216.0" / "1.18160501E8"
+org.login                               BINARY    G RB_     1048576   0.00 B             "apple" / "werf"
+org.url                                 BINARY    G RB_     1048576   0.00 B             "https://api.github.com/or..." / "https://api.github.com/or..."
+org_name                                BINARY    G RB_     1048576   0.00 B             "apple" / "werf"
+payload.before                          BINARY    G RB_     1048576   23.85 B            "0000030b18c1e60e5e4f7444e..." / "fffff79771aa66317b950cf9b..."
+payload.commits.list.item.author.email  BINARY    G RR_     2508428   1.55 B     1236    "" / "“ran@w3.org”"
+payload.commits.list.item.author.name   BINARY    G RR_     2508428   1.09 B     1236    "" / "🦊Tomoya Hirano"
+payload.commits.list.item.distinct      BOOLEAN   G RR_     2508428   0.19 B     1236    "false" / "true"
+payload.commits.list.item.message       BINARY    G RR_     2508428   42.76 B    1236    "" / "🤮"
+payload.commits.list.item.sha           BINARY    G RR_     2508428   18.81 B    1236    "0000030b18c1e60e5e4f7444e..." / "fffff79771aa66317b950cf9b..."
+payload.commits.list.item.url           BINARY    G RR_     2508428   20.40 B    1236    "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.distinct_size                   INT64     G RB_     1048576   0.21 B             "0" / "6032"
+payload.head                            BINARY    G RB_     1048576   24.08 B            "0000030b18c1e60e5e4f7444e..." / "fffff79771aa66317b950cf9b..."
+payload.push_id                         INT64     G RB_     1048576   4.06 B             "536754900" / "17575389161"
+payload.ref                             BINARY    G RB_     1048576   1.33 B             "refs/heads/$program" / "refs/heads/🍒/rebranch/b7..."
+payload.size                            INT64     G RB_     1048576   0.35 B             "0" / "10000"
+public                                  BOOLEAN   G RB_     1048576   0.00 B             "true" / "true"
+repo.id                                 INT64     G RB_     1048576   0.02 B             "3456759" / "771758801"
+repo.name                               BINARY    G RB_     1048576   0.03 B             "apple/" / "werf/werf-test"
+repo.url                                BINARY    G RB_     1048576   0.03 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+repo_name                               BINARY    G RB_     1048576   0.02 B             "" / "ztunnel"
+repo_org_and_name                       BINARY    G RB_     1048576   0.03 B             "apple/" / "werf/werf-test"
+type                                    BINARY    G RB_     1048576   0.00 B             "PushEvent" / "PushEvent"
+year                                    BINARY    G RB_     1048576   0.14 B             "2015" / "2024"
+payload.repository_id                   DOUBLE    G RB_     1048576   0.03 B     892254  "4287066.0" / "7.71758801E8"
+
+Row group 1:  count: 1048576  240.72 B records  start: 282605299  total(compressed): 240.721 MB total(uncompressed):916.017 MB 
+--------------------------------------------------------------------------------
+                                        type      encodings count     avg size   nulls   min / max
+actor.avatar_url                        BINARY    G RB_     1048576   0.42 B             "https://avatars.githubuse..." / "https://avatars.githubuse..."
+actor.display_login                     BINARY    G RB_     1048576   0.41 B     51911   "0405ysj" / "zyshi"
+actor.gravatar_id                       BINARY    G RB_     1048576   0.00 B             "" / ""
+actor.id                                INT64     G RB_     1048576   0.41 B             "188" / "163057481"
+actor.login                             BINARY    G RB_     1048576   0.43 B             "0405ysj" / "zyshi"
+actor.url                               BINARY    G RB_     1048576   0.43 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+created_at                              BINARY    G RB_     1048576   4.99 B             "2015-01-01T00:55:26Z" / "2024-03-16T23:38:17Z"
+day                                     BINARY    G RB_     1048576   0.33 B             "01" / "31"
+id                                      BINARY    G RB_     1048576   5.38 B             "10000021377" / "9999959485"
+month                                   BINARY    G RB_     1048576   0.23 B             "01" / "12"
+org.avatar_url                          BINARY    G RB_     1048576   0.00 B             "https://avatars.githubuse..." / "https://avatars.githubuse..."
+org.gravatar_id                         BINARY    G RB_     1048576   0.00 B             "" / ""
+org.id                                  DOUBLE    G RB_     1048576   0.00 B             "1342004.0" / "1.15947239E8"
+org.login                               BINARY    G RB_     1048576   0.00 B             "armadaproject" / "vega"
+org.url                                 BINARY    G RB_     1048576   0.00 B             "https://api.github.com/or..." / "https://api.github.com/or..."
+org_name                                BINARY    G RB_     1048576   0.00 B             "armadaproject" / "vega"
+payload.before                          BINARY    G RB_     1048576   24.46 B            "000010a4057ecf643d903d076..." / "fffff877ebb54fcba1d382b38..."
+payload.commits.list.item.author.email  BINARY    G RR_     2263214   1.77 B     1709    "" / "“cmwillis@google.com”"
+payload.commits.list.item.author.name   BINARY    G RR_     2263214   0.93 B     1709    "" / "태재영"
+payload.commits.list.item.distinct      BOOLEAN   G RR_     2263214   0.18 B     1709    "false" / "true"
+payload.commits.list.item.message       BINARY    G RR_     2263214   36.71 B    1709    "" / "🩹 Remove force unwrappin..."
+payload.commits.list.item.sha           BINARY    G RR_     2263214   19.45 B    1709    "0000030b18c1e60e5e4f7444e..." / "fffff6d74a6a62c234ff891d9..."
+payload.commits.list.item.url           BINARY    G RR_     2263214   20.97 B    1709    "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.distinct_size                   INT64     G RB_     1048576   0.25 B             "0" / "94273"
+payload.head                            BINARY    G RB_     1048576   23.65 B            "000010a4057ecf643d903d076..." / "fffff6d74a6a62c234ff891d9..."
+payload.push_id                         INT64     G RB_     1048576   4.21 B             "536751375" / "17575385923"
+payload.ref                             BINARY    G RB_     1048576   1.71 B             "refs/heads/0-12-1" / "refs/heads/{un}install"
+payload.size                            INT64     G RB_     1048576   0.33 B             "0" / "10000"
+public                                  BOOLEAN   G RB_     1048576   0.00 B             "true" / "true"
+repo.id                                 INT64     G RB_     1048576   0.03 B             "196334" / "768845240"
+repo.name                               BINARY    G RB_     1048576   0.04 B             "armadaproject/armada-depl..." / "vega/web-service"
+repo.url                                BINARY    G RB_     1048576   0.04 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+repo_name                               BINARY    G RB_     1048576   0.04 B             "" / "zx"
+repo_org_and_name                       BINARY    G RB_     1048576   0.04 B             "armadaproject/armada-depl..." / "vega/web-service"
+type                                    BINARY    G RB_     1048576   0.00 B             "PushEvent" / "PushEvent"
+year                                    BINARY    G RB_     1048576   0.17 B             "2015" / "2024"
+payload.repository_id                   DOUBLE    G RB_     1048576   0.05 B     840829  "1936771.0" / "7.6884524E8"
+
+Row group 2:  count: 1048576  230.92 B records  start: 535023072  total(compressed): 230.924 MB total(uncompressed):955.092 MB 
+--------------------------------------------------------------------------------
+                                        type      encodings count     avg size   nulls   min / max
+actor.avatar_url                        BINARY    G RB_     1048576   0.69 B             "https://avatars.githubuse..." / "https://avatars.githubuse..."
+actor.display_login                     BINARY    G RB_     1048576   0.70 B             "0b01" / "zzzctan"
+actor.gravatar_id                       BINARY    G RB_     1048576   0.00 B             "" / ""
+actor.id                                INT64     G RB_     1048576   0.68 B             "113" / "163059993"
+actor.login                             BINARY    G RB_     1048576   0.70 B             "0b01" / "zzzctan"
+actor.url                               BINARY    G RB_     1048576   0.71 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+created_at                              BINARY    G RB_     1048576   4.78 B             "2019-05-06T21:03:48Z" / "2024-03-16T23:36:32Z"
+day                                     BINARY    G RB_     1048576   0.27 B             "01" / "31"
+id                                      BINARY    G RB_     1048576   5.29 B             "10000198081" / "9999989579"
+month                                   BINARY    G RB_     1048576   0.19 B             "01" / "12"
+org.avatar_url                          BINARY    G RB_     1048576   0.00 B             "https://avatars.githubuse..." / "https://avatars.githubuse..."
+org.gravatar_id                         BINARY    G RB_     1048576   0.00 B             "" / ""
+org.id                                  DOUBLE    G RB_     1048576   0.00 B             "6154722.0" / "6154722.0"
+org.login                               BINARY    G RB_     1048576   0.00 B             "microsoft" / "microsoft"
+org.url                                 BINARY    G RB_     1048576   0.00 B             "https://api.github.com/or..." / "https://api.github.com/or..."
+org_name                                BINARY    G RB_     1048576   0.00 B             "microsoft" / "microsoft"
+payload.before                          BINARY    G RB_     1048576   24.32 B            "00000cbd30389d3129f843190..." / "ffffda224c24d4ab297c8cdcc..."
+payload.commits.list.item.author.email  BINARY    G RR_     2201526   1.68 B     2119    "" / "“malauter@microsoft.com”"
+payload.commits.list.item.author.name   BINARY    G RR_     2201526   1.00 B     2119    "" / "🌞 Vishwanath Narasimhan 🌤"
+payload.commits.list.item.distinct      BOOLEAN   G RR_     2201526   0.17 B     2119    "false" / "true"
+payload.commits.list.item.message       BINARY    G RR_     2201526   33.95 B    2119    "" / "🪲 Bug #219 tally fixup (..."
+payload.commits.list.item.sha           BINARY    G RR_     2201526   18.89 B    2119    "00000cbd30389d3129f843190..." / "fffffb3f134e2cdd2033ee230..."
+payload.commits.list.item.url           BINARY    G RR_     2201526   20.70 B    2119    "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.distinct_size                   INT64     G RB_     1048576   0.16 B             "0" / "13245"
+payload.head                            BINARY    G RB_     1048576   24.57 B            "00000cbd30389d3129f843190..." / "fffffb3f134e2cdd2033ee230..."
+payload.push_id                         INT64     G RB_     1048576   4.09 B             "3580259791" / "17575377694"
+payload.ref                             BINARY    G RB_     1048576   2.67 B             "refs/heads/#1720-ios-fix" / "refs/heads/⭐Docs"
+payload.size                            INT64     G RB_     1048576   0.29 B             "0" / "10000"
+public                                  BOOLEAN   G RB_     1048576   0.00 B             "true" / "true"
+repo.id                                 INT64     G RB_     1048576   0.03 B             "3085152" / "772263454"
+repo.name                               BINARY    G RB_     1048576   0.05 B             "microsoft/-dstoolkit-spee..." / "microsoft/ztlabguide"
+repo.url                                BINARY    G RB_     1048576   0.06 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+repo_name                               BINARY    G RB_     1048576   0.05 B             "-dstoolkit-speech2text-nl..." / "ztlabguide"
+repo_org_and_name                       BINARY    G RB_     1048576   0.05 B             "microsoft/-dstoolkit-spee..." / "microsoft/ztlabguide"
+type                                    BINARY    G RB_     1048576   0.00 B             "PushEvent" / "PushEvent"
+year                                    BINARY    G RB_     1048576   0.12 B             "2019" / "2024"
+payload.repository_id                   DOUBLE    G RB_     1048576   0.06 B     772611  "1.1571442E7" / "7.72263454E8"
+
+Row group 3:  count: 1048576  218.90 B records  start: 777168231  total(compressed): 218.904 MB total(uncompressed):834.388 MB 
+--------------------------------------------------------------------------------
+                                        type      encodings count     avg size   nulls   min / max
+actor.avatar_url                        BINARY    G RB_     1048576   0.66 B             "https://avatars.githubuse..." / "https://avatars.githubuse..."
+actor.display_login                     BINARY    G RB_     1048576   0.67 B     6875    "04diiguyi" / "zz12375"
+actor.gravatar_id                       BINARY    G RB_     1048576   0.00 B             "" / ""
+actor.id                                INT64     G RB_     1048576   0.65 B             "45" / "163059993"
+actor.login                             BINARY    G RB_     1048576   0.67 B             "04diiguyi" / "zz12375"
+actor.url                               BINARY    G RB_     1048576   0.68 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+created_at                              BINARY    G RB_     1048576   4.94 B             "2015-01-01T13:48:32Z" / "2024-03-16T23:59:38Z"
+day                                     BINARY    G RB_     1048576   0.30 B             "01" / "31"
+id                                      BINARY    G RB_     1048576   5.41 B             "10000003051" / "9999962205"
+month                                   BINARY    G RB_     1048576   0.21 B             "01" / "12"
+org.avatar_url                          BINARY    G RB_     1048576   0.00 B             "https://avatars.githubuse..." / "https://avatars.githubuse..."
+org.gravatar_id                         BINARY    G RB_     1048576   0.00 B             "" / ""
+org.id                                  DOUBLE    G RB_     1048576   0.00 B             "314135.0" / "9.6501863E7"
+org.login                               BINARY    G RB_     1048576   0.00 B             "benchopt" / "trinodb"
+org.url                                 BINARY    G RB_     1048576   0.00 B             "https://api.github.com/or..." / "https://api.github.com/or..."
+org_name                                BINARY    G RB_     1048576   0.00 B             "benchopt" / "trinodb"
+payload.before                          BINARY    G RB_     1048576   24.19 B            "000016ebefa6b5efd32b33b22..." / "fffff79587c70af54b15f8a1c..."
+payload.commits.list.item.author.email  BINARY    G RR_     2066287   1.69 B     4222    "" / "“worldsky86rough@gmail.com”"
+payload.commits.list.item.author.name   BINARY    G RR_     2066287   0.94 B     4222    "" / "🧑🏻‍💻 Romain Marcadier"
+payload.commits.list.item.distinct      BOOLEAN   G RR_     2066287   0.17 B     4222    "false" / "true"
+payload.commits.list.item.message       BINARY    G RR_     2066287   30.38 B    4222    "" / "🫒 Auto optimization (#79..."
+payload.commits.list.item.sha           BINARY    G RR_     2066287   20.18 B    4222    "000006f0d14292e063f5a77df..." / "fffff79587c70af54b15f8a1c..."
+payload.commits.list.item.url           BINARY    G RR_     2066287   22.06 B    4222    "https://api.github.com/re..." / "https://cschleiden.review..."
+payload.distinct_size                   INT64     G RB_     1048576   0.18 B             "0" / "27585"
+payload.head                            BINARY    G RB_     1048576   24.51 B            "000016ebefa6b5efd32b33b22..." / "fffff79587c70af54b15f8a1c..."
+payload.push_id                         INT64     G RB_     1048576   4.22 B             "536851188" / "17575480158"
+payload.ref                             BINARY    G RB_     1048576   2.27 B             "refs/heads/#119-dep-feedback" / "refs/heads/⭐samples"
+payload.size                            INT64     G RB_     1048576   0.29 B             "0" / "10000"
+public                                  BOOLEAN   G RB_     1048576   0.00 B             "true" / "true"
+repo.id                                 INT64     G RB_     1048576   0.04 B             "1038468" / "772097055"
+repo.name                               BINARY    G RB_     1048576   0.05 B             "benchopt/.github" / "trinodb/tutorials"
+repo.url                                BINARY    G RB_     1048576   0.05 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+repo_name                               BINARY    G RB_     1048576   0.05 B             "-ConditionalAccessforZero..." / "zulip-archive-new"
+repo_org_and_name                       BINARY    G RB_     1048576   0.05 B             "benchopt/.github" / "trinodb/tutorials"
+type                                    BINARY    G RB_     1048576   0.00 B             "PushEvent" / "PushEvent"
+year                                    BINARY    G RB_     1048576   0.14 B             "2015" / "2024"
+payload.repository_id                   DOUBLE    G RB_     1048576   0.05 B     817051  "2901012.0" / "7.72097055E8"
+
+Row group 4:  count: 1048576  286.76 B records  start: 1006710271  total(compressed): 286.759 MB total(uncompressed):1.910 GB 
+--------------------------------------------------------------------------------
+                                        type      encodings count     avg size   nulls   min / max
+actor.avatar_url                        BINARY    G RB_     1048576   0.47 B             "https://avatars.githubuse..." / "https://avatars.githubuse..."
+actor.display_login                     BINARY    G RB_     1048576   0.47 B     30054   "00pf00" / "zzxwill"
+actor.gravatar_id                       BINARY    G RB_     1048576   0.00 B             "" / ""
+actor.id                                INT64     G RB_     1048576   0.47 B             "45" / "161166621"
+actor.login                             BINARY    G RB_     1048576   0.48 B             "00pf00" / "zzxwill"
+actor.url                               BINARY    G RB_     1048576   0.48 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+created_at                              BINARY    G RB_     1048576   4.77 B             "2015-01-01T00:06:35Z" / "2024-03-16T22:11:17Z"
+day                                     BINARY    G RB_     1048576   0.30 B             "01" / "31"
+id                                      BINARY    G RB_     1048576   5.28 B             "10000015162" / "9999957381"
+month                                   BINARY    G RB_     1048576   0.22 B             "01" / "12"
+org.avatar_url                          BINARY    G RB_     1048576   0.00 B     2       "https://avatars.githubuse..." / "https://avatars.githubuse..."
+org.gravatar_id                         BINARY    G RB_     1048576   0.00 B     2       "" / ""
+org.id                                  DOUBLE    G RB_     1048576   0.00 B     2       "124156.0" / "1.16450972E8"
+org.login                               BINARY    G RB_     1048576   0.00 B     2       "GoogleContainerTools" / "vscode-kubernetes-tools"
+org.url                                 BINARY    G RB_     1048576   0.00 B     2       "https://api.github.com/or..." / "https://api.github.com/or..."
+org_name                                BINARY    G RB_     1048576   0.00 B             "GoogleContainerTools" / "vscode-kubernetes-tools"
+payload.before                          BINARY    G RB_     1048576   23.62 B            "00002d17c8431f78c56e0c033..." / "fffff112d597ce447e3070ef6..."
+payload.commits.list.item.author.email  BINARY    G RR_     3814838   1.11 B     3141    "" / "“nrjadkry@gmail.com”"
+payload.commits.list.item.author.name   BINARY    G RR_     3814838   0.56 B     3141    "" / "🧑🏻‍💻 Romain Marcadier"
+payload.commits.list.item.distinct      BOOLEAN   G RR_     3814838   0.10 B     3141    "false" / "true"
+payload.commits.list.item.message       BINARY    G RR_     3814838   33.54 B    3141    "" / "🪛U Update CHANGELOG
+
+Sig..."
+payload.commits.list.item.sha           BINARY    G RR_     3814838   11.83 B    3141    "00002d17c8431f78c56e0c033..." / "fffffab01a8beaf0a89dc9d94..."
+payload.commits.list.item.url           BINARY    G RR_     3814838   13.08 B    3141    "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.distinct_size                   INT64     G RB_     1048576   0.21 B             "0" / "426871"
+payload.head                            BINARY    G RB_     1048576   24.15 B            "00002d17c8431f78c56e0c033..." / "fffff112d597ce447e3070ef6..."
+payload.push_id                         INT64     G RB_     1048576   4.13 B             "536742006" / "17574924999"
+payload.ref                             BINARY    G RB_     1048576   1.92 B             "refs/heads/0" / "refs/heads/⚡feature/relea..."
+payload.size                            INT64     G RB_     1048576   0.40 B             "0" / "10000"
+public                                  BOOLEAN   G RB_     1048576   0.00 B             "true" / "true"
+repo.id                                 INT64     G RB_     1048576   0.02 B             "302322" / "769230859"
+repo.name                               BINARY    G RB_     1048576   0.03 B             "GoogleContainerTools/.all..." / "vscode-kubernetes-tools/v..."
+repo.url                                BINARY    G RB_     1048576   0.03 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+repo_name                               BINARY    G RB_     1048576   0.03 B             "" / "zui"
+repo_org_and_name                       BINARY    G RB_     1048576   0.03 B             "GoogleContainerTools/.all..." / "vscode-kubernetes-tools/v..."
+type                                    BINARY    G RB_     1048576   0.00 B             "PushEvent" / "PushEvent"
+year                                    BINARY    G RB_     1048576   0.15 B             "2015" / "2024"
+payload.repository_id                   DOUBLE    G RB_     1048576   0.04 B     869730  "302322.0" / "7.69230859E8"
+
+Row group 5:  count: 1048576  354.08 B records  start: 1307402691  total(compressed): 354.081 MB total(uncompressed):2.939 GB 
+--------------------------------------------------------------------------------
+                                        type      encodings count     avg size   nulls   min / max
+actor.avatar_url                        BINARY    G RB_     1048576   0.51 B             "https://avatars.githubuse..." / "https://avatars.githubuse..."
+actor.display_login                     BINARY    G RB_     1048576   0.51 B     14657   "1037husterljx" / "zzzwen"
+actor.gravatar_id                       BINARY    G RB_     1048576   0.00 B             "" / ""
+actor.id                                INT64     G RB_     1048576   0.50 B             "686" / "160935684"
+actor.login                             BINARY    G RB_     1048576   0.51 B             "1037husterljx" / "zzzwen"
+actor.url                               BINARY    G RB_     1048576   0.51 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+created_at                              BINARY    G RB_     1048576   4.19 B             "2015-01-01T00:06:22Z" / "2024-03-16T23:32:40Z"
+day                                     BINARY    G RB_     1048576   0.21 B             "01" / "31"
+id                                      BINARY    G RB_     1048576   4.94 B             "10000039733" / "9999938123"
+month                                   BINARY    G RB_     1048576   0.15 B             "01" / "12"
+org.avatar_url                          BINARY    G RB_     1048576   0.00 B             "https://avatars.githubuse..." / "https://avatars.githubuse..."
+org.gravatar_id                         BINARY    G RB_     1048576   0.00 B             "" / ""
+org.id                                  DOUBLE    G RB_     1048576   0.00 B             "319107.0" / "1.05945214E8"
+org.login                               BINARY    G RB_     1048576   0.00 B             "aws" / "whatwg"
+org.url                                 BINARY    G RB_     1048576   0.00 B             "https://api.github.com/or..." / "https://api.github.com/or..."
+org_name                                BINARY    G RB_     1048576   0.00 B             "aws" / "whatwg"
+payload.before                          BINARY    G RB_     1048576   23.80 B            "00000a10028e003f271e20f8a..." / "fffffde2f8c20f2b00f7ef336..."
+payload.commits.list.item.author.email  BINARY    G RR_     4497198   1.51 B     1259    "" / "“vggangas@amazon.com”"
+payload.commits.list.item.author.name   BINARY    G RR_     4497198   0.74 B     1259    "" / "🧑🏻‍💻 Romain Marcadier"
+payload.commits.list.item.distinct      BOOLEAN   G RR_     4497198   0.11 B     1259    "false" / "true"
+payload.commits.list.item.message       BINARY    G RR_     4497198   44.75 B    1259    "" / "🧹💨"
+payload.commits.list.item.sha           BINARY    G RR_     4497198   9.33 B     1259    "00000a10028e003f271e20f8a..." / "fffffde2f8c20f2b00f7ef336..."
+payload.commits.list.item.url           BINARY    G RR_     4497198   10.58 B    1259    "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.distinct_size                   INT64     G RB_     1048576   0.16 B             "0" / "4231"
+payload.head                            BINARY    G RB_     1048576   23.90 B            "00000a10028e003f271e20f8a..." / "fffffde2f8c20f2b00f7ef336..."
+payload.push_id                         INT64     G RB_     1048576   3.77 B             "536741929" / "17575359157"
+payload.ref                             BINARY    G RB_     1048576   2.31 B             "refs/heads/0-17-upgrade-docs" / "refs/heads/“serialize”"
+payload.size                            INT64     G RB_     1048576   0.47 B             "0" / "10000"
+public                                  BOOLEAN   G RB_     1048576   0.00 B             "true" / "true"
+repo.id                                 INT64     G RB_     1048576   0.01 B             "537800" / "761840164"
+repo.name                               BINARY    G RB_     1048576   0.01 B             "aws/" / "whatwg/xhr"
+repo.url                                BINARY    G RB_     1048576   0.02 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+repo_name                               BINARY    G RB_     1048576   0.01 B             "" / "zone-aware-controllers-fo..."
+repo_org_and_name                       BINARY    G RB_     1048576   0.01 B             "aws/" / "whatwg/xhr"
+type                                    BINARY    G RB_     1048576   0.00 B             "PushEvent" / "PushEvent"
+year                                    BINARY    G RB_     1048576   0.11 B             "2015" / "2024"
+payload.repository_id                   DOUBLE    G RB_     1048576   0.03 B     811327  "537800.0" / "7.61840164E8"
+
+Row group 6:  count: 1048576  296.00 B records  start: 1678686715  total(compressed): 296.005 MB total(uncompressed):1.523 GB 
+--------------------------------------------------------------------------------
+                                        type      encodings count     avg size   nulls   min / max
+actor.avatar_url                        BINARY    G RB_     1048576   0.41 B             "https://avatars.githubuse..." / "https://avatars.githubuse..."
+actor.display_login                     BINARY    G RB_     1048576   0.42 B     75775   "0yi0" / "zzmao"
+actor.gravatar_id                       BINARY    G RB_     1048576   0.00 B             "" / ""
+actor.id                                INT64     G RB_     1048576   0.41 B             "354" / "161629485"
+actor.login                             BINARY    G RB_     1048576   0.42 B             "0yi0" / "zzmao"
+actor.url                               BINARY    G RB_     1048576   0.42 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+created_at                              BINARY    G RB_     1048576   4.79 B             "2015-01-01T00:55:36Z" / "2024-03-16T23:12:02Z"
+day                                     BINARY    G RB_     1048576   0.29 B             "01" / "31"
+id                                      BINARY    G RB_     1048576   5.26 B             "10000017205" / "9999980006"
+month                                   BINARY    G RB_     1048576   0.21 B             "01" / "12"
+org.avatar_url                          BINARY    G RB_     1048576   0.00 B             "https://avatars.githubuse..." / "https://avatars.githubuse..."
+org.gravatar_id                         BINARY    G RB_     1048576   0.00 B             "" / ""
+org.id                                  DOUBLE    G RB_     1048576   0.00 B             "47359.0" / "1.09597321E8"
+org.login                               BINARY    G RB_     1048576   0.00 B             "FabEdge" / "volcano-sh"
+org.url                                 BINARY    G RB_     1048576   0.00 B             "https://api.github.com/or..." / "https://api.github.com/or..."
+org_name                                BINARY    G RB_     1048576   0.00 B             "FabEdge" / "volcano-sh"
+payload.before                          BINARY    G RB_     1048576   24.31 B            "000001c7d36decc840c967039..." / "fffff0fc521afe291a301d91f..."
+payload.commits.list.item.author.email  BINARY    G RR_     2873474   1.88 B     2051    "" / "“victor.cleaner@gmail.com”"
+payload.commits.list.item.author.name   BINARY    G RR_     2873474   0.86 B     2051    "" / "🌌"
+payload.commits.list.item.distinct      BOOLEAN   G RR_     2873474   0.12 B     2051    "false" / "true"
+payload.commits.list.item.message       BINARY    G RR_     2873474   47.15 B    2051    "" / "🧹chore:bumps (#1797)
+
+Si..."
+payload.commits.list.item.sha           BINARY    G RR_     2873474   15.97 B    2051    "000001c7d36decc840c967039..." / "fffffde2f8c20f2b00f7ef336..."
+payload.commits.list.item.url           BINARY    G RR_     2873474   17.37 B    2051    "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.distinct_size                   INT64     G RB_     1048576   0.23 B             "0" / "14813"
+payload.head                            BINARY    G RB_     1048576   24.33 B            "000001c7d36decc840c967039..." / "fffff0fc521afe291a301d91f..."
+payload.push_id                         INT64     G RB_     1048576   4.09 B             "536751403" / "17575250627"
+payload.ref                             BINARY    G RB_     1048576   1.32 B             "refs/heads/#185_update_cr..." / "refs/heads/zy_dev"
+payload.size                            INT64     G RB_     1048576   0.34 B             "0" / "8363"
+public                                  BOOLEAN   G RB_     1048576   0.00 B             "true" / "true"
+repo.id                                 INT64     G RB_     1048576   0.01 B             "160987" / "766424540"
+repo.name                               BINARY    G RB_     1048576   0.02 B             "FabEdge/fab-dns" / "volcano-sh/website"
+repo.url                                BINARY    G RB_     1048576   0.02 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+repo_name                               BINARY    G RB_     1048576   0.02 B             "" / "zest-sandbox"
+repo_org_and_name                       BINARY    G RB_     1048576   0.02 B             "FabEdge/fab-dns" / "volcano-sh/website"
+type                                    BINARY    G RB_     1048576   0.00 B             "PushEvent" / "PushEvent"
+year                                    BINARY    G RB_     1048576   0.16 B             "2015" / "2024"
+payload.repository_id                   DOUBLE    G RB_     1048576   0.04 B     870081  "161001.0" / "7.6642454E8"
+
+Row group 7:  count: 1048576  209.30 B records  start: 1989073493  total(compressed): 209.302 MB total(uncompressed):687.525 MB 
+--------------------------------------------------------------------------------
+                                        type      encodings count     avg size   nulls   min / max
+actor.avatar_url                        BINARY    G RB_     1048576   0.40 B             "https://avatars.githubuse..." / "https://avatars.githubuse..."
+actor.display_login                     BINARY    G RB_     1048576   0.43 B     128826  "0x12FD16B" / "zzcclp"
+actor.gravatar_id                       BINARY    G RB_     1048576   0.00 B             "" / ""
+actor.id                                INT64     G RB_     1048576   0.40 B             "1050" / "148579102"
+actor.login                             BINARY    G RB_     1048576   0.41 B             "0x12FD16B" / "zzcclp"
+actor.url                               BINARY    G RB_     1048576   0.41 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+created_at                              BINARY    G RB_     1048576   5.09 B             "2015-01-01T00:22:42Z" / "2024-03-16T23:46:14Z"
+day                                     BINARY    G RB_     1048576   0.35 B             "01" / "31"
+id                                      BINARY    G RB_     1048576   5.40 B             "10000038546" / "9999950713"
+month                                   BINARY    G RB_     1048576   0.25 B             "01" / "12"
+org.avatar_url                          BINARY    G RB_     1048576   0.00 B             "https://avatars.githubuse..." / "https://avatars.githubuse..."
+org.gravatar_id                         BINARY    G RB_     1048576   0.00 B             "" / ""
+org.id                                  DOUBLE    G RB_     1048576   0.00 B             "47359.0" / "47359.0"
+org.login                               BINARY    G RB_     1048576   0.00 B             "apache" / "apache"
+org.url                                 BINARY    G RB_     1048576   0.00 B             "https://api.github.com/or..." / "https://api.github.com/or..."
+org_name                                BINARY    G RB_     1048576   0.00 B             "apache" / "apache"
+payload.before                          BINARY    G RB_     1048576   24.36 B            "000007f67cdecac0187a336ce..." / "ffffffac19b653f6ddc4cb62d..."
+payload.commits.list.item.author.email  BINARY    G RR_     1713124   2.48 B     2048    "" / "赵志强"
+payload.commits.list.item.author.name   BINARY    G RR_     1713124   1.04 B     2048    "" / "주빈"
+payload.commits.list.item.distinct      BOOLEAN   G RR_     1713124   0.14 B     2048    "false" / "true"
+payload.commits.list.item.message       BINARY    G RR_     1713124   37.13 B    2048    "" / "🚑 Fix camel-lra endpoints"
+payload.commits.list.item.sha           BINARY    G RR_     1713124   22.08 B    2048    "000007f67cdecac0187a336ce..." / "ffffffac19b653f6ddc4cb62d..."
+payload.commits.list.item.url           BINARY    G RR_     1713124   23.85 B    2048    "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.distinct_size                   INT64     G RB_     1048576   0.18 B             "0" / "23354"
+payload.head                            BINARY    G RB_     1048576   24.37 B            "000007f67cdecac0187a336ce..." / "ffffffac19b653f6ddc4cb62d..."
+payload.push_id                         INT64     G RB_     1048576   4.24 B             "536745277" / "17575421395"
+payload.ref                             BINARY    G RB_     1048576   0.74 B             "refs/heads/0-rtt" / "refs/heads/zy_system_store"
+payload.size                            INT64     G RB_     1048576   0.22 B             "0" / "7907"
+public                                  BOOLEAN   G RB_     1048576   0.00 B             "true" / "true"
+repo.id                                 INT64     G RB_     1048576   0.02 B             "160988" / "769351724"
+repo.name                               BINARY    G RB_     1048576   0.02 B             "apache/" / "apache/zookeeper"
+repo.url                                BINARY    G RB_     1048576   0.02 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+repo_name                               BINARY    G RB_     1048576   0.02 B             "" / "zookeeper"
+repo_org_and_name                       BINARY    G RB_     1048576   0.02 B             "apache/" / "apache/zookeeper"
+type                                    BINARY    G RB_     1048576   0.00 B             "PushEvent" / "PushEvent"
+year                                    BINARY    G RB_     1048576   0.20 B             "2015" / "2024"
+payload.repository_id                   DOUBLE    G RB_     1048576   0.05 B     877416  "160997.0" / "7.69351724E8"
+
+Row group 8:  count: 245294  276.97 B records  start: 2208546238  total(compressed): 64.791 MB total(uncompressed):226.243 MB 
+--------------------------------------------------------------------------------
+                                        type      encodings count     avg size   nulls   min / max
+actor.avatar_url                        BINARY    G RB_     245294    0.41 B             "https://avatars.githubuse..." / "https://avatars.githubuse..."
+actor.display_login                     BINARY    G RB_     245294    0.42 B     33112   "012345" / "zzzming"
+actor.gravatar_id                       BINARY    G RB_     245294    0.00 B             "" / ""
+actor.id                                INT64     G RB_     245294    0.40 B             "8052" / "151806568"
+actor.login                             BINARY    G RB_     245294    0.42 B             "012345" / "zzzming"
+actor.url                               BINARY    G RB_     245294    0.42 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+created_at                              BINARY    G RB_     245294    5.32 B             "2015-01-01T00:03:23Z" / "2024-03-16T21:14:45Z"
+day                                     BINARY    G RB_     245294    0.32 B             "01" / "31"
+id                                      BINARY    G RB_     245294    5.83 B             "10000015278" / "9999984998"
+month                                   BINARY    G RB_     245294    0.23 B             "01" / "12"
+org.avatar_url                          BINARY    G RB_     245294    0.00 B             "https://avatars.githubuse..." / "https://avatars.githubuse..."
+org.gravatar_id                         BINARY    G RB_     245294    0.00 B             "" / ""
+org.id                                  DOUBLE    G RB_     245294    0.00 B             "47359.0" / "8.3772337E7"
+org.login                               BINARY    G RB_     245294    0.00 B             "AthenZ" / "tremor-rs"
+org.url                                 BINARY    G RB_     245294    0.00 B             "https://api.github.com/or..." / "https://api.github.com/or..."
+org_name                                BINARY    G RB_     245294    0.00 B             "AthenZ" / "tremor-rs"
+payload.before                          BINARY    G RB_     245294    24.60 B            "00003749da7d3eb14058fb650..." / "ffffa1adfae59a8e2b9fdb5a7..."
+payload.commits.list.item.author.email  BINARY    G RR_     423524    1.45 B     444     "" / "zziming@vmware.com"
+payload.commits.list.item.author.name   BINARY    G RR_     423524    0.98 B     444     "$GITUSERNAME" / "龚娜"
+payload.commits.list.item.distinct      BOOLEAN   G RR_     423524    0.15 B     444     "false" / "true"
+payload.commits.list.item.message       BINARY    G RR_     423524    72.13 B    444     "" / "🚢"
+payload.commits.list.item.sha           BINARY    G RR_     423524    21.66 B    444     "00002ae2341b40ef649f77783..." / "ffffa1adfae59a8e2b9fdb5a7..."
+payload.commits.list.item.url           BINARY    G RR_     423524    23.59 B    444     "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.distinct_size                   INT64     G RB_     245294    0.16 B             "0" / "6177"
+payload.head                            BINARY    G RB_     245294    24.62 B            "00003749da7d3eb14058fb650..." / "ffffa1adfae59a8e2b9fdb5a7..."
+payload.push_id                         INT64     G RB_     245294    5.06 B             "536741267" / "17574660935"
+payload.ref                             BINARY    G RB_     245294    1.03 B             "refs/heads/#943_remove_lo..." / "refs/heads/zzm_test"
+payload.size                            INT64     G RB_     245294    0.25 B             "0" / "10000"
+public                                  BOOLEAN   G RB_     245294    0.00 B             "true" / "true"
+repo.id                                 INT64     G RB_     245294    0.02 B             "240465" / "762494772"
+repo.name                               BINARY    G RB_     245294    0.03 B             "AthenZ/athenz" / "tremor-rs/window"
+repo.url                                BINARY    G RB_     245294    0.03 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+repo_name                               BINARY    G RB_     245294    0.03 B             ".github" / "zdm-proxy-automation"
+repo_org_and_name                       BINARY    G RB_     245294    0.03 B             "AthenZ/athenz" / "tremor-rs/window"
+type                                    BINARY    G RB_     245294    0.00 B             "PushEvent" / "PushEvent"
+year                                    BINARY    G RB_     245294    0.17 B             "2015" / "2024"
+payload.repository_id                   DOUBLE    G RB_     245294    0.04 B     213490  "291570.0" / "7.62494772E8"
+

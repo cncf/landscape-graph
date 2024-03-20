@@ -1,0 +1,550 @@
+
+File path:  /Users/matt/gharchive-cncf/cncf-parquet/ForkEvent-consolidated.parquet
+Created by: parquet-rs version 50.0.0
+Properties:
+  ARROW:schema: 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
+Schema:
+message arrow_schema {
+  optional binary actor.avatar_url (STRING);
+  optional binary actor.display_login (STRING);
+  optional binary actor.gravatar_id (STRING);
+  optional int64 actor.id;
+  optional binary actor.login (STRING);
+  optional binary actor.url (STRING);
+  optional binary created_at (STRING);
+  optional binary day (STRING);
+  optional binary id (STRING);
+  optional binary month (STRING);
+  optional binary org.avatar_url (STRING);
+  optional binary org.gravatar_id (STRING);
+  optional double org.id;
+  optional binary org.login (STRING);
+  optional binary org.url (STRING);
+  optional binary org_name (STRING);
+  optional binary payload.forkee.archive_url (STRING);
+  optional boolean payload.forkee.archived;
+  optional binary payload.forkee.assignees_url (STRING);
+  optional binary payload.forkee.blobs_url (STRING);
+  optional binary payload.forkee.branches_url (STRING);
+  optional binary payload.forkee.clone_url (STRING);
+  optional binary payload.forkee.collaborators_url (STRING);
+  optional binary payload.forkee.comments_url (STRING);
+  optional binary payload.forkee.commits_url (STRING);
+  optional binary payload.forkee.compare_url (STRING);
+  optional binary payload.forkee.contents_url (STRING);
+  optional binary payload.forkee.contributors_url (STRING);
+  optional binary payload.forkee.created_at (STRING);
+  optional binary payload.forkee.default_branch (STRING);
+  optional binary payload.forkee.deployments_url (STRING);
+  optional binary payload.forkee.description (STRING);
+  optional boolean payload.forkee.disabled;
+  optional binary payload.forkee.downloads_url (STRING);
+  optional binary payload.forkee.events_url (STRING);
+  optional boolean payload.forkee.fork;
+  optional int64 payload.forkee.forks;
+  optional int64 payload.forkee.forks_count;
+  optional binary payload.forkee.forks_url (STRING);
+  optional binary payload.forkee.full_name (STRING);
+  optional binary payload.forkee.git_commits_url (STRING);
+  optional binary payload.forkee.git_refs_url (STRING);
+  optional binary payload.forkee.git_tags_url (STRING);
+  optional binary payload.forkee.git_url (STRING);
+  optional boolean payload.forkee.has_downloads;
+  optional boolean payload.forkee.has_issues;
+  optional boolean payload.forkee.has_pages;
+  optional boolean payload.forkee.has_projects;
+  optional boolean payload.forkee.has_wiki;
+  optional binary payload.forkee.homepage (STRING);
+  optional binary payload.forkee.hooks_url (STRING);
+  optional binary payload.forkee.html_url (STRING);
+  optional int64 payload.forkee.id;
+  optional binary payload.forkee.issue_comment_url (STRING);
+  optional binary payload.forkee.issue_events_url (STRING);
+  optional binary payload.forkee.issues_url (STRING);
+  optional binary payload.forkee.keys_url (STRING);
+  optional binary payload.forkee.labels_url (STRING);
+  optional binary payload.forkee.language (STRING);
+  optional binary payload.forkee.languages_url (STRING);
+  optional int32 payload.forkee.license;
+  optional binary payload.forkee.license.key (STRING);
+  optional binary payload.forkee.license.name (STRING);
+  optional binary payload.forkee.license.node_id (STRING);
+  optional binary payload.forkee.license.spdx_id (STRING);
+  optional binary payload.forkee.license.url (STRING);
+  optional binary payload.forkee.merges_url (STRING);
+  optional binary payload.forkee.milestones_url (STRING);
+  optional int32 payload.forkee.mirror_url;
+  optional binary payload.forkee.name (STRING);
+  optional binary payload.forkee.node_id (STRING);
+  optional binary payload.forkee.notifications_url (STRING);
+  optional int64 payload.forkee.open_issues;
+  optional int64 payload.forkee.open_issues_count;
+  optional binary payload.forkee.owner.avatar_url (STRING);
+  optional binary payload.forkee.owner.events_url (STRING);
+  optional binary payload.forkee.owner.followers_url (STRING);
+  optional binary payload.forkee.owner.following_url (STRING);
+  optional binary payload.forkee.owner.gists_url (STRING);
+  optional binary payload.forkee.owner.gravatar_id (STRING);
+  optional binary payload.forkee.owner.html_url (STRING);
+  optional int64 payload.forkee.owner.id;
+  optional binary payload.forkee.owner.login (STRING);
+  optional binary payload.forkee.owner.node_id (STRING);
+  optional binary payload.forkee.owner.organizations_url (STRING);
+  optional binary payload.forkee.owner.received_events_url (STRING);
+  optional binary payload.forkee.owner.repos_url (STRING);
+  optional boolean payload.forkee.owner.site_admin;
+  optional binary payload.forkee.owner.starred_url (STRING);
+  optional binary payload.forkee.owner.subscriptions_url (STRING);
+  optional binary payload.forkee.owner.type (STRING);
+  optional binary payload.forkee.owner.url (STRING);
+  optional boolean payload.forkee.private;
+  optional boolean payload.forkee.public;
+  optional binary payload.forkee.pulls_url (STRING);
+  optional binary payload.forkee.pushed_at (STRING);
+  optional binary payload.forkee.releases_url (STRING);
+  optional int64 payload.forkee.size;
+  optional binary payload.forkee.ssh_url (STRING);
+  optional int64 payload.forkee.stargazers_count;
+  optional binary payload.forkee.stargazers_url (STRING);
+  optional binary payload.forkee.statuses_url (STRING);
+  optional binary payload.forkee.subscribers_url (STRING);
+  optional binary payload.forkee.subscription_url (STRING);
+  optional binary payload.forkee.svn_url (STRING);
+  optional binary payload.forkee.tags_url (STRING);
+  optional binary payload.forkee.teams_url (STRING);
+  optional binary payload.forkee.trees_url (STRING);
+  optional binary payload.forkee.updated_at (STRING);
+  optional binary payload.forkee.url (STRING);
+  optional int64 payload.forkee.watchers;
+  optional int64 payload.forkee.watchers_count;
+  optional boolean public;
+  optional int64 repo.id;
+  optional binary repo.name (STRING);
+  optional binary repo.url (STRING);
+  optional binary repo_name (STRING);
+  optional binary repo_org_and_name (STRING);
+  optional binary type (STRING);
+  optional binary year (STRING);
+  optional boolean payload.forkee.allow_forking;
+  optional boolean payload.forkee.is_template;
+  optional group payload.forkee.topics (LIST) {
+    repeated group list {
+      optional binary item (STRING);
+    }
+  }
+  optional binary payload.forkee.visibility (STRING);
+  optional boolean payload.forkee.web_commit_signoff_required;
+  optional boolean payload.forkee.has_discussions;
+  optional int32 payload.forkee.code_of_conduct;
+  optional binary payload.forkee.code_of_conduct.html_url (STRING);
+  optional binary payload.forkee.code_of_conduct.key (STRING);
+  optional binary payload.forkee.code_of_conduct.name (STRING);
+  optional binary payload.forkee.code_of_conduct.url (STRING);
+}
+
+
+Row group 0:  count: 1048576  586.08 B records  start: 4  total(compressed): 586.084 MB total(uncompressed):3.828 GB 
+--------------------------------------------------------------------------------
+                                            type      encodings count     avg size   nulls   min / max
+actor.avatar_url                            BINARY    G RB_     1048576   5.42 B             "https://avatars.githubuse..." / "https://avatars.githubuse..."
+actor.display_login                         BINARY    G RB_     1048576   6.68 B     70290   "0-0-0-0-0-0-0" / "zzzzzzzz3"
+actor.gravatar_id                           BINARY    G RB_     1048576   0.00 B             "" / ""
+actor.id                                    INT64     G RB_     1048576   4.24 B             "7" / "163694212"
+actor.login                                 BINARY    G RB_     1048576   7.10 B             "0-0-0-0-0-0-0" / "zzzzzzzz3"
+actor.url                                   BINARY    G RB_     1048576   7.98 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+created_at                                  BINARY    G RB_     1048576   5.78 B             "2015-01-01T00:25:07Z" / "2024-03-16T23:50:37Z"
+day                                         BINARY    G RB_     1048576   0.50 B             "01" / "31"
+id                                          BINARY    G RB_     1048576   5.91 B             "10000038486" / "9999939246"
+month                                       BINARY    G RB_     1048576   0.35 B             "01" / "12"
+org.avatar_url                              BINARY    G RB_     1048576   0.00 B             "https://avatars.githubuse..." / "https://avatars.githubuse..."
+org.gravatar_id                             BINARY    G RB_     1048576   0.00 B             "" / ""
+org.id                                      DOUBLE    G RB_     1048576   0.00 B             "379216.0" / "1.15947239E8"
+org.login                                   BINARY    G RB_     1048576   0.00 B             "apple" / "werf"
+org.url                                     BINARY    G RB_     1048576   0.00 B             "https://api.github.com/or..." / "https://api.github.com/or..."
+org_name                                    BINARY    G RB_     1048576   0.00 B             "apple" / "werf"
+payload.forkee.archive_url                  BINARY    G RB_     1048576   9.39 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.archived                     BOOLEAN   G RB_     1048576   0.05 B     161371  "false" / "false"
+payload.forkee.assignees_url                BINARY    G RB_     1048576   9.34 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.blobs_url                    BINARY    G RB_     1048576   9.34 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.branches_url                 BINARY    G RB_     1048576   9.35 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.clone_url                    BINARY    G RB_     1048576   9.11 B             "https://github.com/0-0-0-..." / "https://github.com/zzzzzz..."
+payload.forkee.collaborators_url            BINARY    G RB_     1048576   9.46 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.comments_url                 BINARY    G RB_     1048576   9.35 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.commits_url                  BINARY    G RB_     1048576   9.33 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.compare_url                  BINARY    G RB_     1048576   9.41 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.contents_url                 BINARY    G RB_     1048576   9.34 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.contributors_url             BINARY    G RB_     1048576   9.32 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.created_at                   BINARY    G RB_     1048576   5.78 B             "2015-01-01T00:25:06Z" / "2024-03-16T23:50:36Z"
+payload.forkee.default_branch               BINARY    G RB_     1048576   0.19 B             ""maestro"" / "表单"
+payload.forkee.deployments_url              BINARY    G RB_     1048576   8.94 B     49652   "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.description                  BINARY    G RB_     1048576   0.58 B     57578   "" / "🧠🗼LearnSNNArch"
+payload.forkee.disabled                     BOOLEAN   G RB_     1048576   0.05 B     260522  "false" / "true"
+payload.forkee.downloads_url                BINARY    G RB_     1048576   9.29 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.events_url                   BINARY    G RB_     1048576   9.26 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.fork                         BOOLEAN   G RB_     1048576   0.00 B             "true" / "true"
+payload.forkee.forks                        INT64     G RB_     1048576   0.00 B             "0" / "1"
+payload.forkee.forks_count                  INT64     G RB_     1048576   0.00 B             "0" / "1"
+payload.forkee.forks_url                    BINARY    G RB_     1048576   9.25 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.full_name                    BINARY    G RB_     1048576   8.63 B             "0-0-0-0-0-0-0/grpc" / "zzzzzzzz3/grafika"
+payload.forkee.git_commits_url              BINARY    G RB_     1048576   9.35 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.git_refs_url                 BINARY    G RB_     1048576   9.34 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.git_tags_url                 BINARY    G RB_     1048576   9.34 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.git_url                      BINARY    G RB_     1048576   9.09 B             "git://github.com/0-0-0-0-..." / "git://github.com/zzzzzzzz..."
+payload.forkee.has_downloads                BOOLEAN   G RB_     1048576   0.01 B             "false" / "true"
+payload.forkee.has_issues                   BOOLEAN   G RB_     1048576   0.00 B             "false" / "true"
+payload.forkee.has_pages                    BOOLEAN   G RB_     1048576   0.00 B             "false" / "true"
+payload.forkee.has_projects                 BOOLEAN   G RB_     1048576   0.04 B     123039  "false" / "true"
+payload.forkee.has_wiki                     BOOLEAN   G RB_     1048576   0.02 B             "false" / "true"
+payload.forkee.homepage                     BINARY    G RB_     1048576   0.11 B     174831  "" / "www.visualstudio.com"
+payload.forkee.hooks_url                    BINARY    G RB_     1048576   9.25 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.html_url                     BINARY    G RB_     1048576   9.03 B             "https://github.com/0-0-0-..." / "https://github.com/zzzzzz..."
+payload.forkee.id                           INT64     G RB_     1048576   4.36 B             "28677810" / "773174477"
+payload.forkee.issue_comment_url            BINARY    G RB_     1048576   9.43 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.issue_events_url             BINARY    G RB_     1048576   9.39 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.issues_url                   BINARY    G RB_     1048576   9.34 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.keys_url                     BINARY    G RB_     1048576   9.33 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.labels_url                   BINARY    G RB_     1048576   9.33 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.language                     BINARY    G RB_     1048576   0.01 B     1043698 "Arduino" / "XSLT"
+payload.forkee.languages_url                BINARY    G RB_     1048576   9.29 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.license                      INT32     G RB_     1048576   0.00 B     1048576 
+payload.forkee.license.key                  BINARY    G RB_     1048576   0.13 B     539190  "0bsd" / "unlicense"
+payload.forkee.license.name                 BINARY    G RB_     1048576   0.13 B     539190  "Academic Free License v3.0" / "University of Illinois/NC..."
+payload.forkee.license.node_id              BINARY    G RB_     1048576   0.13 B     543849  "MDc6TGljZW5zZTA=" / "MDc6TGljZW5zZTk="
+payload.forkee.license.spdx_id              BINARY    G RB_     1048576   0.13 B     541281  "0BSD" / "Unlicense"
+payload.forkee.license.url                  BINARY    G RB_     1048576   0.11 B     627006  "https://api.github.com/li..." / "https://api.github.com/li..."
+payload.forkee.merges_url                   BINARY    G RB_     1048576   9.26 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.milestones_url               BINARY    G RB_     1048576   9.36 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.mirror_url                   INT32     G RB_     1048576   0.00 B     1048576 
+payload.forkee.name                         BINARY    G RB_     1048576   0.36 B             "-" / "zy"
+payload.forkee.node_id                      BINARY    G RB_     1048576   4.95 B     204630  "MDEwOlJlcG9zaXRvcnk0MDA2N..." / "R_kgDOLhWv3w"
+payload.forkee.notifications_url            BINARY    G RB_     1048576   9.54 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.open_issues                  INT64     G RB_     1048576   0.00 B             "0" / "0"
+payload.forkee.open_issues_count            INT64     G RB_     1048576   0.00 B             "0" / "0"
+payload.forkee.owner.avatar_url             BINARY    G RB_     1048576   6.09 B             "https://avatars.githubuse..." / "https://avatars7.githubus..."
+payload.forkee.owner.events_url             BINARY    G RB_     1048576   8.56 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.forkee.owner.followers_url          BINARY    G RB_     1048576   8.43 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.forkee.owner.following_url          BINARY    G RB_     1048576   8.57 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.forkee.owner.gists_url              BINARY    G RB_     1048576   8.60 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.forkee.owner.gravatar_id            BINARY    G RB_     1048576   0.00 B             "" / ""
+payload.forkee.owner.html_url               BINARY    G RB_     1048576   7.72 B             "https://github.com/0-0-0-..." / "https://github.com/zzzzzzzz3"
+payload.forkee.owner.id                     INT64     G RB_     1048576   4.24 B             "7" / "163694212"
+payload.forkee.owner.login                  BINARY    G RB_     1048576   7.10 B             "0-0-0-0-0-0-0" / "zzzzzzzz3"
+payload.forkee.owner.node_id                BINARY    G RB_     1048576   4.63 B     204630  "MDEyOk9yZ2FuaXphdGlvbjE0M..." / "U_kgDOCcHGhA"
+payload.forkee.owner.organizations_url      BINARY    G RB_     1048576   8.35 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.forkee.owner.received_events_url    BINARY    G RB_     1048576   8.57 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.forkee.owner.repos_url              BINARY    G RB_     1048576   8.37 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.forkee.owner.site_admin             BOOLEAN   G RB_     1048576   0.00 B             "false" / "true"
+payload.forkee.owner.starred_url            BINARY    G RB_     1048576   8.58 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.forkee.owner.subscriptions_url      BINARY    G RB_     1048576   8.48 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.forkee.owner.type                   BINARY    G RB_     1048576   0.06 B             "Organization" / "User"
+payload.forkee.owner.url                    BINARY    G RB_     1048576   7.98 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.forkee.private                      BOOLEAN   G RB_     1048576   0.00 B             "false" / "false"
+payload.forkee.public                       BOOLEAN   G RB_     1048576   0.00 B             "true" / "true"
+payload.forkee.pulls_url                    BINARY    G RB_     1048576   9.33 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.pushed_at                    BINARY    G RB_     1048576   3.44 B             "2012-01-26T18:55:46Z" / "2024-03-16T22:55:10Z"
+payload.forkee.releases_url                 BINARY    G RB_     1048576   9.33 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.size                         INT64     G RB_     1048576   1.85 B             "0" / "36217752"
+payload.forkee.ssh_url                      BINARY    G RB_     1048576   9.05 B             "git@github.com:0-0-0-0-0-..." / "org-89961216@github.com:s..."
+payload.forkee.stargazers_count             INT64     G RB_     1048576   0.00 B             "0" / "1"
+payload.forkee.stargazers_url               BINARY    G RB_     1048576   9.31 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.statuses_url                 BINARY    G RB_     1048576   9.34 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.subscribers_url              BINARY    G RB_     1048576   9.31 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.subscription_url             BINARY    G RB_     1048576   9.32 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.svn_url                      BINARY    G RB_     1048576   9.03 B             "https://github.com/0-0-0-..." / "https://github.com/zzzzzz..."
+payload.forkee.tags_url                     BINARY    G RB_     1048576   9.24 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.teams_url                    BINARY    G RB_     1048576   9.25 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.trees_url                    BINARY    G RB_     1048576   9.34 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.updated_at                   BINARY    G RB_     1048576   5.07 B             "2013-10-09T22:14:06Z" / "2024-03-16T23:50:36Z"
+payload.forkee.url                          BINARY    G RB_     1048576   9.16 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.watchers                     INT64     G RB_     1048576   0.00 B             "0" / "1"
+payload.forkee.watchers_count               INT64     G RB_     1048576   0.00 B             "0" / "1"
+public                                      BOOLEAN   G RB_     1048576   0.00 B             "true" / "true"
+repo.id                                     INT64     G RB_     1048576   0.10 B             "196334" / "770828344"
+repo.name                                   BINARY    G RB_     1048576   0.15 B             "apple/ARKitScenes" / "werf/werf-guides"
+repo.url                                    BINARY    G RB_     1048576   0.16 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+repo_name                                   BINARY    G RB_     1048576   0.14 B             "-azure-data-services-go-f..." / "zx"
+repo_org_and_name                           BINARY    G RB_     1048576   0.15 B             "apple/ARKitScenes" / "werf/werf-guides"
+type                                        BINARY    G RB_     1048576   0.00 B             "ForkEvent" / "ForkEvent"
+year                                        BINARY    G RB_     1048576   0.28 B             "2015" / "2024"
+payload.forkee.allow_forking                BOOLEAN   G RB_     1048576   0.09 B     665398  "true" / "true"
+payload.forkee.is_template                  BOOLEAN   G RB_     1048576   0.09 B     674853  "false" / "true"
+payload.forkee.topics.list.item             BINARY    G RR_     1048576   0.10 B     1047648 "google" / "google"
+payload.forkee.visibility                   BINARY    G RB_     1048576   0.09 B     672847  "public" / "public"
+payload.forkee.web_commit_signoff_required  BOOLEAN   G RB_     1048576   0.08 B     783234  "false" / "true"
+payload.forkee.has_discussions              BOOLEAN   G RB_     1048576   0.07 B     833726  "false" / "false"
+payload.forkee.code_of_conduct              INT32     G RB_     1048576   0.00 B     1048576 
+payload.forkee.code_of_conduct.html_url     BINARY    G RB_     1048576   0.00 B     1048574 "https://github.com/cather..." / "https://github.com/mrmoti..."
+payload.forkee.code_of_conduct.key          BINARY    G RB_     1048576   0.00 B     1048574 "other" / "other"
+payload.forkee.code_of_conduct.name         BINARY    G RB_     1048576   0.00 B     1048574 "Other" / "Other"
+payload.forkee.code_of_conduct.url          BINARY    G RB_     1048576   0.00 B     1048574 "https://api.github.com/re..." / "https://api.github.com/re..."
+
+Row group 1:  count: 1048576  568.01 B records  start: 614570886  total(compressed): 568.013 MB total(uncompressed):3.726 GB 
+--------------------------------------------------------------------------------
+                                            type      encodings count     avg size   nulls   min / max
+actor.avatar_url                            BINARY    G RB_     1048576   5.39 B             "https://avatars.githubuse..." / "https://avatars.githubuse..."
+actor.display_login                         BINARY    G RB_     1048576   6.65 B     47758   "0-Ayala" / "zzzzzzzzzzb"
+actor.gravatar_id                           BINARY    G RB_     1048576   0.00 B             "" / ""
+actor.id                                    INT64     G RB_     1048576   4.18 B             "7" / "163682820"
+actor.login                                 BINARY    G RB_     1048576   6.90 B             "0-Ayala" / "zzzzzzzzzzb"
+actor.url                                   BINARY    G RB_     1048576   7.77 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+created_at                                  BINARY    G RB_     1048576   5.82 B             "2015-01-01T01:39:39Z" / "2024-03-16T23:59:43Z"
+day                                         BINARY    G RB_     1048576   0.50 B             "01" / "31"
+id                                          BINARY    G RB_     1048576   5.93 B             "10000005801" / "9999995733"
+month                                       BINARY    G RB_     1048576   0.36 B             "01" / "12"
+org.avatar_url                              BINARY    G RB_     1048576   0.00 B     3       "https://avatars.githubuse..." / "https://avatars.githubuse..."
+org.gravatar_id                             BINARY    G RB_     1048576   0.00 B     3       "" / ""
+org.id                                      DOUBLE    G RB_     1048576   0.00 B     3       "47359.0" / "1.16450972E8"
+org.login                                   BINARY    G RB_     1048576   0.00 B     3       "FabEdge" / "whatwg"
+org.url                                     BINARY    G RB_     1048576   0.00 B     3       "https://api.github.com/or..." / "https://api.github.com/or..."
+org_name                                    BINARY    G RB_     1048576   0.00 B             "FabEdge" / "whatwg"
+payload.forkee.archive_url                  BINARY    G RB_     1048576   9.02 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.archived                     BOOLEAN   G RB_     1048576   0.05 B     129309  "false" / "false"
+payload.forkee.assignees_url                BINARY    G RB_     1048576   8.98 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.blobs_url                    BINARY    G RB_     1048576   8.97 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.branches_url                 BINARY    G RB_     1048576   8.97 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.clone_url                    BINARY    G RB_     1048576   8.71 B             "https://github.com/0-Ayal..." / "https://github.com/zzzzzz..."
+payload.forkee.collaborators_url            BINARY    G RB_     1048576   9.12 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.comments_url                 BINARY    G RB_     1048576   8.98 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.commits_url                  BINARY    G RB_     1048576   8.95 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.compare_url                  BINARY    G RB_     1048576   9.05 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.contents_url                 BINARY    G RB_     1048576   8.98 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.contributors_url             BINARY    G RB_     1048576   8.94 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.created_at                   BINARY    G RB_     1048576   5.82 B             "2015-01-01T01:39:39Z" / "2024-03-16T23:59:43Z"
+payload.forkee.default_branch               BINARY    G RB_     1048576   0.20 B             ""master"" / "线上移动支付"
+payload.forkee.deployments_url              BINARY    G RB_     1048576   8.70 B     33309   "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.description                  BINARY    G RB_     1048576   0.40 B     22029   "" / "🧰 DevSpace CLI - The Swi..."
+payload.forkee.disabled                     BOOLEAN   G RB_     1048576   0.07 B     282390  "false" / "true"
+payload.forkee.downloads_url                BINARY    G RB_     1048576   8.92 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.events_url                   BINARY    G RB_     1048576   8.88 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.fork                         BOOLEAN   G RB_     1048576   0.00 B             "true" / "true"
+payload.forkee.forks                        INT64     G RB_     1048576   0.00 B             "0" / "1"
+payload.forkee.forks_count                  INT64     G RB_     1048576   0.00 B             "0" / "1"
+payload.forkee.forks_url                    BINARY    G RB_     1048576   8.86 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.full_name                    BINARY    G RB_     1048576   8.18 B             "0-Ayala/jupyter" / "zzzzzzzzzzb/kubernetes"
+payload.forkee.git_commits_url              BINARY    G RB_     1048576   8.98 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.git_refs_url                 BINARY    G RB_     1048576   8.96 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.git_tags_url                 BINARY    G RB_     1048576   8.96 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.git_url                      BINARY    G RB_     1048576   8.69 B             "git://github.com/0-Ayala/..." / "git://github.com/zzzzzzzz..."
+payload.forkee.has_downloads                BOOLEAN   G RB_     1048576   0.00 B             "false" / "true"
+payload.forkee.has_issues                   BOOLEAN   G RB_     1048576   0.00 B             "false" / "true"
+payload.forkee.has_pages                    BOOLEAN   G RB_     1048576   0.00 B     2       "false" / "true"
+payload.forkee.has_projects                 BOOLEAN   G RB_     1048576   0.04 B     91353   "false" / "true"
+payload.forkee.has_wiki                     BOOLEAN   G RB_     1048576   0.02 B             "false" / "true"
+payload.forkee.homepage                     BINARY    G RB_     1048576   0.14 B     219596  "" / "www.pip-installer.org"
+payload.forkee.hooks_url                    BINARY    G RB_     1048576   8.87 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.html_url                     BINARY    G RB_     1048576   8.63 B             "https://github.com/0-Ayal..." / "https://github.com/zzzzzz..."
+payload.forkee.id                           INT64     G RB_     1048576   4.37 B             "28678666" / "773175914"
+payload.forkee.issue_comment_url            BINARY    G RB_     1048576   9.08 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.issue_events_url             BINARY    G RB_     1048576   9.02 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.issues_url                   BINARY    G RB_     1048576   8.97 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.keys_url                     BINARY    G RB_     1048576   8.95 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.labels_url                   BINARY    G RB_     1048576   8.94 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.language                     BINARY    G RB_     1048576   0.01 B     1045457 "ActionScript" / "XSLT"
+payload.forkee.languages_url                BINARY    G RB_     1048576   8.92 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.license                      INT32     G RB_     1048576   0.00 B     1048576 
+payload.forkee.license.key                  BINARY    G RB_     1048576   0.13 B     502121  "agpl-3.0" / "unlicense"
+payload.forkee.license.name                 BINARY    G RB_     1048576   0.13 B     502121  "Apache License 2.0" / "The Unlicense"
+payload.forkee.license.node_id              BINARY    G RB_     1048576   0.13 B     509082  "MDc6TGljZW5zZTA=" / "MDc6TGljZW5zZTk="
+payload.forkee.license.spdx_id              BINARY    G RB_     1048576   0.13 B     504884  "AGPL-3.0" / "Unlicense"
+payload.forkee.license.url                  BINARY    G RB_     1048576   0.12 B     558702  "https://api.github.com/li..." / "https://api.github.com/li..."
+payload.forkee.merges_url                   BINARY    G RB_     1048576   8.88 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.milestones_url               BINARY    G RB_     1048576   8.98 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.mirror_url                   INT32     G RB_     1048576   0.00 B     1048576 
+payload.forkee.name                         BINARY    G RB_     1048576   0.29 B             "-" / "zuran"
+payload.forkee.node_id                      BINARY    G RB_     1048576   5.14 B     186101  "MDEwOlJlcG9zaXRvcnk0MDA2N..." / "R_kgDOLhWuZA"
+payload.forkee.notifications_url            BINARY    G RB_     1048576   9.20 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.open_issues                  INT64     G RB_     1048576   0.00 B             "0" / "1"
+payload.forkee.open_issues_count            INT64     G RB_     1048576   0.00 B             "0" / "1"
+payload.forkee.owner.avatar_url             BINARY    G RB_     1048576   6.09 B             "https://avatars.githubuse..." / "https://avatars7.githubus..."
+payload.forkee.owner.events_url             BINARY    G RB_     1048576   8.36 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.forkee.owner.followers_url          BINARY    G RB_     1048576   8.23 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.forkee.owner.following_url          BINARY    G RB_     1048576   8.38 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.forkee.owner.gists_url              BINARY    G RB_     1048576   8.40 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.forkee.owner.gravatar_id            BINARY    G RB_     1048576   0.00 B             "" / ""
+payload.forkee.owner.html_url               BINARY    G RB_     1048576   7.51 B             "https://github.com/0-Ayala" / "https://github.com/zzzzzz..."
+payload.forkee.owner.id                     INT64     G RB_     1048576   4.18 B             "7" / "163682820"
+payload.forkee.owner.login                  BINARY    G RB_     1048576   6.90 B             "0-Ayala" / "zzzzzzzzzzb"
+payload.forkee.owner.node_id                BINARY    G RB_     1048576   4.73 B     186101  "MDEyOk9yZ2FuaXphdGlvbjE0M..." / "U_kgDOCcGaBA"
+payload.forkee.owner.organizations_url      BINARY    G RB_     1048576   8.14 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.forkee.owner.received_events_url    BINARY    G RB_     1048576   8.37 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.forkee.owner.repos_url              BINARY    G RB_     1048576   8.17 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.forkee.owner.site_admin             BOOLEAN   G RB_     1048576   0.00 B             "false" / "true"
+payload.forkee.owner.starred_url            BINARY    G RB_     1048576   8.38 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.forkee.owner.subscriptions_url      BINARY    G RB_     1048576   8.28 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.forkee.owner.type                   BINARY    G RB_     1048576   0.06 B             "Organization" / "User"
+payload.forkee.owner.url                    BINARY    G RB_     1048576   7.77 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.forkee.private                      BOOLEAN   G RB_     1048576   0.00 B             "false" / "false"
+payload.forkee.public                       BOOLEAN   G RB_     1048576   0.00 B             "true" / "true"
+payload.forkee.pulls_url                    BINARY    G RB_     1048576   8.95 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.pushed_at                    BINARY    G RB_     1048576   4.37 B             "2009-05-21T03:16:15Z" / "2024-03-16T22:25:15Z"
+payload.forkee.releases_url                 BINARY    G RB_     1048576   8.95 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.size                         INT64     G RB_     1048576   2.10 B             "0" / "15956707"
+payload.forkee.ssh_url                      BINARY    G RB_     1048576   8.65 B             "git@github.com:0-Ayala/ju..." / "org-97245012@github.com:j..."
+payload.forkee.stargazers_count             INT64     G RB_     1048576   0.00 B             "0" / "1"
+payload.forkee.stargazers_url               BINARY    G RB_     1048576   8.92 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.statuses_url                 BINARY    G RB_     1048576   8.95 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.subscribers_url              BINARY    G RB_     1048576   8.92 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.subscription_url             BINARY    G RB_     1048576   8.93 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.svn_url                      BINARY    G RB_     1048576   8.63 B             "https://github.com/0-Ayal..." / "https://github.com/zzzzzz..."
+payload.forkee.tags_url                     BINARY    G RB_     1048576   8.85 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.teams_url                    BINARY    G RB_     1048576   8.87 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.trees_url                    BINARY    G RB_     1048576   8.97 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.updated_at                   BINARY    G RB_     1048576   4.97 B             "2013-06-28T15:08:30Z" / "2024-03-16T23:59:43Z"
+payload.forkee.url                          BINARY    G RB_     1048576   8.78 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.watchers                     INT64     G RB_     1048576   0.00 B             "0" / "1"
+payload.forkee.watchers_count               INT64     G RB_     1048576   0.00 B             "0" / "1"
+public                                      BOOLEAN   G RB_     1048576   0.00 B             "true" / "true"
+repo.id                                     INT64     G RB_     1048576   0.07 B             "160987" / "772187858"
+repo.name                                   BINARY    G RB_     1048576   0.10 B             "FabEdge/fab-dns" / "whatwg/xhr"
+repo.url                                    BINARY    G RB_     1048576   0.11 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+repo_name                                   BINARY    G RB_     1048576   0.09 B             "" / "zui"
+repo_org_and_name                           BINARY    G RB_     1048576   0.10 B             "FabEdge/fab-dns" / "whatwg/xhr"
+type                                        BINARY    G RB_     1048576   0.00 B             "ForkEvent" / "ForkEvent"
+year                                        BINARY    G RB_     1048576   0.29 B             "2015" / "2024"
+payload.forkee.allow_forking                BOOLEAN   G RB_     1048576   0.10 B     705915  "true" / "true"
+payload.forkee.is_template                  BOOLEAN   G RB_     1048576   0.09 B     716487  "false" / "true"
+payload.forkee.topics.list.item             BINARY    G RR_     1048576   0.10 B     1048576 
+payload.forkee.visibility                   BINARY    G RB_     1048576   0.09 B     714788  "public" / "public"
+payload.forkee.web_commit_signoff_required  BOOLEAN   G RB_     1048576   0.08 B     835165  "false" / "true"
+payload.forkee.has_discussions              BOOLEAN   G RB_     1048576   0.07 B     895908  "false" / "false"
+payload.forkee.code_of_conduct              INT32     G RB_     1048576   0.00 B     1048576 
+payload.forkee.code_of_conduct.html_url     BINARY    G RB_     1048576   0.00 B     1048571 "https://github.com/Xiaoch..." / "https://github.com/tottot..."
+payload.forkee.code_of_conduct.key          BINARY    G RB_     1048576   0.00 B     1048571 "other" / "other"
+payload.forkee.code_of_conduct.name         BINARY    G RB_     1048576   0.00 B     1048571 "Other" / "Other"
+payload.forkee.code_of_conduct.url          BINARY    G RB_     1048576   0.00 B     1048571 "https://api.github.com/re..." / "https://api.github.com/re..."
+
+Row group 2:  count: 260087  567.08 B records  start: 1210192478  total(compressed): 140.658 MB total(uncompressed):924.288 MB 
+--------------------------------------------------------------------------------
+                                            type      encodings count     avg size   nulls   min / max
+actor.avatar_url                            BINARY    G RB_     260087    5.45 B             "https://avatars.githubuse..." / "https://avatars.githubuse..."
+actor.display_login                         BINARY    G RB_     260087    6.38 B     25484   "0-Vector" / "zzzzzzzzzzzzzzzzzzzzzzzzz..."
+actor.gravatar_id                           BINARY    G RB_     260087    0.00 B             "" / ""
+actor.id                                    INT64     G RB_     260087    4.72 B             "19" / "163670955"
+actor.login                                 BINARY    G RB_     260087    6.97 B             "0-Vector" / "zzzzzzzzzzzzzzzzzzzzzzzzz..."
+actor.url                                   BINARY    G RB_     260087    7.81 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+created_at                                  BINARY    G RB_     260087    6.00 B             "2015-01-01T02:22:05Z" / "2024-03-16T23:56:13Z"
+day                                         BINARY    G RB_     260087    0.47 B             "01" / "31"
+id                                          BINARY    G RB_     260087    6.27 B             "10000051826" / "9999941017"
+month                                       BINARY    G RB_     260087    0.34 B             "01" / "12"
+org.avatar_url                              BINARY    G RB_     260087    0.00 B             "https://avatars.githubuse..." / "https://avatars.githubuse..."
+org.gravatar_id                             BINARY    G RB_     260087    0.00 B             "" / ""
+org.id                                      DOUBLE    G RB_     260087    0.00 B             "47359.0" / "8.3772337E7"
+org.login                                   BINARY    G RB_     260087    0.00 B             "AthenZ" / "tremor-rs"
+org.url                                     BINARY    G RB_     260087    0.00 B             "https://api.github.com/or..." / "https://api.github.com/or..."
+org_name                                    BINARY    G RB_     260087    0.00 B             "AthenZ" / "tremor-rs"
+payload.forkee.archive_url                  BINARY    G RB_     260087    8.91 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.archived                     BOOLEAN   G RB_     260087    0.06 B     59097   "false" / "false"
+payload.forkee.assignees_url                BINARY    G RB_     260087    8.90 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.blobs_url                    BINARY    G RB_     260087    8.90 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.branches_url                 BINARY    G RB_     260087    8.91 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.clone_url                    BINARY    G RB_     260087    8.67 B             "https://github.com/0-Vect..." / "https://github.com/zzzzzz..."
+payload.forkee.collaborators_url            BINARY    G RB_     260087    9.03 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.comments_url                 BINARY    G RB_     260087    8.91 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.commits_url                  BINARY    G RB_     260087    8.87 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.compare_url                  BINARY    G RB_     260087    8.93 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.contents_url                 BINARY    G RB_     260087    8.90 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.contributors_url             BINARY    G RB_     260087    8.86 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.created_at                   BINARY    G RB_     260087    6.01 B             "2015-01-01T02:22:03Z" / "2024-03-16T23:56:12Z"
+payload.forkee.default_branch               BINARY    G RB_     260087    0.17 B             "0.1" / "windsor-merge"
+payload.forkee.deployments_url              BINARY    G RB_     260087    8.31 B     18382   "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.description                  BINARY    G RB_     260087    0.32 B     763     " Apache RocketMQ是一个云原生消息和..." / "🛡️📃 PhoenixDOMString🚀S..."
+payload.forkee.disabled                     BOOLEAN   G RB_     260087    0.08 B     99876   "false" / "false"
+payload.forkee.downloads_url                BINARY    G RB_     260087    8.86 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.events_url                   BINARY    G RB_     260087    8.81 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.fork                         BOOLEAN   G RB_     260087    0.00 B             "true" / "true"
+payload.forkee.forks                        INT64     G RB_     260087    0.00 B             "0" / "1"
+payload.forkee.forks_count                  INT64     G RB_     260087    0.00 B             "0" / "1"
+payload.forkee.forks_url                    BINARY    G RB_     260087    8.80 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.full_name                    BINARY    G RB_     260087    8.26 B             "0-Vector/spark" / "zzzzzzzzzzzzzzzzzzzzzzzzz..."
+payload.forkee.git_commits_url              BINARY    G RB_     260087    8.91 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.git_refs_url                 BINARY    G RB_     260087    8.88 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.git_tags_url                 BINARY    G RB_     260087    8.88 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.git_url                      BINARY    G RB_     260087    8.64 B             "git://github.com/0-Vector..." / "git://github.com/zzzzzzzz..."
+payload.forkee.has_downloads                BOOLEAN   G RB_     260087    0.00 B             "false" / "true"
+payload.forkee.has_issues                   BOOLEAN   G RB_     260087    0.00 B             "false" / "true"
+payload.forkee.has_pages                    BOOLEAN   G RB_     260087    0.00 B             "false" / "true"
+payload.forkee.has_projects                 BOOLEAN   G RB_     260087    0.06 B     44497   "false" / "true"
+payload.forkee.has_wiki                     BOOLEAN   G RB_     260087    0.01 B             "false" / "true"
+payload.forkee.homepage                     BINARY    G RB_     260087    0.14 B     99734   "" / "https://zipkin.apache.org/"
+payload.forkee.hooks_url                    BINARY    G RB_     260087    8.81 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.html_url                     BINARY    G RB_     260087    8.61 B             "https://github.com/0-Vect..." / "https://github.com/zzzzzz..."
+payload.forkee.id                           INT64     G RB_     260087    5.02 B             "28679118" / "773175374"
+payload.forkee.issue_comment_url            BINARY    G RB_     260087    8.98 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.issue_events_url             BINARY    G RB_     260087    8.91 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.issues_url                   BINARY    G RB_     260087    8.90 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.keys_url                     BINARY    G RB_     260087    8.87 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.labels_url                   BINARY    G RB_     260087    8.87 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.language                     BINARY    G RB_     260087    0.01 B     259414  "Bro" / "Swift"
+payload.forkee.languages_url                BINARY    G RB_     260087    8.86 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.license                      INT32     G RB_     260087    0.00 B     260087  
+payload.forkee.license.key                  BINARY    G RB_     260087    0.13 B     145519  "apache-2.0" / "other"
+payload.forkee.license.name                 BINARY    G RB_     260087    0.13 B     145519  "Apache License 2.0" / "Other"
+payload.forkee.license.node_id              BINARY    G RB_     260087    0.13 B     147424  "MDc6TGljZW5zZTA=" / "MDc6TGljZW5zZTI="
+payload.forkee.license.spdx_id              BINARY    G RB_     260087    0.13 B     145668  "Apache-2.0" / "NOASSERTION"
+payload.forkee.license.url                  BINARY    G RB_     260087    0.12 B     148663  "https://api.github.com/li..." / "https://api.github.com/li..."
+payload.forkee.merges_url                   BINARY    G RB_     260087    8.81 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.milestones_url               BINARY    G RB_     260087    8.89 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.mirror_url                   INT32     G RB_     260087    0.00 B     260087  
+payload.forkee.name                         BINARY    G RB_     260087    0.25 B             "-" / "zn-echarts"
+payload.forkee.node_id                      BINARY    G RB_     260087    4.63 B     76295   "MDEwOlJlcG9zaXRvcnk0MDA2N..." / "R_kgDOLhW4Tg"
+payload.forkee.notifications_url            BINARY    G RB_     260087    9.11 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.open_issues                  INT64     G RB_     260087    0.00 B             "0" / "1"
+payload.forkee.open_issues_count            INT64     G RB_     260087    0.00 B             "0" / "1"
+payload.forkee.owner.avatar_url             BINARY    G RB_     260087    6.18 B             "https://avatars.githubuse..." / "https://avatars7.githubus..."
+payload.forkee.owner.events_url             BINARY    G RB_     260087    8.37 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.forkee.owner.followers_url          BINARY    G RB_     260087    8.25 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.forkee.owner.following_url          BINARY    G RB_     260087    8.39 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.forkee.owner.gists_url              BINARY    G RB_     260087    8.42 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.forkee.owner.gravatar_id            BINARY    G RB_     260087    0.00 B             "" / ""
+payload.forkee.owner.html_url               BINARY    G RB_     260087    7.56 B             "https://github.com/0-Vector" / "https://github.com/zzzzzz..."
+payload.forkee.owner.id                     INT64     G RB_     260087    4.72 B             "19" / "163670955"
+payload.forkee.owner.login                  BINARY    G RB_     260087    6.97 B             "0-Vector" / "zzzzzzzzzzzzzzzzzzzzzzzzz..."
+payload.forkee.owner.node_id                BINARY    G RB_     260087    4.14 B     76295   "MDEyOk9yZ2FuaXphdGlvbjE0M..." / "U_kgDOCcFrqw"
+payload.forkee.owner.organizations_url      BINARY    G RB_     260087    8.16 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.forkee.owner.received_events_url    BINARY    G RB_     260087    8.39 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.forkee.owner.repos_url              BINARY    G RB_     260087    8.19 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.forkee.owner.site_admin             BOOLEAN   G RB_     260087    0.00 B             "false" / "true"
+payload.forkee.owner.starred_url            BINARY    G RB_     260087    8.40 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.forkee.owner.subscriptions_url      BINARY    G RB_     260087    8.30 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.forkee.owner.type                   BINARY    G RB_     260087    0.06 B             "Organization" / "User"
+payload.forkee.owner.url                    BINARY    G RB_     260087    7.81 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.forkee.private                      BOOLEAN   G RB_     260087    0.00 B             "false" / "false"
+payload.forkee.public                       BOOLEAN   G RB_     260087    0.00 B             "true" / "true"
+payload.forkee.pulls_url                    BINARY    G RB_     260087    8.88 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.pushed_at                    BINARY    G RB_     260087    4.66 B             "2009-05-21T01:33:50Z" / "2024-03-16T20:26:35Z"
+payload.forkee.releases_url                 BINARY    G RB_     260087    8.87 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.size                         INT64     G RB_     260087    2.82 B             "0" / "7768610"
+payload.forkee.ssh_url                      BINARY    G RB_     260087    8.62 B             "git@github.com:0-Vector/s..." / "org-49461806@github.com:s..."
+payload.forkee.stargazers_count             INT64     G RB_     260087    0.00 B             "0" / "1"
+payload.forkee.stargazers_url               BINARY    G RB_     260087    8.86 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.statuses_url                 BINARY    G RB_     260087    8.88 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.subscribers_url              BINARY    G RB_     260087    8.85 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.subscription_url             BINARY    G RB_     260087    8.86 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.svn_url                      BINARY    G RB_     260087    8.61 B             "https://github.com/0-Vect..." / "https://github.com/zzzzzz..."
+payload.forkee.tags_url                     BINARY    G RB_     260087    8.79 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.teams_url                    BINARY    G RB_     260087    8.80 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.trees_url                    BINARY    G RB_     260087    8.90 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.updated_at                   BINARY    G RB_     260087    4.96 B             "2013-10-01T03:29:51Z" / "2024-03-16T23:56:12Z"
+payload.forkee.url                          BINARY    G RB_     260087    8.72 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.forkee.watchers                     INT64     G RB_     260087    0.00 B             "0" / "1"
+payload.forkee.watchers_count               INT64     G RB_     260087    0.00 B             "0" / "1"
+public                                      BOOLEAN   G RB_     260087    0.00 B             "true" / "true"
+repo.id                                     INT64     G RB_     260087    0.06 B             "160986" / "762473242"
+repo.name                                   BINARY    G RB_     260087    0.08 B             "AthenZ/athenz" / "tremor-rs/tremor.jepsen"
+repo.url                                    BINARY    G RB_     260087    0.08 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+repo_name                                   BINARY    G RB_     260087    0.07 B             ".github" / "zeppelin-site"
+repo_org_and_name                           BINARY    G RB_     260087    0.08 B             "AthenZ/athenz" / "tremor-rs/tremor.jepsen"
+type                                        BINARY    G RB_     260087    0.00 B             "ForkEvent" / "ForkEvent"
+year                                        BINARY    G RB_     260087    0.27 B             "2015" / "2024"
+payload.forkee.allow_forking                BOOLEAN   G RB_     260087    0.08 B     189055  "true" / "true"
+payload.forkee.is_template                  BOOLEAN   G RB_     260087    0.08 B     190799  "false" / "false"
+payload.forkee.topics.list.item             BINARY    G RR_     260087    0.09 B     260087  
+payload.forkee.visibility                   BINARY    G RB_     260087    0.08 B     190580  "public" / "public"
+payload.forkee.web_commit_signoff_required  BOOLEAN   G RB_     260087    0.07 B     213968  "false" / "true"
+payload.forkee.has_discussions              BOOLEAN   G RB_     260087    0.06 B     225836  "false" / "false"
+payload.forkee.code_of_conduct              INT32     G RB_     260087    0.00 B     260087  
+payload.forkee.code_of_conduct.html_url     BINARY    G RB_     260087    0.00 B     260087  
+payload.forkee.code_of_conduct.key          BINARY    G RB_     260087    0.00 B     260087  
+payload.forkee.code_of_conduct.name         BINARY    G RB_     260087    0.00 B     260087  
+payload.forkee.code_of_conduct.url          BINARY    G RB_     260087    0.00 B     260087  
+
