@@ -18,6 +18,15 @@ __pycache__
 .lsp_symlink
 .cache/
 .config/
+
+__pycache__
+
+.metals
+
+# JupyterLab
+.lsp_symlink
+.cache/
+.config/
 .ipynb_checkpoints/
 .ipython/
 .jupyter/
@@ -53,4 +62,7 @@ data/sbom/downloaded-sboms/*
 
 # notebooks/cncf/landscape-summary.ipynb
 *.json.compact
+*.feather
+notebooks/cncf/generated/
+notebooks/cncf/out/
 
