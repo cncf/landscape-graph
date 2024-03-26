@@ -14,6 +14,32 @@ venv-ipynb
 .venv-ipynb
 .venv
 
+
+__pycache__
+
+.metals
+
+# JupyterLab
+.lsp_symlink
+.cache/
+.config/
+
+__pycache__
+
+.metals
+
+# JupyterLab
+.lsp_symlink
+.cache/
+.config/
+.ipynb_checkpoints/
+.ipython/
+.jupyter/
+.local/
+.npm/
+.visualpython/
+.memestra/
+.mypy_cache/
 .virtual_documents/
 node_modules/
 # *.arrow
@@ -41,4 +67,7 @@ data/sbom/downloaded-sboms/*
 
 # notebooks/cncf/landscape-summary.ipynb
 *.json.compact
+*.feather
+notebooks/cncf/generated/
+notebooks/cncf/out/
 
