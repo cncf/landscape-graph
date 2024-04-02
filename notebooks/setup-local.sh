@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -ex
+set -e
 
 GIT_TOPLEVEL="$(git rev-parse --show-toplevel)"
 
