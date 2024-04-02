@@ -1,0 +1,215 @@
+version: '3.7'
+
+# /shared_data            - The root directory for all data.
+# /shared_data/postgres   - PostgreSQL (15) data.
+# /shared_data/prometheus - Prometheus data.
+# /shared_data/grafana    - Grafana data.
+# /shared_data/logs       - Logs, including PostgreSQL and Loki logs.
+
+volumes:
+    postgres:
+    pgadmin:
+    shared_data:
+
+services:
+
+  # age:
+  #   container_name: fossgraph_age
+  #   image: "docker-upstream.apple.com/TODOTODO"
+  #   environment:
+  #     POSTGRES_USER: "postgres"
+  #     POSTGRES_PASSWORD: "password"
+  #     PGDATA: "/data/postgres"
+  #   volumes:
+  #      - postgres:/data/postgres
+  #      - ./docker_postgres_init.sql:/docker-entrypoint-initdb.d/docker_postgres_init.sql
+  #   healthcheck:
+  #     test: ["CMD-SHELL", "pg_isready -U postgres"]
+  #     interval: 5s
+  #     timeout: 5s
+  #     retries: 5
+  #   ports:
+  #     - "15431:5432"
+  #   restart: unless-stopped
+
+  postgres:
+    container_name: fossgraph_postgres
+    #image: "docker-upstream.apple.com/postgres:12"
+    image: "postgres:12"
+    environment:
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "password"
+      PGDATA: "/data/postgres"
+    volumes:
+       - postgres:/data/postgres
+       - ./docker_postgres_init.sql:/docker-entrypoint-initdb.d/docker_postgres_init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    ports:
+      - "15432:5432"
+    restart: unless-stopped
+
+  pgadmin:
+    container_name: fossgraph_pgadmin
+    # image: "docker-upstream.apple.com/dpage/pgadmin4:7.5"
+    # v8.1 released Dec. 14, 2023
+    image: "dpage/pgadmin4:8.1"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@acme.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+      PGADMIN_CONFIG_SERVER_MODE: "False"
+      PGADMIN_CONFIG_MASTER_PASSWORD_REQUIRED: "False"
+    volumes:
+       - pgadmin:/var/lib/pgadmin
+       - ./docker_pgadmin_servers.json:/pgadmin4/servers.json
+    ports:
+      - "15433:80"
+    entrypoint:
+      - "/bin/sh"
+      - "-c"
+      - "/bin/echo 'postgres:5432:*:postgres:${POSTGRES_PASSWORD:-password}' > /tmp/pgpassfile && chmod 600 /tmp/pgpassfile && /entrypoint.sh"
+    restart: unless-stopped
+
+  pgweb:
+    container_name: fossgraph_pgweb
+    restart: always
+    #image: docker-upstream.apple.com/sosedoff/pgweb
+    image: sosedoff/pgweb
+    ports: 
+      - "15434:8081" 
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      - PGWEB_DATABASE_URL=postgres://postgres:password@host.docker.internal:15432/fossgraph?sslmode=disable
+
+# https://docs.docker.com/compose/environment-variables/env-file/#parameter-expansion
+# https://docs.docker.com/compose/environment-variables/envvars-precedence/
+#
+# The order of precedence (highest to lowest) is as follows:
+#
+# 1. Set using docker compose run -e in the CLI
+# 2. Substituted from your shell
+# 3. Set using the environment attribute in the Compose file
+# 4. Use of the --env-file argument in the CLI
+# 5. Use of the env_file attribute in the Compose file
+# 6. Set using an .env file placed at base of your project directory
+# 7. Set in a container image in the ENV directive. Having any ARG or ENV setting in a
+#      Dockerfile evaluates only if there is no Docker Compose entry for environment,
+#      env_file or run --env.
+#
+# ---
+#
+# fossgraph_jlab and fossgraph_graphql expect the following to be set (1-4), 
+# otherwise versions.default.env will control.
+#
+# TAG_VERSION
+# TAG_SHORTSHA
+# TAG_LONGSHA
+#
+  
+  jlab:
+    container_name: fossgraph_jlab
+    image: ${USER}/fossjlab${TAG_SHORTSHA}
+    env_file: 
+      - versions.default.env
+    build:
+      context: ./jlab
+      tags:
+        - ${USER}/fossjlab${TAG_SHORTSHA}
+        - ${USER}/fossjlab${TAG_VERSION}
+        - ${USER}/fossjlab:dev
+    ports:
+      - "15435:8888"
+    volumes:
+      - ./:/home/jovyan/
+      - ${HOME}/gharchive-datasets/:/home/jovyan/gharchive-datasets/
+    environment:
+      JUPYTER_ENABLE_LAB: "yes"
+    restart: always
+    command: "start-notebook.sh --NotebookApp.token='' --NotebookApp.password=''"
+
+  fossgraph:
+    container_name: fossgraph_graphql
+    image: ${USER}/fossgraph${TAG_SHORTSHA}
+    init: true # https://docs.docker.com/compose/compose-file/05-services/#init
+    env_file: 
+      - versions.default.env
+    build:
+      context: ./fossgraph
+      tags:
+        - ${USER}/fossgraph${TAG_SHORTSHA}
+        - ${USER}/fossgraph${TAG_VERSION}
+        - ${USER}/fossgraph:dev
+    restart: always
+    depends_on:
+      postgres:
+        condition: service_healthy
+      # TODO: alembic / sqlalchemy migration worker
+      # migration_worker:
+      #   # this is to ensure all migrations are run before the API starts up
+      #   condition: service_healthy
+    ports:
+      - 13000:3000
+    command:
+      - "--verbose"
+
+  # postgres_git:
+  # ###
+  # ### Postgres Git FDW and new monitoring
+  # ###
+
+  #   # env_file: 
+  #   #   - versions.default.env
+  #   container_name: git_postgres
+  #   build:
+  #     context: ./postgres_git
+  #     dockerfile: ./Dockerfile.postgres_git
+  #     tags:
+  #       - ${USER}/postgres_git${TAG_SHORTSHA}
+  #       - ${USER}/postgres_git${TAG_VERSION}
+  #       - ${USER}/postgres_git:dev
+  #   environment:
+  #     POSTGRES_USER: "postgres"
+  #     POSTGRES_PASSWORD: "password"
+  #     # PGDATA: "/data/postgres"
+  #   volumes:
+  #     - ./shared_data/postgres:/var/lib/postgresql/data
+  #     - ${HOME}/gitdata:/var/lib/postgresql/gitdata
+  #     - ./shared_data/logs/postgresql:/var/log/postgresql
+  #     - ./postgres_git/git_docker_postgres_init.sql:/docker-entrypoint-initdb.d/docker_postgres_init.sql
+  #   ports:
+  #     # - "5432:5432"
+  #    - "25432:5432"
+  #   healthcheck:
+  #     test: ["CMD-SHELL", "pg_isready -U postgres"]
+  #     interval: 5s
+  #     timeout: 5s
+  #     retries: 5
+  #   restart: unless-stopped
+
+  prometheus:
+    image: prom/prometheus
+    volumes:
+      - ./shared_data/prometheus:/etc/prometheus
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+      - "29090:9090"
+
+  grafana:
+    image: grafana/grafana
+    volumes:
+      - ./shared_data/grafana:/var/lib/grafana
+    ports:
+      - "23000:3000"
+
+  loki:
+    image: grafana/loki:latest
+    ports:
+      - "23100:3100"
+    volumes:
+      - ./loki-config.yaml:/etc/loki/local-config.yaml
+
