@@ -1440,4 +1440,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-# ./gha-osrb.py --source ~/gharchive-test --target ~/gharchive-datasets/osrb  --org-file ./org_list.txt --verbose
