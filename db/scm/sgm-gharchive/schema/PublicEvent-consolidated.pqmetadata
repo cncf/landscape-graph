@@ -1,0 +1,62 @@
+
+File path:  /Users/matt/gharchive-cncf/cncf-parquet/PublicEvent-consolidated.parquet
+Created by: parquet-rs version 50.0.0
+Properties:
+  ARROW:schema: /////+AEAAAQAAAAAAAKAAwACgAJAAQACgAAABAAAAAAAQQACAAIAAAABAAIAAAABAAAABgAAAB4BAAAMAQAAPgDAAC4AwAAiAMAAFgDAAAoAwAAAAMAANgCAACsAgAAeAIAAEQCAAAQAgAA4AEAALQBAACEAQAAWAEAACQBAAD0AAAAxAAAAJQAAABcAAAAMAAAAAQAAAD4+///FAAAAAwAAAAAAAEFDAAAAAAAAADo+///BAAAAHllYXIAAAAAIPz//xQAAAAMAAAAAAABBQwAAAAAAAAAEPz//wQAAAB0eXBlAAAAAEj8//8UAAAADAAAAAAAAQUMAAAAAAAAADj8//8RAAAAcmVwb19vcmdfYW5kX25hbWUAAAB8/P//FAAAAAwAAAAAAAEFDAAAAAAAAABs/P//CQAAAHJlcG9fbmFtZQAAAKj8//8UAAAADAAAAAAAAQUMAAAAAAAAAJj8//8IAAAAcmVwby51cmwAAAAA1Pz//xQAAAAMAAAAAAABBQwAAAAAAAAAxPz//wkAAAByZXBvLm5hbWUAAAAA/f//EAAAABgAAAAAAAECFAAAAKT9//9AAAAAAAAAAQAAAAAHAAAAcmVwby5pZAAw/f//FAAAAAwAAAAAAAEGDAAAAAAAAAAg/f//BgAAAHB1YmxpYwAAWP3//xQAAAAMAAAAAAABBQwAAAAAAAAASP3//wgAAABvcmdfbmFtZQAAAACE/f//FAAAAAwAAAAAAAEFDAAAAAAAAAB0/f//BwAAAG9yZy51cmwArP3//xQAAAAMAAAAAAABBQwAAAAAAAAAnP3//wkAAABvcmcubG9naW4AAADY/f//EAAAABgAAAAAAAECFAAAAHz+//9AAAAAAAAAAQAAAAAGAAAAb3JnLmlkAAAI/v//FAAAAAwAAAAAAAEFDAAAAAAAAAD4/f//DwAAAG9yZy5ncmF2YXRhcl9pZAA4/v//FAAAAAwAAAAAAAEFDAAAAAAAAAAo/v//DgAAAG9yZy5hdmF0YXJfdXJsAABo/v//FAAAAAwAAAAAAAEFDAAAAAAAAABY/v//BQAAAG1vbnRoAAAAkP7//xQAAAAMAAAAAAABBQwAAAAAAAAAgP7//wIAAABpZAAAtP7//xQAAAAMAAAAAAABBQwAAAAAAAAApP7//wMAAABkYXkA2P7//xQAAAAMAAAAAAABBQwAAAAAAAAAyP7//woAAABjcmVhdGVkX2F0AAAE////FAAAAAwAAAAAAAEFDAAAAAAAAAD0/v//CQAAAGFjdG9yLnVybAAAADD///8UAAAADAAAAAAAAQUMAAAAAAAAACD///8LAAAAYWN0b3IubG9naW4AXP///xgAAAAgAAAAAAABAhwAAAAIAAwABAALAAgAAABAAAAAAAAAAQAAAAAIAAAAYWN0b3IuaWQAAAAAmP///xQAAAAMAAAAAAABBQwAAAAAAAAAiP///xEAAABhY3Rvci5ncmF2YXRhcl9pZAAAAMz///8UAAAADAAAAAAAAQUMAAAAAAAAALz///8TAAAAYWN0b3IuZGlzcGxheV9sb2dpbgAQABQAEAAOAA8ABAAAAAgAEAAAABgAAAAMAAAAAAABBRAAAAAAAAAABAAEAAQAAAAQAAAAYWN0b3IuYXZhdGFyX3VybAAAAAA=
+Schema:
+message arrow_schema {
+  optional binary actor.avatar_url (STRING);
+  optional binary actor.display_login (STRING);
+  optional binary actor.gravatar_id (STRING);
+  optional int64 actor.id;
+  optional binary actor.login (STRING);
+  optional binary actor.url (STRING);
+  optional binary created_at (STRING);
+  optional binary day (STRING);
+  optional binary id (STRING);
+  optional binary month (STRING);
+  optional binary org.avatar_url (STRING);
+  optional binary org.gravatar_id (STRING);
+  optional int64 org.id;
+  optional binary org.login (STRING);
+  optional binary org.url (STRING);
+  optional binary org_name (STRING);
+  optional boolean public;
+  optional int64 repo.id;
+  optional binary repo.name (STRING);
+  optional binary repo.url (STRING);
+  optional binary repo_name (STRING);
+  optional binary repo_org_and_name (STRING);
+  optional binary type (STRING);
+  optional binary year (STRING);
+}
+
+
+Row group 0:  count: 5631  69.81 B records  start: 4  total(compressed): 383.902 kB total(uncompressed):1.081 MB 
+--------------------------------------------------------------------------------
+                     type      encodings count     avg size   nulls   min / max
+actor.avatar_url     BINARY    G RB_     5631      0.25 B             "https://avatars.githubuse..." / "https://avatars.githubuse..."
+actor.display_login  BINARY    G RB_     5631      0.30 B     263     "AthenZ" / "wasmCloud"
+actor.gravatar_id    BINARY    G RB_     5631      0.02 B             "" / ""
+actor.id             INT64     G RB_     5631      0.19 B             "47359" / "118160501"
+actor.login          BINARY    G RB_     5631      0.25 B             "AthenZ" / "wasmCloud"
+actor.url            BINARY    G RB_     5631      0.28 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+created_at           BINARY    G RB_     5631      7.76 B             "2015-01-01T16:04:46Z" / "2024-03-15T22:38:45Z"
+day                  BINARY    G RB_     5631      0.66 B             "01" / "31"
+id                   BINARY    G RB_     5631      7.79 B             "10005809877" / "9996209882"
+month                BINARY    G RB_     5631      0.48 B             "01" / "12"
+org.avatar_url       BINARY    G RB_     5631      0.25 B             "https://avatars.githubuse..." / "https://avatars.githubuse..."
+org.gravatar_id      BINARY    G RB_     5631      0.02 B             "" / ""
+org.id               INT64     G RB_     5631      0.19 B             "47359" / "118160501"
+org.login            BINARY    G RB_     5631      0.25 B             "AthenZ" / "wasmCloud"
+org.url              BINARY    G RB_     5631      0.28 B             "https://api.github.com/or..." / "https://api.github.com/or..."
+org_name             BINARY    G RB_     5631      0.25 B             "AthenZ" / "wasmCloud"
+public               BOOLEAN   G RB_     5631      0.01 B             "true" / "true"
+repo.id              INT64     G RB_     5631      6.09 B             "5247278" / "772187858"
+repo.name            BINARY    G RB_     5631      11.04 B            "AthenZ/OSSRH-64412" / "wasmCloud/weld"
+repo.url             BINARY    G RB_     5631      11.84 B            "https://api.github.com/re..." / "https://api.github.com/re..."
+repo_name            BINARY    G RB_     5631      10.15 B            "-dstoolkit-speech2text-nl..." / "zui"
+repo_org_and_name    BINARY    G RB_     5631      11.04 B            "AthenZ/OSSRH-64412" / "wasmCloud/weld"
+type                 BINARY    G RB_     5631      0.02 B             "PublicEvent" / "PublicEvent"
+year                 BINARY    G RB_     5631      0.41 B             "2015" / "2024"
+

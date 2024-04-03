@@ -1,0 +1,113 @@
+actor.avatar_url: string
+actor.display_login: string
+actor.gravatar_id: string
+actor.id: int64
+actor.login: string
+actor.url: string
+created_at: string
+day: string
+id: string
+month: string
+org.avatar_url: string
+org.gravatar_id: string
+org.id: int64
+org.login: string
+org.url: string
+org_name: string
+payload.action: string
+payload.release.assets: list<item: struct<browser_download_url: string, content_type: string, created_at: string, download_count: int64, id: int64, label: string, name: string, node_id: string, size: int64, state: string, updated_at: string, uploader: struct<avatar_url: string, events_url: string, followers_url: string, following_url: string, gists_url: string, gravatar_id: string, html_url: string, id: int64, login: string, node_id: string, organizations_url: string, received_events_url: string, repos_url: string, site_admin: bool, starred_url: string, subscriptions_url: string, type: string, url: string>, url: string>>
+  child 0, item: struct<browser_download_url: string, content_type: string, created_at: string, download_count: int64, id: int64, label: string, name: string, node_id: string, size: int64, state: string, updated_at: string, uploader: struct<avatar_url: string, events_url: string, followers_url: string, following_url: string, gists_url: string, gravatar_id: string, html_url: string, id: int64, login: string, node_id: string, organizations_url: string, received_events_url: string, repos_url: string, site_admin: bool, starred_url: string, subscriptions_url: string, type: string, url: string>, url: string>
+      child 0, browser_download_url: string
+      child 1, content_type: string
+      child 2, created_at: string
+      child 3, download_count: int64
+      child 4, id: int64
+      child 5, label: string
+      child 6, name: string
+      child 7, node_id: string
+      child 8, size: int64
+      child 9, state: string
+      child 10, updated_at: string
+      child 11, uploader: struct<avatar_url: string, events_url: string, followers_url: string, following_url: string, gists_url: string, gravatar_id: string, html_url: string, id: int64, login: string, node_id: string, organizations_url: string, received_events_url: string, repos_url: string, site_admin: bool, starred_url: string, subscriptions_url: string, type: string, url: string>
+          child 0, avatar_url: string
+          child 1, events_url: string
+          child 2, followers_url: string
+          child 3, following_url: string
+          child 4, gists_url: string
+          child 5, gravatar_id: string
+          child 6, html_url: string
+          child 7, id: int64
+          child 8, login: string
+          child 9, node_id: string
+          child 10, organizations_url: string
+          child 11, received_events_url: string
+          child 12, repos_url: string
+          child 13, site_admin: bool
+          child 14, starred_url: string
+          child 15, subscriptions_url: string
+          child 16, type: string
+          child 17, url: string
+      child 12, url: string
+payload.release.assets_url: string
+payload.release.author.avatar_url: string
+payload.release.author.events_url: string
+payload.release.author.followers_url: string
+payload.release.author.following_url: string
+payload.release.author.gists_url: string
+payload.release.author.gravatar_id: string
+payload.release.author.html_url: string
+payload.release.author.id: int64
+payload.release.author.login: string
+payload.release.author.node_id: string
+payload.release.author.organizations_url: string
+payload.release.author.received_events_url: string
+payload.release.author.repos_url: string
+payload.release.author.site_admin: bool
+payload.release.author.starred_url: string
+payload.release.author.subscriptions_url: string
+payload.release.author.type: string
+payload.release.author.url: string
+payload.release.body: string
+payload.release.created_at: string
+payload.release.draft: bool
+payload.release.html_url: string
+payload.release.id: int64
+payload.release.name: string
+payload.release.node_id: string
+payload.release.prerelease: bool
+payload.release.published_at: string
+payload.release.tag_name: string
+payload.release.tarball_url: string
+payload.release.target_commitish: string
+payload.release.upload_url: string
+payload.release.url: string
+payload.release.zipball_url: string
+public: bool
+repo.id: int64
+repo.name: string
+repo.url: string
+repo_name: string
+repo_org_and_name: string
+type: string
+year: string
+payload.release.discussion_url: string
+payload.release.is_short_description_html_truncated: bool
+payload.release.mentions: list<item: struct<avatar_url: string, avatar_user_actor: bool, login: string, profile_name: string, profile_url: string>>
+  child 0, item: struct<avatar_url: string, avatar_user_actor: bool, login: string, profile_name: string, profile_url: string>
+      child 0, avatar_url: string
+      child 1, avatar_user_actor: bool
+      child 2, login: string
+      child 3, profile_name: string
+      child 4, profile_url: string
+payload.release.mentions_count: double
+payload.release.short_description_html: string
+payload.release.reactions.+1: double
+payload.release.reactions.-1: double
+payload.release.reactions.confused: double
+payload.release.reactions.eyes: double
+payload.release.reactions.heart: double
+payload.release.reactions.hooray: double
+payload.release.reactions.laugh: double
+payload.release.reactions.rocket: double
+payload.release.reactions.total_count: double
+payload.release.reactions.url: string

@@ -1,0 +1,100 @@
+
+File path:  /Users/matt/gharchive-cncf/cncf-parquet/MemberEvent-consolidated.parquet
+Created by: parquet-rs version 50.0.0
+Properties:
+  ARROW:schema: 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
+Schema:
+message arrow_schema {
+  optional binary actor.avatar_url (STRING);
+  optional binary actor.display_login (STRING);
+  optional binary actor.gravatar_id (STRING);
+  optional int64 actor.id;
+  optional binary actor.login (STRING);
+  optional binary actor.url (STRING);
+  optional binary created_at (STRING);
+  optional binary day (STRING);
+  optional binary id (STRING);
+  optional binary month (STRING);
+  optional binary org.avatar_url (STRING);
+  optional binary org.gravatar_id (STRING);
+  optional double org.id;
+  optional binary org.login (STRING);
+  optional binary org.url (STRING);
+  optional binary org_name (STRING);
+  optional binary payload.action (STRING);
+  optional binary payload.member.avatar_url (STRING);
+  optional binary payload.member.events_url (STRING);
+  optional binary payload.member.followers_url (STRING);
+  optional binary payload.member.following_url (STRING);
+  optional binary payload.member.gists_url (STRING);
+  optional binary payload.member.gravatar_id (STRING);
+  optional binary payload.member.html_url (STRING);
+  optional int64 payload.member.id;
+  optional binary payload.member.login (STRING);
+  optional binary payload.member.node_id (STRING);
+  optional binary payload.member.organizations_url (STRING);
+  optional binary payload.member.received_events_url (STRING);
+  optional binary payload.member.repos_url (STRING);
+  optional boolean payload.member.site_admin;
+  optional binary payload.member.starred_url (STRING);
+  optional binary payload.member.subscriptions_url (STRING);
+  optional binary payload.member.type (STRING);
+  optional binary payload.member.url (STRING);
+  optional boolean public;
+  optional int64 repo.id;
+  optional binary repo.name (STRING);
+  optional binary repo.url (STRING);
+  optional binary repo_name (STRING);
+  optional binary repo_org_and_name (STRING);
+  optional binary type (STRING);
+  optional binary year (STRING);
+}
+
+
+Row group 0:  count: 94043  65.58 B records  start: 4  total(compressed): 5.882 MB total(uncompressed):22.580 MB 
+--------------------------------------------------------------------------------
+                                    type      encodings count     avg size   nulls   min / max
+actor.avatar_url                    BINARY    G RB_     94043     0.85 B             "https://avatars.githubuse..." / "https://avatars.githubuse..."
+actor.display_login                 BINARY    G RB_     94043     0.92 B     2455    "04diiguyi" / "zzzming"
+actor.gravatar_id                   BINARY    G RB_     94043     0.00 B             "" / ""
+actor.id                            INT64     G RB_     94043     0.77 B             "45" / "145619849"
+actor.login                         BINARY    G RB_     94043     0.94 B             "04diiguyi" / "zzzming"
+actor.url                           BINARY    G RB_     94043     0.98 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+created_at                          BINARY    G RB_     94043     3.92 B             "2015-02-10T23:40:01Z" / "2024-03-16T20:28:04Z"
+day                                 BINARY    G RB_     94043     0.34 B             "01" / "31"
+id                                  BINARY    G RB_     94043     6.24 B             "10000923512" / "9999568138"
+month                               BINARY    G RB_     94043     0.24 B             "01" / "12"
+org.avatar_url                      BINARY    G RB_     94043     0.02 B     5       "https://avatars.githubuse..." / "https://avatars.githubuse..."
+org.gravatar_id                     BINARY    G RB_     94043     0.00 B     5       "" / ""
+org.id                              DOUBLE    G RB_     94043     0.02 B     5       "47359.0" / "1.18160501E8"
+org.login                           BINARY    G RB_     94043     0.02 B     5       "AthenZ" / "whatwg"
+org.url                             BINARY    G RB_     94043     0.02 B     5       "https://api.github.com/or..." / "https://api.github.com/or..."
+org_name                            BINARY    G RB_     94043     0.02 B             "AthenZ" / "whatwg"
+payload.action                      BINARY    G RB_     94043     0.00 B             "added" / "added"
+payload.member.avatar_url           BINARY    G RB_     94043     2.63 B             "https://avatars.githubuse..." / "https://avatars7.githubus..."
+payload.member.events_url           BINARY    G RB_     94043     2.99 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.member.followers_url        BINARY    G RB_     94043     2.97 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.member.following_url        BINARY    G RB_     94043     2.89 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.member.gists_url            BINARY    G RB_     94043     3.02 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.member.gravatar_id          BINARY    G RB_     94043     0.00 B             "" / ""
+payload.member.html_url             BINARY    G RB_     94043     2.83 B             "https://github.com/00pf00" / "https://github.com/zzzxl1993"
+payload.member.id                   INT64     G RB_     94043     2.10 B             "4" / "163569871"
+payload.member.login                BINARY    G RB_     94043     2.71 B             "00pf00" / "zzzxl1993"
+payload.member.node_id              BINARY    G RB_     94043     2.11 B     8512    "MDQ6VXNlcjE0MDA0MDE=" / "U_kgDOCbgPSQ"
+payload.member.organizations_url    BINARY    G RB_     94043     2.95 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.member.received_events_url  BINARY    G RB_     94043     3.01 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.member.repos_url            BINARY    G RB_     94043     2.96 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.member.site_admin           BOOLEAN   G RB_     94043     0.01 B             "false" / "true"
+payload.member.starred_url          BINARY    G RB_     94043     2.90 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.member.subscriptions_url    BINARY    G RB_     94043     2.98 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.member.type                 BINARY    G RB_     94043     0.00 B             "User" / "User"
+payload.member.url                  BINARY    G RB_     94043     2.88 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+public                              BOOLEAN   G RB_     94043     0.00 B             "true" / "true"
+repo.id                             INT64     G RB_     94043     1.14 B             "196334" / "772612487"
+repo.name                           BINARY    G RB_     94043     1.76 B             "AthenZ/athenz" / "whatwg/urlpattern"
+repo.url                            BINARY    G RB_     94043     1.87 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+repo_name                           BINARY    G RB_     94043     1.62 B             "-ConditionalAccessforZero..." / "zx"
+repo_org_and_name                   BINARY    G RB_     94043     1.76 B             "AthenZ/athenz" / "whatwg/urlpattern"
+type                                BINARY    G RB_     94043     0.00 B             "MemberEvent" / "MemberEvent"
+year                                BINARY    G RB_     94043     0.19 B             "2015" / "2024"
+
