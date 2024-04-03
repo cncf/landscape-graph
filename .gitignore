@@ -1,6 +1,7 @@
 .venv*
 .venv
 venv
+venv-lg
 ve-*
 venv-ipynb
 .venv-ipynb
