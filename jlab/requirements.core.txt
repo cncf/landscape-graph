@@ -1,0 +1,36 @@
+# postgres
+adbc-driver-postgresql
+asyncpg
+psycopg2-binary
+sqlacodegen-v2
+
+# Data Processing
+dask[complete]
+pandas
+polars
+sqlalchemy
+tabulate
+
+# Utilities
+wget
+# jq               # needs to be installed via brew as well, this is just the binding.
+jp
+jsonpath-ng
+
+# misc
+PyGithub
+python-dotenv
+opentelemetry-api
+opentelemetry-sdk
+humanize
+icecream
+
+# JSON Processing
+ijson
+gql[all]
+
+# natural language toolkit
+nltk
+
+pysimdjson
+# libpy-simdjson

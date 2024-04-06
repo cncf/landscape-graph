@@ -1,10 +1,91 @@
-# ignore system files
+.venv*
+.venv
+venv
+venv-lg
+ve-*
+venv-ipynb
+.venv-ipynb
+*.svg
+.vscode/
+.env
 .DS_Store
-node_modules
-.mvn
 .idea
 .vscode
 
 .venv-ipynb
 .venv
+
+
+__pycache__
+
+.metals
+
+# JupyterLab
+.lsp_symlink
+.cache/
+.config/
+
+__pycache__
+
+.metals
+
+# JupyterLab
+.lsp_symlink
+.cache/
+.config/
+.ipynb_checkpoints/
+.ipython/
+.jupyter/
+.local/
+.npm/
+.visualpython/
+.memestra/
+.mypy_cache/
+.virtual_documents/
+node_modules/
+# *.arrow
+# *.csv
+*.gz
+
+_versions.env
+
+# icon archive
+.venv-icons/
+
+*.docker-build.log
+
+
+# guacsec/guac
+guac/guac-compose/container_files/pg
+
+data/sbom/downloaded-sboms/*
+
+
+
+
+.virtual_documents/
+node_modules/
+# *.arrow
+# *.csv
+*.gz
+
+_versions.env
+
+# icon archive
+.venv-icons/
+
+*.docker-build.log
+
+
+# guacsec/guac
+guac/guac-compose/container_files/pg
+
+data/sbom/downloaded-sboms/*
+
+
+
+
+.venv*
+.ipynb_checkpoints/
+.env
 

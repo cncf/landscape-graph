@@ -1,0 +1,213 @@
+actor.avatar_url: string
+actor.display_login: string
+actor.gravatar_id: string
+actor.id: int64
+actor.login: string
+actor.url: string
+created_at: string
+day: string
+id: string
+month: string
+org.avatar_url: string
+org.gravatar_id: string
+org.id: int64
+org.login: string
+org.url: string
+org_name: string
+payload.action: string
+payload.issue.active_lock_reason: string
+payload.issue.assignee: null
+payload.issue.assignee.avatar_url: string
+payload.issue.assignee.events_url: string
+payload.issue.assignee.followers_url: string
+payload.issue.assignee.following_url: string
+payload.issue.assignee.gists_url: string
+payload.issue.assignee.gravatar_id: string
+payload.issue.assignee.html_url: string
+payload.issue.assignee.id: double
+payload.issue.assignee.login: string
+payload.issue.assignee.node_id: string
+payload.issue.assignee.organizations_url: string
+payload.issue.assignee.received_events_url: string
+payload.issue.assignee.repos_url: string
+payload.issue.assignee.site_admin: bool
+payload.issue.assignee.starred_url: string
+payload.issue.assignee.subscriptions_url: string
+payload.issue.assignee.type: string
+payload.issue.assignee.url: string
+payload.issue.assignees: list<item: struct<avatar_url: string, events_url: string, followers_url: string, following_url: string, gists_url: string, gravatar_id: string, html_url: string, id: int64, login: string, node_id: string, organizations_url: string, received_events_url: string, repos_url: string, site_admin: bool, starred_url: string, subscriptions_url: string, type: string, url: string>>
+  child 0, item: struct<avatar_url: string, events_url: string, followers_url: string, following_url: string, gists_url: string, gravatar_id: string, html_url: string, id: int64, login: string, node_id: string, organizations_url: string, received_events_url: string, repos_url: string, site_admin: bool, starred_url: string, subscriptions_url: string, type: string, url: string>
+      child 0, avatar_url: string
+      child 1, events_url: string
+      child 2, followers_url: string
+      child 3, following_url: string
+      child 4, gists_url: string
+      child 5, gravatar_id: string
+      child 6, html_url: string
+      child 7, id: int64
+      child 8, login: string
+      child 9, node_id: string
+      child 10, organizations_url: string
+      child 11, received_events_url: string
+      child 12, repos_url: string
+      child 13, site_admin: bool
+      child 14, starred_url: string
+      child 15, subscriptions_url: string
+      child 16, type: string
+      child 17, url: string
+payload.issue.author_association: string
+payload.issue.body: string
+payload.issue.closed_at: string
+payload.issue.comments: int64
+payload.issue.comments_url: string
+payload.issue.created_at: string
+payload.issue.events_url: string
+payload.issue.html_url: string
+payload.issue.id: int64
+payload.issue.labels: list<item: struct<color: string, default: bool, description: string, id: int64, name: string, node_id: string, url: string>>
+  child 0, item: struct<color: string, default: bool, description: string, id: int64, name: string, node_id: string, url: string>
+      child 0, color: string
+      child 1, default: bool
+      child 2, description: string
+      child 3, id: int64
+      child 4, name: string
+      child 5, node_id: string
+      child 6, url: string
+payload.issue.labels_url: string
+payload.issue.locked: bool
+payload.issue.milestone: null
+payload.issue.milestone.closed_at: string
+payload.issue.milestone.closed_issues: double
+payload.issue.milestone.created_at: string
+payload.issue.milestone.creator.avatar_url: string
+payload.issue.milestone.creator.events_url: string
+payload.issue.milestone.creator.followers_url: string
+payload.issue.milestone.creator.following_url: string
+payload.issue.milestone.creator.gists_url: string
+payload.issue.milestone.creator.gravatar_id: string
+payload.issue.milestone.creator.html_url: string
+payload.issue.milestone.creator.id: double
+payload.issue.milestone.creator.login: string
+payload.issue.milestone.creator.node_id: string
+payload.issue.milestone.creator.organizations_url: string
+payload.issue.milestone.creator.received_events_url: string
+payload.issue.milestone.creator.repos_url: string
+payload.issue.milestone.creator.site_admin: bool
+payload.issue.milestone.creator.starred_url: string
+payload.issue.milestone.creator.subscriptions_url: string
+payload.issue.milestone.creator.type: string
+payload.issue.milestone.creator.url: string
+payload.issue.milestone.description: string
+payload.issue.milestone.due_on: string
+payload.issue.milestone.html_url: string
+payload.issue.milestone.id: double
+payload.issue.milestone.labels_url: string
+payload.issue.milestone.node_id: string
+payload.issue.milestone.number: double
+payload.issue.milestone.open_issues: double
+payload.issue.milestone.state: string
+payload.issue.milestone.title: string
+payload.issue.milestone.updated_at: string
+payload.issue.milestone.url: string
+payload.issue.node_id: string
+payload.issue.number: int64
+payload.issue.performed_via_github_app: null
+payload.issue.repository_url: string
+payload.issue.state: string
+payload.issue.title: string
+payload.issue.updated_at: string
+payload.issue.url: string
+payload.issue.user.avatar_url: string
+payload.issue.user.events_url: string
+payload.issue.user.followers_url: string
+payload.issue.user.following_url: string
+payload.issue.user.gists_url: string
+payload.issue.user.gravatar_id: string
+payload.issue.user.html_url: string
+payload.issue.user.id: int64
+payload.issue.user.login: string
+payload.issue.user.node_id: string
+payload.issue.user.organizations_url: string
+payload.issue.user.received_events_url: string
+payload.issue.user.repos_url: string
+payload.issue.user.site_admin: bool
+payload.issue.user.starred_url: string
+payload.issue.user.subscriptions_url: string
+payload.issue.user.type: string
+payload.issue.user.url: string
+public: bool
+repo.id: int64
+repo.name: string
+repo.url: string
+repo_name: string
+repo_org_and_name: string
+type: string
+year: string
+payload.issue.reactions.+1: double
+payload.issue.reactions.-1: double
+payload.issue.reactions.confused: double
+payload.issue.reactions.eyes: double
+payload.issue.reactions.heart: double
+payload.issue.reactions.hooray: double
+payload.issue.reactions.laugh: double
+payload.issue.reactions.rocket: double
+payload.issue.reactions.total_count: double
+payload.issue.reactions.url: string
+payload.issue.timeline_url: string
+payload.issue.state_reason: string
+payload.issue.performed_via_github_app.created_at: string
+payload.issue.performed_via_github_app.description: string
+payload.issue.performed_via_github_app.events: list<item: string>
+  child 0, item: string
+payload.issue.performed_via_github_app.external_url: string
+payload.issue.performed_via_github_app.html_url: string
+payload.issue.performed_via_github_app.id: double
+payload.issue.performed_via_github_app.name: string
+payload.issue.performed_via_github_app.node_id: string
+payload.issue.performed_via_github_app.owner.avatar_url: string
+payload.issue.performed_via_github_app.owner.events_url: string
+payload.issue.performed_via_github_app.owner.followers_url: string
+payload.issue.performed_via_github_app.owner.following_url: string
+payload.issue.performed_via_github_app.owner.gists_url: string
+payload.issue.performed_via_github_app.owner.gravatar_id: string
+payload.issue.performed_via_github_app.owner.html_url: string
+payload.issue.performed_via_github_app.owner.id: double
+payload.issue.performed_via_github_app.owner.login: string
+payload.issue.performed_via_github_app.owner.node_id: string
+payload.issue.performed_via_github_app.owner.organizations_url: string
+payload.issue.performed_via_github_app.owner.received_events_url: string
+payload.issue.performed_via_github_app.owner.repos_url: string
+payload.issue.performed_via_github_app.owner.site_admin: bool
+payload.issue.performed_via_github_app.owner.starred_url: string
+payload.issue.performed_via_github_app.owner.subscriptions_url: string
+payload.issue.performed_via_github_app.owner.type: string
+payload.issue.performed_via_github_app.owner.url: string
+payload.issue.performed_via_github_app.permissions.checks: string
+payload.issue.performed_via_github_app.permissions.contents: string
+payload.issue.performed_via_github_app.permissions.deployments: string
+payload.issue.performed_via_github_app.permissions.discussions: string
+payload.issue.performed_via_github_app.permissions.issues: string
+payload.issue.performed_via_github_app.permissions.metadata: string
+payload.issue.performed_via_github_app.permissions.pull_requests: string
+payload.issue.performed_via_github_app.permissions.repository_projects: string
+payload.issue.performed_via_github_app.permissions.statuses: string
+payload.issue.performed_via_github_app.slug: string
+payload.issue.performed_via_github_app.updated_at: string
+payload.issue.performed_via_github_app.permissions.actions: string
+payload.issue.performed_via_github_app.permissions.packages: string
+payload.issue.performed_via_github_app.permissions.pull_requests_comment_only_reviews: string
+payload.issue.performed_via_github_app.permissions.pull_requests_from_forks: string
+payload.issue.performed_via_github_app.permissions.workflows: string
+payload.issue.performed_via_github_app.permissions.codespace_metadata: string
+payload.issue.performed_via_github_app.permissions.codespaces_secrets: string
+payload.issue.performed_via_github_app.permissions.codespaces_user_secrets: string
+payload.issue.performed_via_github_app.permissions.organization_packages: string
+payload.issue.performed_via_github_app.permissions.pages: string
+payload.issue.performed_via_github_app.permissions.codespaces: string
+payload.issue.milestone.creator: null
+payload.issue.performed_via_github_app.permissions.members: string
+payload.label.color: string
+payload.label.default: bool
+payload.label.id: double
+payload.label.name: string
+payload.label.url: string

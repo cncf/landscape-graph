@@ -1,0 +1,541 @@
+actor.avatar_url: string
+actor.display_login: string
+actor.gravatar_id: string
+actor.id: int64
+actor.login: string
+actor.url: string
+created_at: string
+day: string
+id: string
+month: string
+org.avatar_url: string
+org.gravatar_id: string
+org.id: int64
+org.login: string
+org.url: string
+org_name: string
+payload.action: string
+payload.comment._links.html.href: string
+payload.comment._links.pull_request.href: string
+payload.comment._links.self.href: string
+payload.comment.author_association: string
+payload.comment.body: string
+payload.comment.commit_id: string
+payload.comment.created_at: string
+payload.comment.diff_hunk: string
+payload.comment.html_url: string
+payload.comment.id: int64
+payload.comment.in_reply_to_id: double
+payload.comment.line: double
+payload.comment.node_id: string
+payload.comment.original_commit_id: string
+payload.comment.original_line: double
+payload.comment.original_position: int64
+payload.comment.original_start_line: double
+payload.comment.path: string
+payload.comment.position: double
+payload.comment.pull_request_review_id: double
+payload.comment.pull_request_url: string
+payload.comment.side: string
+payload.comment.start_line: double
+payload.comment.start_side: string
+payload.comment.updated_at: string
+payload.comment.url: string
+payload.comment.user.avatar_url: string
+payload.comment.user.events_url: string
+payload.comment.user.followers_url: string
+payload.comment.user.following_url: string
+payload.comment.user.gists_url: string
+payload.comment.user.gravatar_id: string
+payload.comment.user.html_url: string
+payload.comment.user.id: int64
+payload.comment.user.login: string
+payload.comment.user.node_id: string
+payload.comment.user.organizations_url: string
+payload.comment.user.received_events_url: string
+payload.comment.user.repos_url: string
+payload.comment.user.site_admin: bool
+payload.comment.user.starred_url: string
+payload.comment.user.subscriptions_url: string
+payload.comment.user.type: string
+payload.comment.user.url: string
+payload.pull_request._links.comments.href: string
+payload.pull_request._links.commits.href: string
+payload.pull_request._links.html.href: string
+payload.pull_request._links.issue.href: string
+payload.pull_request._links.review_comment.href: string
+payload.pull_request._links.review_comments.href: string
+payload.pull_request._links.self.href: string
+payload.pull_request._links.statuses.href: string
+payload.pull_request.assignee: null
+payload.pull_request.assignee.avatar_url: string
+payload.pull_request.assignee.events_url: string
+payload.pull_request.assignee.followers_url: string
+payload.pull_request.assignee.following_url: string
+payload.pull_request.assignee.gists_url: string
+payload.pull_request.assignee.gravatar_id: string
+payload.pull_request.assignee.html_url: string
+payload.pull_request.assignee.id: double
+payload.pull_request.assignee.login: string
+payload.pull_request.assignee.node_id: string
+payload.pull_request.assignee.organizations_url: string
+payload.pull_request.assignee.received_events_url: string
+payload.pull_request.assignee.repos_url: string
+payload.pull_request.assignee.site_admin: bool
+payload.pull_request.assignee.starred_url: string
+payload.pull_request.assignee.subscriptions_url: string
+payload.pull_request.assignee.type: string
+payload.pull_request.assignee.url: string
+payload.pull_request.assignees: list<item: struct<avatar_url: string, events_url: string, followers_url: string, following_url: string, gists_url: string, gravatar_id: string, html_url: string, id: int64, login: string, node_id: string, organizations_url: string, received_events_url: string, repos_url: string, site_admin: bool, starred_url: string, subscriptions_url: string, type: string, url: string>>
+  child 0, item: struct<avatar_url: string, events_url: string, followers_url: string, following_url: string, gists_url: string, gravatar_id: string, html_url: string, id: int64, login: string, node_id: string, organizations_url: string, received_events_url: string, repos_url: string, site_admin: bool, starred_url: string, subscriptions_url: string, type: string, url: string>
+      child 0, avatar_url: string
+      child 1, events_url: string
+      child 2, followers_url: string
+      child 3, following_url: string
+      child 4, gists_url: string
+      child 5, gravatar_id: string
+      child 6, html_url: string
+      child 7, id: int64
+      child 8, login: string
+      child 9, node_id: string
+      child 10, organizations_url: string
+      child 11, received_events_url: string
+      child 12, repos_url: string
+      child 13, site_admin: bool
+      child 14, starred_url: string
+      child 15, subscriptions_url: string
+      child 16, type: string
+      child 17, url: string
+payload.pull_request.author_association: string
+payload.pull_request.base.label: string
+payload.pull_request.base.ref: string
+payload.pull_request.base.repo.archive_url: string
+payload.pull_request.base.repo.archived: bool
+payload.pull_request.base.repo.assignees_url: string
+payload.pull_request.base.repo.blobs_url: string
+payload.pull_request.base.repo.branches_url: string
+payload.pull_request.base.repo.clone_url: string
+payload.pull_request.base.repo.collaborators_url: string
+payload.pull_request.base.repo.comments_url: string
+payload.pull_request.base.repo.commits_url: string
+payload.pull_request.base.repo.compare_url: string
+payload.pull_request.base.repo.contents_url: string
+payload.pull_request.base.repo.contributors_url: string
+payload.pull_request.base.repo.created_at: string
+payload.pull_request.base.repo.default_branch: string
+payload.pull_request.base.repo.deployments_url: string
+payload.pull_request.base.repo.description: string
+payload.pull_request.base.repo.disabled: bool
+payload.pull_request.base.repo.downloads_url: string
+payload.pull_request.base.repo.events_url: string
+payload.pull_request.base.repo.fork: bool
+payload.pull_request.base.repo.forks: int64
+payload.pull_request.base.repo.forks_count: int64
+payload.pull_request.base.repo.forks_url: string
+payload.pull_request.base.repo.full_name: string
+payload.pull_request.base.repo.git_commits_url: string
+payload.pull_request.base.repo.git_refs_url: string
+payload.pull_request.base.repo.git_tags_url: string
+payload.pull_request.base.repo.git_url: string
+payload.pull_request.base.repo.has_downloads: bool
+payload.pull_request.base.repo.has_issues: bool
+payload.pull_request.base.repo.has_pages: bool
+payload.pull_request.base.repo.has_projects: bool
+payload.pull_request.base.repo.has_wiki: bool
+payload.pull_request.base.repo.homepage: string
+payload.pull_request.base.repo.hooks_url: string
+payload.pull_request.base.repo.html_url: string
+payload.pull_request.base.repo.id: int64
+payload.pull_request.base.repo.issue_comment_url: string
+payload.pull_request.base.repo.issue_events_url: string
+payload.pull_request.base.repo.issues_url: string
+payload.pull_request.base.repo.keys_url: string
+payload.pull_request.base.repo.labels_url: string
+payload.pull_request.base.repo.language: string
+payload.pull_request.base.repo.languages_url: string
+payload.pull_request.base.repo.license: null
+payload.pull_request.base.repo.license.key: string
+payload.pull_request.base.repo.license.name: string
+payload.pull_request.base.repo.license.node_id: string
+payload.pull_request.base.repo.license.spdx_id: string
+payload.pull_request.base.repo.license.url: string
+payload.pull_request.base.repo.merges_url: string
+payload.pull_request.base.repo.milestones_url: string
+payload.pull_request.base.repo.mirror_url: string
+payload.pull_request.base.repo.name: string
+payload.pull_request.base.repo.node_id: string
+payload.pull_request.base.repo.notifications_url: string
+payload.pull_request.base.repo.open_issues: int64
+payload.pull_request.base.repo.open_issues_count: int64
+payload.pull_request.base.repo.owner.avatar_url: string
+payload.pull_request.base.repo.owner.events_url: string
+payload.pull_request.base.repo.owner.followers_url: string
+payload.pull_request.base.repo.owner.following_url: string
+payload.pull_request.base.repo.owner.gists_url: string
+payload.pull_request.base.repo.owner.gravatar_id: string
+payload.pull_request.base.repo.owner.html_url: string
+payload.pull_request.base.repo.owner.id: int64
+payload.pull_request.base.repo.owner.login: string
+payload.pull_request.base.repo.owner.node_id: string
+payload.pull_request.base.repo.owner.organizations_url: string
+payload.pull_request.base.repo.owner.received_events_url: string
+payload.pull_request.base.repo.owner.repos_url: string
+payload.pull_request.base.repo.owner.site_admin: bool
+payload.pull_request.base.repo.owner.starred_url: string
+payload.pull_request.base.repo.owner.subscriptions_url: string
+payload.pull_request.base.repo.owner.type: string
+payload.pull_request.base.repo.owner.url: string
+payload.pull_request.base.repo.private: bool
+payload.pull_request.base.repo.pulls_url: string
+payload.pull_request.base.repo.pushed_at: string
+payload.pull_request.base.repo.releases_url: string
+payload.pull_request.base.repo.size: int64
+payload.pull_request.base.repo.ssh_url: string
+payload.pull_request.base.repo.stargazers_count: int64
+payload.pull_request.base.repo.stargazers_url: string
+payload.pull_request.base.repo.statuses_url: string
+payload.pull_request.base.repo.subscribers_url: string
+payload.pull_request.base.repo.subscription_url: string
+payload.pull_request.base.repo.svn_url: string
+payload.pull_request.base.repo.tags_url: string
+payload.pull_request.base.repo.teams_url: string
+payload.pull_request.base.repo.trees_url: string
+payload.pull_request.base.repo.updated_at: string
+payload.pull_request.base.repo.url: string
+payload.pull_request.base.repo.watchers: int64
+payload.pull_request.base.repo.watchers_count: int64
+payload.pull_request.base.sha: string
+payload.pull_request.base.user.avatar_url: string
+payload.pull_request.base.user.events_url: string
+payload.pull_request.base.user.followers_url: string
+payload.pull_request.base.user.following_url: string
+payload.pull_request.base.user.gists_url: string
+payload.pull_request.base.user.gravatar_id: string
+payload.pull_request.base.user.html_url: string
+payload.pull_request.base.user.id: int64
+payload.pull_request.base.user.login: string
+payload.pull_request.base.user.node_id: string
+payload.pull_request.base.user.organizations_url: string
+payload.pull_request.base.user.received_events_url: string
+payload.pull_request.base.user.repos_url: string
+payload.pull_request.base.user.site_admin: bool
+payload.pull_request.base.user.starred_url: string
+payload.pull_request.base.user.subscriptions_url: string
+payload.pull_request.base.user.type: string
+payload.pull_request.base.user.url: string
+payload.pull_request.body: string
+payload.pull_request.closed_at: string
+payload.pull_request.comments_url: string
+payload.pull_request.commits_url: string
+payload.pull_request.created_at: string
+payload.pull_request.diff_url: string
+payload.pull_request.draft: bool
+payload.pull_request.head.label: string
+payload.pull_request.head.ref: string
+payload.pull_request.head.repo.archive_url: string
+payload.pull_request.head.repo.archived: bool
+payload.pull_request.head.repo.assignees_url: string
+payload.pull_request.head.repo.blobs_url: string
+payload.pull_request.head.repo.branches_url: string
+payload.pull_request.head.repo.clone_url: string
+payload.pull_request.head.repo.collaborators_url: string
+payload.pull_request.head.repo.comments_url: string
+payload.pull_request.head.repo.commits_url: string
+payload.pull_request.head.repo.compare_url: string
+payload.pull_request.head.repo.contents_url: string
+payload.pull_request.head.repo.contributors_url: string
+payload.pull_request.head.repo.created_at: string
+payload.pull_request.head.repo.default_branch: string
+payload.pull_request.head.repo.deployments_url: string
+payload.pull_request.head.repo.description: string
+payload.pull_request.head.repo.disabled: bool
+payload.pull_request.head.repo.downloads_url: string
+payload.pull_request.head.repo.events_url: string
+payload.pull_request.head.repo.fork: bool
+payload.pull_request.head.repo.forks: double
+payload.pull_request.head.repo.forks_count: double
+payload.pull_request.head.repo.forks_url: string
+payload.pull_request.head.repo.full_name: string
+payload.pull_request.head.repo.git_commits_url: string
+payload.pull_request.head.repo.git_refs_url: string
+payload.pull_request.head.repo.git_tags_url: string
+payload.pull_request.head.repo.git_url: string
+payload.pull_request.head.repo.has_downloads: bool
+payload.pull_request.head.repo.has_issues: bool
+payload.pull_request.head.repo.has_pages: bool
+payload.pull_request.head.repo.has_projects: bool
+payload.pull_request.head.repo.has_wiki: bool
+payload.pull_request.head.repo.homepage: string
+payload.pull_request.head.repo.hooks_url: string
+payload.pull_request.head.repo.html_url: string
+payload.pull_request.head.repo.id: double
+payload.pull_request.head.repo.issue_comment_url: string
+payload.pull_request.head.repo.issue_events_url: string
+payload.pull_request.head.repo.issues_url: string
+payload.pull_request.head.repo.keys_url: string
+payload.pull_request.head.repo.labels_url: string
+payload.pull_request.head.repo.language: string
+payload.pull_request.head.repo.languages_url: string
+payload.pull_request.head.repo.license: null
+payload.pull_request.head.repo.license.key: string
+payload.pull_request.head.repo.license.name: string
+payload.pull_request.head.repo.license.node_id: string
+payload.pull_request.head.repo.license.spdx_id: string
+payload.pull_request.head.repo.license.url: string
+payload.pull_request.head.repo.merges_url: string
+payload.pull_request.head.repo.milestones_url: string
+payload.pull_request.head.repo.mirror_url: string
+payload.pull_request.head.repo.name: string
+payload.pull_request.head.repo.node_id: string
+payload.pull_request.head.repo.notifications_url: string
+payload.pull_request.head.repo.open_issues: double
+payload.pull_request.head.repo.open_issues_count: double
+payload.pull_request.head.repo.owner.avatar_url: string
+payload.pull_request.head.repo.owner.events_url: string
+payload.pull_request.head.repo.owner.followers_url: string
+payload.pull_request.head.repo.owner.following_url: string
+payload.pull_request.head.repo.owner.gists_url: string
+payload.pull_request.head.repo.owner.gravatar_id: string
+payload.pull_request.head.repo.owner.html_url: string
+payload.pull_request.head.repo.owner.id: double
+payload.pull_request.head.repo.owner.login: string
+payload.pull_request.head.repo.owner.node_id: string
+payload.pull_request.head.repo.owner.organizations_url: string
+payload.pull_request.head.repo.owner.received_events_url: string
+payload.pull_request.head.repo.owner.repos_url: string
+payload.pull_request.head.repo.owner.site_admin: bool
+payload.pull_request.head.repo.owner.starred_url: string
+payload.pull_request.head.repo.owner.subscriptions_url: string
+payload.pull_request.head.repo.owner.type: string
+payload.pull_request.head.repo.owner.url: string
+payload.pull_request.head.repo.private: bool
+payload.pull_request.head.repo.pulls_url: string
+payload.pull_request.head.repo.pushed_at: string
+payload.pull_request.head.repo.releases_url: string
+payload.pull_request.head.repo.size: double
+payload.pull_request.head.repo.ssh_url: string
+payload.pull_request.head.repo.stargazers_count: double
+payload.pull_request.head.repo.stargazers_url: string
+payload.pull_request.head.repo.statuses_url: string
+payload.pull_request.head.repo.subscribers_url: string
+payload.pull_request.head.repo.subscription_url: string
+payload.pull_request.head.repo.svn_url: string
+payload.pull_request.head.repo.tags_url: string
+payload.pull_request.head.repo.teams_url: string
+payload.pull_request.head.repo.trees_url: string
+payload.pull_request.head.repo.updated_at: string
+payload.pull_request.head.repo.url: string
+payload.pull_request.head.repo.watchers: double
+payload.pull_request.head.repo.watchers_count: double
+payload.pull_request.head.sha: string
+payload.pull_request.head.user.avatar_url: string
+payload.pull_request.head.user.events_url: string
+payload.pull_request.head.user.followers_url: string
+payload.pull_request.head.user.following_url: string
+payload.pull_request.head.user.gists_url: string
+payload.pull_request.head.user.gravatar_id: string
+payload.pull_request.head.user.html_url: string
+payload.pull_request.head.user.id: double
+payload.pull_request.head.user.login: string
+payload.pull_request.head.user.node_id: string
+payload.pull_request.head.user.organizations_url: string
+payload.pull_request.head.user.received_events_url: string
+payload.pull_request.head.user.repos_url: string
+payload.pull_request.head.user.site_admin: bool
+payload.pull_request.head.user.starred_url: string
+payload.pull_request.head.user.subscriptions_url: string
+payload.pull_request.head.user.type: string
+payload.pull_request.head.user.url: string
+payload.pull_request.html_url: string
+payload.pull_request.id: int64
+payload.pull_request.issue_url: string
+payload.pull_request.labels: list<item: struct<color: string, default: bool, description: string, id: int64, name: string, node_id: string, url: string>>
+  child 0, item: struct<color: string, default: bool, description: string, id: int64, name: string, node_id: string, url: string>
+      child 0, color: string
+      child 1, default: bool
+      child 2, description: string
+      child 3, id: int64
+      child 4, name: string
+      child 5, node_id: string
+      child 6, url: string
+payload.pull_request.locked: bool
+payload.pull_request.merge_commit_sha: string
+payload.pull_request.merged_at: string
+payload.pull_request.milestone: null
+payload.pull_request.milestone.closed_at: string
+payload.pull_request.milestone.closed_issues: double
+payload.pull_request.milestone.created_at: string
+payload.pull_request.milestone.creator.avatar_url: string
+payload.pull_request.milestone.creator.events_url: string
+payload.pull_request.milestone.creator.followers_url: string
+payload.pull_request.milestone.creator.following_url: string
+payload.pull_request.milestone.creator.gists_url: string
+payload.pull_request.milestone.creator.gravatar_id: string
+payload.pull_request.milestone.creator.html_url: string
+payload.pull_request.milestone.creator.id: double
+payload.pull_request.milestone.creator.login: string
+payload.pull_request.milestone.creator.node_id: string
+payload.pull_request.milestone.creator.organizations_url: string
+payload.pull_request.milestone.creator.received_events_url: string
+payload.pull_request.milestone.creator.repos_url: string
+payload.pull_request.milestone.creator.site_admin: bool
+payload.pull_request.milestone.creator.starred_url: string
+payload.pull_request.milestone.creator.subscriptions_url: string
+payload.pull_request.milestone.creator.type: string
+payload.pull_request.milestone.creator.url: string
+payload.pull_request.milestone.description: string
+payload.pull_request.milestone.due_on: string
+payload.pull_request.milestone.html_url: string
+payload.pull_request.milestone.id: double
+payload.pull_request.milestone.labels_url: string
+payload.pull_request.milestone.node_id: string
+payload.pull_request.milestone.number: double
+payload.pull_request.milestone.open_issues: double
+payload.pull_request.milestone.state: string
+payload.pull_request.milestone.title: string
+payload.pull_request.milestone.updated_at: string
+payload.pull_request.milestone.url: string
+payload.pull_request.node_id: string
+payload.pull_request.number: int64
+payload.pull_request.patch_url: string
+payload.pull_request.requested_reviewers: list<item: struct<avatar_url: string, events_url: string, followers_url: string, following_url: string, gists_url: string, gravatar_id: string, html_url: string, id: int64, login: string, node_id: string, organizations_url: string, received_events_url: string, repos_url: string, site_admin: bool, starred_url: string, subscriptions_url: string, type: string, url: string>>
+  child 0, item: struct<avatar_url: string, events_url: string, followers_url: string, following_url: string, gists_url: string, gravatar_id: string, html_url: string, id: int64, login: string, node_id: string, organizations_url: string, received_events_url: string, repos_url: string, site_admin: bool, starred_url: string, subscriptions_url: string, type: string, url: string>
+      child 0, avatar_url: string
+      child 1, events_url: string
+      child 2, followers_url: string
+      child 3, following_url: string
+      child 4, gists_url: string
+      child 5, gravatar_id: string
+      child 6, html_url: string
+      child 7, id: int64
+      child 8, login: string
+      child 9, node_id: string
+      child 10, organizations_url: string
+      child 11, received_events_url: string
+      child 12, repos_url: string
+      child 13, site_admin: bool
+      child 14, starred_url: string
+      child 15, subscriptions_url: string
+      child 16, type: string
+      child 17, url: string
+payload.pull_request.requested_teams: list<item: struct<description: string, html_url: string, id: int64, members_url: string, name: string, node_id: string, parent: struct<description: string, html_url: string, id: int64, members_url: string, name: string, node_id: string, permission: string, privacy: string, repositories_url: string, slug: string, url: string>, permission: string, privacy: string, repositories_url: string, slug: string, url: string, notification_setting: string>>
+  child 0, item: struct<description: string, html_url: string, id: int64, members_url: string, name: string, node_id: string, parent: struct<description: string, html_url: string, id: int64, members_url: string, name: string, node_id: string, permission: string, privacy: string, repositories_url: string, slug: string, url: string>, permission: string, privacy: string, repositories_url: string, slug: string, url: string, notification_setting: string>
+      child 0, description: string
+      child 1, html_url: string
+      child 2, id: int64
+      child 3, members_url: string
+      child 4, name: string
+      child 5, node_id: string
+      child 6, parent: struct<description: string, html_url: string, id: int64, members_url: string, name: string, node_id: string, permission: string, privacy: string, repositories_url: string, slug: string, url: string>
+          child 0, description: string
+          child 1, html_url: string
+          child 2, id: int64
+          child 3, members_url: string
+          child 4, name: string
+          child 5, node_id: string
+          child 6, permission: string
+          child 7, privacy: string
+          child 8, repositories_url: string
+          child 9, slug: string
+          child 10, url: string
+      child 7, permission: string
+      child 8, privacy: string
+      child 9, repositories_url: string
+      child 10, slug: string
+      child 11, url: string
+      child 12, notification_setting: string
+payload.pull_request.review_comment_url: string
+payload.pull_request.review_comments_url: string
+payload.pull_request.state: string
+payload.pull_request.statuses_url: string
+payload.pull_request.title: string
+payload.pull_request.updated_at: string
+payload.pull_request.url: string
+payload.pull_request.user.avatar_url: string
+payload.pull_request.user.events_url: string
+payload.pull_request.user.followers_url: string
+payload.pull_request.user.following_url: string
+payload.pull_request.user.gists_url: string
+payload.pull_request.user.gravatar_id: string
+payload.pull_request.user.html_url: string
+payload.pull_request.user.id: int64
+payload.pull_request.user.login: string
+payload.pull_request.user.node_id: string
+payload.pull_request.user.organizations_url: string
+payload.pull_request.user.received_events_url: string
+payload.pull_request.user.repos_url: string
+payload.pull_request.user.site_admin: bool
+payload.pull_request.user.starred_url: string
+payload.pull_request.user.subscriptions_url: string
+payload.pull_request.user.type: string
+payload.pull_request.user.url: string
+public: bool
+repo.id: int64
+repo.name: string
+repo.url: string
+repo_name: string
+repo_org_and_name: string
+type: string
+year: string
+payload.pull_request.head.repo: null
+payload.comment.reactions.+1: double
+payload.comment.reactions.-1: double
+payload.comment.reactions.confused: double
+payload.comment.reactions.eyes: double
+payload.comment.reactions.heart: double
+payload.comment.reactions.hooray: double
+payload.comment.reactions.laugh: double
+payload.comment.reactions.rocket: double
+payload.comment.reactions.total_count: double
+payload.comment.reactions.url: string
+payload.pull_request.active_lock_reason: string
+payload.pull_request.auto_merge: null
+payload.pull_request.auto_merge.commit_message: string
+payload.pull_request.auto_merge.commit_title: string
+payload.pull_request.auto_merge.enabled_by.avatar_url: string
+payload.pull_request.auto_merge.enabled_by.events_url: string
+payload.pull_request.auto_merge.enabled_by.followers_url: string
+payload.pull_request.auto_merge.enabled_by.following_url: string
+payload.pull_request.auto_merge.enabled_by.gists_url: string
+payload.pull_request.auto_merge.enabled_by.gravatar_id: string
+payload.pull_request.auto_merge.enabled_by.html_url: string
+payload.pull_request.auto_merge.enabled_by.id: double
+payload.pull_request.auto_merge.enabled_by.login: string
+payload.pull_request.auto_merge.enabled_by.node_id: string
+payload.pull_request.auto_merge.enabled_by.organizations_url: string
+payload.pull_request.auto_merge.enabled_by.received_events_url: string
+payload.pull_request.auto_merge.enabled_by.repos_url: string
+payload.pull_request.auto_merge.enabled_by.site_admin: bool
+payload.pull_request.auto_merge.enabled_by.starred_url: string
+payload.pull_request.auto_merge.enabled_by.subscriptions_url: string
+payload.pull_request.auto_merge.enabled_by.type: string
+payload.pull_request.auto_merge.enabled_by.url: string
+payload.pull_request.auto_merge.merge_method: string
+payload.pull_request.base.repo.allow_forking: bool
+payload.pull_request.base.repo.is_template: bool
+payload.pull_request.base.repo.topics: list<item: string>
+  child 0, item: string
+payload.pull_request.base.repo.visibility: string
+payload.pull_request.base.repo.web_commit_signoff_required: bool
+payload.pull_request.head.repo.allow_forking: bool
+payload.pull_request.head.repo.is_template: bool
+payload.pull_request.head.repo.topics: list<item: string>
+  child 0, item: string
+payload.pull_request.head.repo.visibility: string
+payload.pull_request.head.repo.web_commit_signoff_required: bool
+payload.pull_request.base.repo.has_discussions: bool
+payload.pull_request.head.repo.has_discussions: bool
+payload.pull_request.head.user: null
+payload.comment.subject_type: string
+payload.pull_request.milestone.creator: null
+payload.pull_request.base.repo.code_of_conduct: null
+payload.pull_request.base.repo.code_of_conduct.html_url: string
+payload.pull_request.base.repo.code_of_conduct.key: string
+payload.pull_request.base.repo.code_of_conduct.name: string
+payload.pull_request.base.repo.code_of_conduct.url: string
+payload.pull_request.head.repo.code_of_conduct: null
+payload.pull_request.head.repo.code_of_conduct.html_url: string
+payload.pull_request.head.repo.code_of_conduct.key: string
+payload.pull_request.head.repo.code_of_conduct.name: string
+payload.pull_request.head.repo.code_of_conduct.url: string
+payload.pull_request.head.repo.owner.gists_upl: string

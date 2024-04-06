@@ -1,0 +1,174 @@
+ipykernel
+
+# dask
+dask-labextension
+
+# helpful
+jupyterlab-visualpython
+
+# https://github.com/bloomberg/ipydatagrid
+ipydatagrid
+
+# https://plotly.com/python/getting-started/`
+plotly
+
+# plotly uses this for write_image()
+kaleido
+
+# https://github.com/bokeh/bokeh
+bokeh
+
+# https://github.com/altair-viz/altair
+altair
+
+jupyter-resource-usage
+
+# graph vizualization library
+ipycytoscape
+
+# sql blocks
+# jupysql
+
+# bidirectional sync .py <-> .ipynb
+jupytext
+
+jupyterthemes
+
+# jupyter-archive
+# jupyterlab-github
+
+jupyterlab-favorites
+jupyterlab-recents
+jupyterlab-spellchecker
+
+# local interactive automagic dashboards
+voila
+
+#
+# Language Server Protocol (LSP) packages
+#
+
+# https://pypi.org/project/jupyterlab-lsp/  (reproducing for clarity)
+#
+# (Optional, Linux/OSX-only) As a security measure by default Jupyter server 
+# only allows access to files under the Jupyter root directory (the place where 
+# you launch the Jupyter server). Thus, in order to allow jupyterlab-lsp to navigate 
+# to external files such as packages installed system-wide or to libraries inside 
+# a virtual environment (conda, pip, ...) this access control mechanism needs to 
+# be circumvented: inside your Jupyter root directory create a 
+# symlink named .lsp_symlink pointing to your system root /.
+#
+# ln -s / .lsp_symlink
+#
+# As this symlink is a hidden file the Jupyter server must be instructed to serve
+#  hidden files. Either use the appropriate command line flag:
+#
+# jupyter lab --ContentsManager.allow_hidden=True
+#
+# or, alternatively, set the corresponding setting inside your jupyter_server_config.py.
+#
+# Help in implementing a custom ContentsManager which will enable navigating 
+# to external files without the symlink is welcome.
+jupyter-lsp
+jupyterlab-lsp
+python-lsp-server[all]
+jupyter-server
+
+
+# pylsp-mypy: MyPy type checking for Python >=3.7.
+# pylsp-mypy
+
+# pyls-isort: code formatting using isort (automatic import sorting).
+pyls-isort
+
+# pylsp-rope: Extended refactoring capabilities using Rope.
+pylsp-rope
+
+# extremely opinionated, YMMV
+# python-lsp-black
+
+
+#
+# AI
+#
+
+# See using-jupyterlab-ai.md for more details
+
+# jupyter_ai depends on jupyter_ai_magics, so installing jupyter_ai automatically installs jupyter_ai_magics.
+jupyter_ai
+jupyter_ai_magics
+
+# used by huggingface image models
+pillow
+
+
+
+
+# ipykernel
+
+# dask
+dask-labextension
+
+# helpful
+jupyterlab-visualpython
+
+# https://github.com/bloomberg/ipydatagrid
+ipydatagrid
+
+# https://plotly.com/python/getting-started/
+plotly
+
+# https://github.com/bokeh/bokeh
+bokeh
+
+# https://github.com/altair-viz/altair
+altair
+
+jupyter-resource-usage
+
+# graph vizualization library
+ipycytoscape
+
+# sql blocks
+# jupysql
+
+# bidirectional sync .py <-> .ipynb
+jupytext
+
+jupyterthemes
+
+# jupyter-archive
+# jupyterlab-github
+
+jupyterlab-favorites
+jupyterlab-recents
+jupyterlab-spellchecker
+
+# local interactive automagic dashboards
+voila
+
+# Language Server Protocol (LSP) packages
+# python-lsp-black: code formatting using Black.
+# pyls-memestra: detecting the use of deprecated APIs.
+# python-lsp-ruff: Extensive and fast linting using ruff.
+
+jupyter-lsp
+jupyter-server
+
+# https://github.com/google/yapf
+# https://github.com/python-rope/rope
+# https://github.com/PyCQA/pycodestyle
+python-lsp-server[yapf,rope,pycodestyle]
+
+# pylsp-mypy: MyPy type checking for Python >=3.7.
+pylsp-mypy
+
+# pyls-isort: code formatting using isort (automatic import sorting).
+pyls-isort
+
+# pylsp-rope: Extended refactoring capabilities using Rope.
+pylsp-rope
+
+# extremely opinionated, YMMV
+# python-lsp-black
+

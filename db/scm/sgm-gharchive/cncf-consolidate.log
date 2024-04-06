@@ -1,0 +1,69 @@
+====================================
+  GZ File Consolidation Script
+====================================
+
+Source: /Users/matt/gharchive-cncf/cncf.all
+Target: /Users/matt/gharchive-cncf/cncf.byrepo
+Dry Run: 0
+Verbose: 1
+Processing directory: /Users/matt/gharchive-cncf/cncf.all/CommitCommentEvent
+    dirName: CommitCommentEvent
+    outputFile: /Users/matt/gharchive-cncf/cncf.byrepo/CommitCommentEvent-consolidated.gz
+Concatenating files from /Users/matt/gharchive-cncf/cncf.all/CommitCommentEvent into /Users/matt/gharchive-cncf/cncf.byrepo/CommitCommentEvent-consolidated.gz...
+Processing directory: /Users/matt/gharchive-cncf/cncf.all/CreateEvent
+    dirName: CreateEvent
+    outputFile: /Users/matt/gharchive-cncf/cncf.byrepo/CreateEvent-consolidated.gz
+Concatenating files from /Users/matt/gharchive-cncf/cncf.all/CreateEvent into /Users/matt/gharchive-cncf/cncf.byrepo/CreateEvent-consolidated.gz...
+Processing directory: /Users/matt/gharchive-cncf/cncf.all/DeleteEvent
+    dirName: DeleteEvent
+    outputFile: /Users/matt/gharchive-cncf/cncf.byrepo/DeleteEvent-consolidated.gz
+Concatenating files from /Users/matt/gharchive-cncf/cncf.all/DeleteEvent into /Users/matt/gharchive-cncf/cncf.byrepo/DeleteEvent-consolidated.gz...
+Processing directory: /Users/matt/gharchive-cncf/cncf.all/ForkEvent
+    dirName: ForkEvent
+    outputFile: /Users/matt/gharchive-cncf/cncf.byrepo/ForkEvent-consolidated.gz
+Concatenating files from /Users/matt/gharchive-cncf/cncf.all/ForkEvent into /Users/matt/gharchive-cncf/cncf.byrepo/ForkEvent-consolidated.gz...
+Processing directory: /Users/matt/gharchive-cncf/cncf.all/GollumEvent
+    dirName: GollumEvent
+    outputFile: /Users/matt/gharchive-cncf/cncf.byrepo/GollumEvent-consolidated.gz
+Concatenating files from /Users/matt/gharchive-cncf/cncf.all/GollumEvent into /Users/matt/gharchive-cncf/cncf.byrepo/GollumEvent-consolidated.gz...
+Processing directory: /Users/matt/gharchive-cncf/cncf.all/IssueCommentEvent
+    dirName: IssueCommentEvent
+    outputFile: /Users/matt/gharchive-cncf/cncf.byrepo/IssueCommentEvent-consolidated.gz
+Concatenating files from /Users/matt/gharchive-cncf/cncf.all/IssueCommentEvent into /Users/matt/gharchive-cncf/cncf.byrepo/IssueCommentEvent-consolidated.gz...
+Processing directory: /Users/matt/gharchive-cncf/cncf.all/IssuesEvent
+    dirName: IssuesEvent
+    outputFile: /Users/matt/gharchive-cncf/cncf.byrepo/IssuesEvent-consolidated.gz
+Concatenating files from /Users/matt/gharchive-cncf/cncf.all/IssuesEvent into /Users/matt/gharchive-cncf/cncf.byrepo/IssuesEvent-consolidated.gz...
+Processing directory: /Users/matt/gharchive-cncf/cncf.all/MemberEvent
+    dirName: MemberEvent
+    outputFile: /Users/matt/gharchive-cncf/cncf.byrepo/MemberEvent-consolidated.gz
+Concatenating files from /Users/matt/gharchive-cncf/cncf.all/MemberEvent into /Users/matt/gharchive-cncf/cncf.byrepo/MemberEvent-consolidated.gz...
+Processing directory: /Users/matt/gharchive-cncf/cncf.all/PublicEvent
+    dirName: PublicEvent
+    outputFile: /Users/matt/gharchive-cncf/cncf.byrepo/PublicEvent-consolidated.gz
+Concatenating files from /Users/matt/gharchive-cncf/cncf.all/PublicEvent into /Users/matt/gharchive-cncf/cncf.byrepo/PublicEvent-consolidated.gz...
+Processing directory: /Users/matt/gharchive-cncf/cncf.all/PullRequestEvent
+    dirName: PullRequestEvent
+    outputFile: /Users/matt/gharchive-cncf/cncf.byrepo/PullRequestEvent-consolidated.gz
+Concatenating files from /Users/matt/gharchive-cncf/cncf.all/PullRequestEvent into /Users/matt/gharchive-cncf/cncf.byrepo/PullRequestEvent-consolidated.gz...
+Processing directory: /Users/matt/gharchive-cncf/cncf.all/PullRequestReviewCommentEvent
+    dirName: PullRequestReviewCommentEvent
+    outputFile: /Users/matt/gharchive-cncf/cncf.byrepo/PullRequestReviewCommentEvent-consolidated.gz
+Concatenating files from /Users/matt/gharchive-cncf/cncf.all/PullRequestReviewCommentEvent into /Users/matt/gharchive-cncf/cncf.byrepo/PullRequestReviewCommentEvent-consolidated.gz...
+Processing directory: /Users/matt/gharchive-cncf/cncf.all/PullRequestReviewEvent
+    dirName: PullRequestReviewEvent
+    outputFile: /Users/matt/gharchive-cncf/cncf.byrepo/PullRequestReviewEvent-consolidated.gz
+Concatenating files from /Users/matt/gharchive-cncf/cncf.all/PullRequestReviewEvent into /Users/matt/gharchive-cncf/cncf.byrepo/PullRequestReviewEvent-consolidated.gz...
+Processing directory: /Users/matt/gharchive-cncf/cncf.all/PushEvent
+    dirName: PushEvent
+    outputFile: /Users/matt/gharchive-cncf/cncf.byrepo/PushEvent-consolidated.gz
+Concatenating files from /Users/matt/gharchive-cncf/cncf.all/PushEvent into /Users/matt/gharchive-cncf/cncf.byrepo/PushEvent-consolidated.gz...
+Processing directory: /Users/matt/gharchive-cncf/cncf.all/ReleaseEvent
+    dirName: ReleaseEvent
+    outputFile: /Users/matt/gharchive-cncf/cncf.byrepo/ReleaseEvent-consolidated.gz
+Concatenating files from /Users/matt/gharchive-cncf/cncf.all/ReleaseEvent into /Users/matt/gharchive-cncf/cncf.byrepo/ReleaseEvent-consolidated.gz...
+Processing directory: /Users/matt/gharchive-cncf/cncf.all/WatchEvent
+    dirName: WatchEvent
+    outputFile: /Users/matt/gharchive-cncf/cncf.byrepo/WatchEvent-consolidated.gz
+Concatenating files from /Users/matt/gharchive-cncf/cncf.all/WatchEvent into /Users/matt/gharchive-cncf/cncf.byrepo/WatchEvent-consolidated.gz...
+Concatenation complete.

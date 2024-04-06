@@ -1,0 +1,142 @@
+
+File path:  /Users/matt/gharchive-cncf/cncf-parquet/CommitCommentEvent-consolidated.parquet
+Created by: parquet-rs version 50.0.0
+Properties:
+  ARROW:schema: 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
+Schema:
+message arrow_schema {
+  optional binary actor.avatar_url (STRING);
+  optional binary actor.display_login (STRING);
+  optional binary actor.gravatar_id (STRING);
+  optional int64 actor.id;
+  optional binary actor.login (STRING);
+  optional binary actor.url (STRING);
+  optional binary created_at (STRING);
+  optional binary day (STRING);
+  optional binary id (STRING);
+  optional binary month (STRING);
+  optional binary org.avatar_url (STRING);
+  optional binary org.gravatar_id (STRING);
+  optional int64 org.id;
+  optional binary org.login (STRING);
+  optional binary org.url (STRING);
+  optional binary org_name (STRING);
+  optional binary payload.comment.author_association (STRING);
+  optional binary payload.comment.body (STRING);
+  optional binary payload.comment.commit_id (STRING);
+  optional binary payload.comment.created_at (STRING);
+  optional binary payload.comment.html_url (STRING);
+  optional int64 payload.comment.id;
+  optional double payload.comment.line;
+  optional binary payload.comment.node_id (STRING);
+  optional binary payload.comment.path (STRING);
+  optional double payload.comment.position;
+  optional double payload.comment.reactions.+1;
+  optional double payload.comment.reactions.-1;
+  optional double payload.comment.reactions.confused;
+  optional double payload.comment.reactions.eyes;
+  optional double payload.comment.reactions.heart;
+  optional double payload.comment.reactions.hooray;
+  optional double payload.comment.reactions.laugh;
+  optional double payload.comment.reactions.rocket;
+  optional double payload.comment.reactions.total_count;
+  optional binary payload.comment.reactions.url (STRING);
+  optional binary payload.comment.updated_at (STRING);
+  optional binary payload.comment.url (STRING);
+  optional binary payload.comment.user.avatar_url (STRING);
+  optional binary payload.comment.user.events_url (STRING);
+  optional binary payload.comment.user.followers_url (STRING);
+  optional binary payload.comment.user.following_url (STRING);
+  optional binary payload.comment.user.gists_url (STRING);
+  optional binary payload.comment.user.gravatar_id (STRING);
+  optional binary payload.comment.user.html_url (STRING);
+  optional int64 payload.comment.user.id;
+  optional binary payload.comment.user.login (STRING);
+  optional binary payload.comment.user.node_id (STRING);
+  optional binary payload.comment.user.organizations_url (STRING);
+  optional binary payload.comment.user.received_events_url (STRING);
+  optional binary payload.comment.user.repos_url (STRING);
+  optional boolean payload.comment.user.site_admin;
+  optional binary payload.comment.user.starred_url (STRING);
+  optional binary payload.comment.user.subscriptions_url (STRING);
+  optional binary payload.comment.user.type (STRING);
+  optional binary payload.comment.user.url (STRING);
+  optional boolean public;
+  optional int64 repo.id;
+  optional binary repo.name (STRING);
+  optional binary repo.url (STRING);
+  optional binary repo_name (STRING);
+  optional binary repo_org_and_name (STRING);
+  optional binary type (STRING);
+  optional binary year (STRING);
+}
+
+
+Row group 0:  count: 104647  206.33 B records  start: 4  total(compressed): 20.592 MB total(uncompressed):104.672 MB 
+--------------------------------------------------------------------------------
+                                          type      encodings count     avg size   nulls   min / max
+actor.avatar_url                          BINARY    G RB_     104647    1.92 B             "https://avatars.githubuse..." / "https://avatars.githubuse..."
+actor.display_login                       BINARY    G RB_     104647    1.86 B     36233   "00arthur00" / "zzzadruga"
+actor.gravatar_id                         BINARY    G RB_     104647    0.00 B             "" / ""
+actor.id                                  INT64     G RB_     104647    1.71 B             "45" / "163454697"
+actor.login                               BINARY    G RB_     104647    2.21 B             "00arthur00" / "zzzadruga"
+actor.url                                 BINARY    G RB_     104647    2.35 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+created_at                                BINARY    G RB_     104647    5.92 B             "2015-01-01T03:18:21Z" / "2024-03-16T22:51:06Z"
+day                                       BINARY    G RB_     104647    0.39 B             "01" / "31"
+id                                        BINARY    G RB_     104647    6.64 B             "10000365479" / "9998841510"
+month                                     BINARY    G RB_     104647    0.28 B             "01" / "12"
+org.avatar_url                            BINARY    G RB_     104647    0.02 B             "https://avatars.githubuse..." / "https://avatars.githubuse..."
+org.gravatar_id                           BINARY    G RB_     104647    0.00 B             "" / ""
+org.id                                    INT64     G RB_     104647    0.01 B             "47359" / "105945214"
+org.login                                 BINARY    G RB_     104647    0.02 B             "AthenZ" / "whatwg"
+org.url                                   BINARY    G RB_     104647    0.02 B             "https://api.github.com/or..." / "https://api.github.com/or..."
+org_name                                  BINARY    G RB_     104647    0.02 B             "AthenZ" / "whatwg"
+payload.comment.author_association        BINARY    G RB_     104647    0.17 B     46877   "COLLABORATOR" / "OWNER"
+payload.comment.body                      BINARY    G RB_     104647    75.65 B            "								this.logService.i..." / "🦾"
+payload.comment.commit_id                 BINARY    G RB_     104647    16.19 B            "00026e88460f33edd35b69f34..." / "ffffc59bc5febb96bd523134d..."
+payload.comment.created_at                BINARY    G RB_     104647    5.92 B             "2015-01-01T03:18:21Z" / "2024-03-16T22:51:06Z"
+payload.comment.html_url                  BINARY    G RB_     104647    22.49 B            "https://github.com/AthenZ..." / "https://github.com/whatwg..."
+payload.comment.id                        INT64     G RB_     104647    5.11 B             "9131591" / "139869285"
+payload.comment.line                      DOUBLE    G RB_     104647    0.60 B     66682   "-0.0" / "149903.0"
+payload.comment.node_id                   BINARY    G RB_     104647    3.41 B     52233   "CC_kwDOA-8jIM4Dz9rW" / "MDEzOkNvbW1pdENvbW1lbnQzO..."
+payload.comment.path                      BINARY    G RB_     104647    2.74 B     61277   "" / "静止的/图像/社区/贡献者/Shaohui Liu"
+payload.comment.position                  DOUBLE    G RB_     104647    0.46 B     66653   "1.0" / "2.8147581E7"
+payload.comment.reactions.+1              DOUBLE    G RB_     104647    0.06 B     81918   "-0.0" / "0.0"
+payload.comment.reactions.-1              DOUBLE    G RB_     104647    0.06 B     81918   "-0.0" / "0.0"
+payload.comment.reactions.confused        DOUBLE    G RB_     104647    0.06 B     81918   "-0.0" / "0.0"
+payload.comment.reactions.eyes            DOUBLE    G RB_     104647    0.06 B     81918   "-0.0" / "0.0"
+payload.comment.reactions.heart           DOUBLE    G RB_     104647    0.06 B     81918   "-0.0" / "0.0"
+payload.comment.reactions.hooray          DOUBLE    G RB_     104647    0.06 B     81918   "-0.0" / "0.0"
+payload.comment.reactions.laugh           DOUBLE    G RB_     104647    0.06 B     81918   "-0.0" / "0.0"
+payload.comment.reactions.rocket          DOUBLE    G RB_     104647    0.06 B     81918   "-0.0" / "0.0"
+payload.comment.reactions.total_count     DOUBLE    G RB_     104647    0.06 B     81918   "-0.0" / "0.0"
+payload.comment.reactions.url             BINARY    G RB_     104647    1.77 B     81918   "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.comment.updated_at                BINARY    G RB_     104647    5.92 B             "2015-01-01T03:18:21Z" / "2024-03-16T22:51:06Z"
+payload.comment.url                       BINARY    G RB_     104647    5.62 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+payload.comment.user.avatar_url           BINARY    G RB_     104647    2.25 B             "https://avatars.githubuse..." / "https://avatars7.githubus..."
+payload.comment.user.events_url           BINARY    G RB_     104647    2.44 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.comment.user.followers_url        BINARY    G RB_     104647    2.42 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.comment.user.following_url        BINARY    G RB_     104647    2.38 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.comment.user.gists_url            BINARY    G RB_     104647    2.45 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.comment.user.gravatar_id          BINARY    G RB_     104647    0.00 B             "" / ""
+payload.comment.user.html_url             BINARY    G RB_     104647    2.31 B             "https://github.com/00arth..." / "https://github.com/zzzadruga"
+payload.comment.user.id                   INT64     G RB_     104647    1.71 B             "45" / "163454697"
+payload.comment.user.login                BINARY    G RB_     104647    2.21 B             "00arthur00" / "zzzadruga"
+payload.comment.user.node_id              BINARY    G RB_     104647    1.30 B     52233   "MDM6Qm90MzU2MTM4MjU=" / "U_kgDOCbx5Rg"
+payload.comment.user.organizations_url    BINARY    G RB_     104647    2.41 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.comment.user.received_events_url  BINARY    G RB_     104647    2.44 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.comment.user.repos_url            BINARY    G RB_     104647    2.41 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.comment.user.site_admin           BOOLEAN   G RB_     104647    0.00 B             "false" / "true"
+payload.comment.user.starred_url          BINARY    G RB_     104647    2.38 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.comment.user.subscriptions_url    BINARY    G RB_     104647    2.43 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+payload.comment.user.type                 BINARY    G RB_     104647    0.01 B             "Bot" / "User"
+payload.comment.user.url                  BINARY    G RB_     104647    2.35 B             "https://api.github.com/us..." / "https://api.github.com/us..."
+public                                    BOOLEAN   G RB_     104647    0.00 B             "true" / "true"
+repo.id                                   INT64     G RB_     104647    0.31 B             "160994" / "771633215"
+repo.name                                 BINARY    G RB_     104647    0.49 B             "AthenZ/athenz" / "whatwg/webidl"
+repo.url                                  BINARY    G RB_     104647    0.52 B             "https://api.github.com/re..." / "https://api.github.com/re..."
+repo_name                                 BINARY    G RB_     104647    0.41 B             "" / "zx"
+repo_org_and_name                         BINARY    G RB_     104647    0.49 B             "AthenZ/athenz" / "whatwg/webidl"
+type                                      BINARY    G RB_     104647    0.00 B             "CommitCommentEvent" / "CommitCommentEvent"
+year                                      BINARY    G RB_     104647    0.22 B             "2015" / "2024"
+

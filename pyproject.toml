@@ -1,0 +1,5 @@
+# https://github.com/python-lsp/pylsp-mypy#configuration
+[tool.pylsp-mypy]
+enabled = true
+live_mode = true
+strict = true
