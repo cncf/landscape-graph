@@ -1366,12 +1366,10 @@ def parse_args():
 def main():
     global g_pool, g_manager
     
-    ic()
     print(f"Current Working Directory: {os.getcwd()}")
     print(f"Script Path: {os.path.abspath(__file__)}")
 
     # Set working directory to the location the script was called from
-    ic((f'cwd: {os.getcwd()}'))
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
     ic((f'cwd: {os.getcwd()}'))
 
@@ -1410,9 +1408,6 @@ def main():
         print('Starting PoolManager')
         ic(context)
     try:
-        #
-        # "DoAllTheWork()"
-        #
         ret = process_days(context, days)
         
     except KeyboardInterrupt:
