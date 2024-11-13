@@ -16,11 +16,6 @@ start_dstat() {
   dstat -cdngy --output "$1/dstat.log" &
 }
 
-# # Usage: graph_dstat <log_dir> 
-# graph_dstat() {
-#   dstat-to-graphite < "$1/dstat.log" > "$1/dstat.png"
-# } 
-
 display_banner() {
     echo "===================================="
     echo "  gharchive: JSON to Parquet        "
@@ -195,7 +190,9 @@ process_file() {
     
 
     echo "[decompress] $gzfile --> $json_file"
-    pigz -v -d -k "$gz_file" -c > "$json_file" || { echo "Decompression failed for $gz_file"; return 1; }
+    # pigz -v -d -k "$gz_file" -c > "$json_file" || { echo "Decompression failed for $gz_file"; return 1; }
+    
+    gzip -v -d -k "$gz_file" -c > "$json_file" || { echo "Decompression failed for $gz_file"; return 1; }
 
     echo "[json2parquet] $json_file --> $parquet_file, $schema_file"
     echo json2parquet "${json_file}" "${parquet_file}" -c gzip --dictionary --statistics page 2> "${schema_file}"
@@ -219,7 +216,6 @@ export -f process_file
 #
 parallelArgs=(--verbose --progress --tag --linebuffer --color \
   --jobs ${#consolidated_files[@]} \
-#   --jobs 5 \
   --joblog "$jobLogfile" \
   --results "$resultsLogfile")
 

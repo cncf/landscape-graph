@@ -20,7 +20,7 @@ set "orgfile=%~3"
 REM Set optional arguments with defaults
 if "%~4"=="" (
     for %%I in ("%source%") do set "sourcename=%%~nxI"
-    set "logs=%target%\gharchive-gz-hour2day-%sourcename%.csv"
+    set "logs=%target%\gharchive-gz-to-parquet-%sourcename%.csv"
 ) else (
     set "logs=%~4"
 )
@@ -54,6 +54,7 @@ if not exist "%target%" (
 )
 
 REM Remove the redirection to allow console output while still logging
+echo python gharchive-gz-to-parquet.py --source %source% --target %target% --org-file %orgfile% --log-results %logs% --verbose --workers %workers%
 python gharchive-gz-to-parquet.py --source %source% --target %target% --org-file %orgfile% --log-results %logs% --verbose --workers %workers%
 
 REM Calculate duration
@@ -86,7 +87,7 @@ echo            (default: target\gharchive-gz-hour2day-pylog-YYYYMMDD.log)
 echo   workers   Number of parallel workers (default: 55)
 echo.
 echo Example:
-echo %~nx0 "p:\gha-raw-daily\2024" "p:\gha-parquet-daily\2024" "C:\data\gharchive\orgs.csv"
+echo %~nx0 "p:\gha-raw-daily\2024" "p:\gha-parquet-daily\2024" "org-list-cncf.txt"
 
 REM exit /b 1 returns error code 1 to calling process to indicate help was shown
 REM due to missing required arguments or explicit help request
