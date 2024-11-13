@@ -19,7 +19,14 @@ set -euox pipefail
 #   -d, --dry-run             Perform a dry run without actual concatenation
 #   -v, --verbose             Enable verbose output
 #   -h, --help                Display this help text
-./consolidate-gz.sh --source ~/gharchive-cncf/debug.cncf.all \
-                    --target ~/gharchive-cncf/debug.cncf.byrepo \
-                    --verbose
-                    # --dry-run
+
+./consolidate-gz.sh --source /p/gha-parquet-daily/2024 \
+                    --target /p/gha-parquet-cncf \
+                    --verbose | tee consolidate-gz-2024.log
+
+
+
+# ./consolidate-gz.sh --source ~/gharchive-cncf/debug.cncf.all \
+#                     --target ~/gharchive-cncf/debug.cncf.byrepo \
+#                     --verbose
+#                     --dry-run
