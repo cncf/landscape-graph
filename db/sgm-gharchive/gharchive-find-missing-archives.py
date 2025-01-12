@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 
-# python gha-find-missing-archives.py --help                          
-# usage: gha-find-missing-archives.py [-h] [--years [YEARS ...]] [--start_date START_DATE] [--end_date END_DATE] [--persist]
-#                                     [--filename FILENAME] [--missing_files_list]
-#                                     directory
+# python gharchive-find-missing-archives.py --help                          
+# usage: gharchive-find-missing-archives.py [-h] [--years [YEARS ...]] [--start_date START_DATE] [--end_date END_DATE] [--persist]
+#                                           [--filename FILENAME] [--missing_files_list]
+#                                           directory
 
 # Check existence of hourly archive files in a specified directory.
 
