@@ -22,7 +22,7 @@ rm -rvf .memestra
 rm -rvf .mypy_cache
 
 # created whenever a file is modified.
-find -d . -name .ipynb_checkpoints | xargs -0 rm -v -rf "{}"
+find . -name .ipynb_checkpoints -print0 | xargs -0 rm -v -rf
 
 ls -laF ~/Library/jupyter
 rm -rf ~/Library/jupyter
