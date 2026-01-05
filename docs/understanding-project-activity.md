@@ -120,18 +120,3 @@ Since emails are already obfuscated, by itself these records don't contain email
 Each event is quickly sorted, and optionally filtered, using the org list as input. Since there are 20 event types with deeply nested embedded objects, normalizing them into a uniform union set (wide table) has over 9000 columns, and is unworkable.  Instead, event types are written to a file, and the arrow schemas don't have the geometric combinatorial expansion of cardinality (columns).
 
 The files are reified into a directory based time index.  This allows the use of  Apache Arrow's Dataset API for larger than memory / time-segmented datasets, yielding a plethora of benefits that enable processing the volumes of data on a laptop. Here's a few links describing the concept and the Datasets API provided by Apache Arrow.
-
----
-
-## Aggregation, Analysis, Storing, and Reporting
-
-### How we connect to database (postgres) using Arrow's ADBC
-
-leveraging Arrow's database connectivity (not Apache Flight or FlightSQL) for the bulk inject --> postgres.
-
-For now using the postgres wire protocol. Ultimately the better choice is to leverage the PG extension that provides a Flight Endpoint...which would allow data transfer on the wire in Arrow format over gRPC. ACI Postgres instances at the moment don't have this extension, and it's still new, while the PG wire protocol...is not.
-
-- https://arrow.apache.org/adbc/0.3.0/python/quickstart.html#ingesting-bulk-data
-- https://arrow.apache.org/adbc/0.5.1/python/recipe/postgresql.html
-
-As a fallback / plan B (should ADBC prove problematic) is to load from .feather --> pandas (or dask...but pandas is fine as each individual file is quite small) --> sqlalchemy --> postgres. This however has a lot more moving parts, and is orders of magnitude slower.
