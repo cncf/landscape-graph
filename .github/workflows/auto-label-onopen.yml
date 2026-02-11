@@ -1,0 +1,73 @@
+name: Auto Label Issues on Open
+
+on:
+  issues:
+    types: [opened, edited]
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  auto-label:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Auto-label based on file paths
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issueBody = context.payload.issue.body || '';
+            const issueNumber = context.payload.issue.number;
+            
+            const sgmMappings = {
+              'db/blogs/': 'sgm/blogcncf',
+              'db/boards/': 'sgm/ghdiscuss',
+              'db/cncf/': 'sgm/cncf',
+              'db/core/': 'sgm/core',
+              'db/corp/': 'sgm/crunchbase',
+              'db/packages/': 'sgm/brew',
+              'db/rtc/': 'sgm/slack',
+              'db/sgm-gharchive/': 'sgm/gharchive',
+              'db/sgm-git/': 'sgm/git',
+              'db/sgm-github/': 'sgm/github',
+              'db/social/': 'sgm/twitter',
+              'db/threats/': 'sgm/nist',
+              'db/videos/': 'sgm/youtube',
+              '.github/': 'infrastructure',
+              'scripts/': 'infrastructure',
+              'README': 'documentation',
+              'docs/': 'documentation',
+              '.md': 'documentation'
+            };
+            
+            const labelsToAdd = new Set();
+
+            // Check issue body for path mentions
+            for (const [path, label] of Object.entries(sgmMappings)) {
+              if (issueBody.includes(path)) {
+                labelsToAdd.add(label);
+                console.log(`Found '${path}' -> Adding label '${label}'`);
+              }
+            }
+            
+            if (labelsToAdd.size > 0) {
+              const labels = Array.from(labelsToAdd);
+              console.log(`Applying labels: ${labels.join(', ')}`);
+              
+              try {
+                await github.rest.issues.addLabels({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: issueNumber,
+                  labels: labels
+                });
+                console.log('✓ Labels added successfully');
+              } catch (error) {
+                console.error('Failed to add labels:', error);
+              }
+            } else {
+              console.log('No matching paths found in issue body');
+            }
