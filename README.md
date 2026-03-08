@@ -154,6 +154,12 @@ On its influences and roots:
 * Review our current [plan][lg-plan].
 * Help us to [make this better][lg-cguide] :)
 
+### Dev setup (optional IDE tooling)
+
+If you use JetBrains IDEs, the community-maintained **Graph Database Support** plugin can make working with Neo4j/Cypher more pleasant (syntax highlighting, query console helpers, etc.):
+
+- https://github.com/neueda/jetbrains-plugin-graph-database-support/
+
 [lg-slack]: https://cloud-native.slack.com/archives/C03BXBYFMQS
 [lg-plan]: https://github.com/orgs/cncf/projects/7
 [lg-cguide]: https://github.com/orgs/cncf/projects/7/views/6
