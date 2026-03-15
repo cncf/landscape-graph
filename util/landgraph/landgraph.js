@@ -43,7 +43,7 @@ const optionDefinitions = [
   },
   {
     name: 'out',     alias: 'o', type: String,
-    description: 'executable schema --> output file', typelabel: '<file>'
+    description: 'executable schema --> output file', typeLabel: '<file>'
   },
   {
     name: 'gserve',  alias: 'g', type: Boolean,
@@ -61,7 +61,7 @@ const optionDefinitions = [
 
 const options = commandLineArgs(optionDefinitions)
 
-if (options.help || options ) {
+if (options.help || Object.keys(options).length === 0) {
   const usage = commandLineUsage([
     {
       header: 'landgraph',
