@@ -89,4 +89,109 @@ labels:
   - name: wontfix
     description: This will not be worked on
     color: ffffff
+  
+  # Sub-Graph Module (SGM) Component Labels
+  # BLOGS
+  - name: sgm/blogcncf
+    description: "Sub-Graph Module: blogs/sgm-blogcncf"
+    color: E8B4D9
+  
+  # BOARDS
+  - name: sgm/ghdiscuss
+    description: "Sub-Graph Module: boards/sgm-ghdiscuss"
+    color: B4D9E8
+  - name: sgm/stackoverflow
+    description: "Sub-Graph Module: boards/sgm-stackoverflow"
+    color: B4D9E8
+  
+  # CNCF & CORE
+  - name: sgm/cncf
+    description: "Sub-Graph Module: cncf"
+    color: CCCCCC
+  - name: sgm/core
+    description: "Sub-Graph Module: core"
+    color: CCCCCC
+  
+  # CORP
+  - name: sgm/crunchbase
+    description: "Sub-Graph Module: corp/sgm-crunchbase"
+    color: D9E8B4
+  - name: sgm/yahoofinance
+    description: "Sub-Graph Module: corp/sgm-yahoofinance"
+    color: D9E8B4
+  
+  # PACKAGES
+  - name: sgm/brew
+    description: "Sub-Graph Module: packages/sgm-brew"
+    color: FFD580
+  - name: sgm/choco
+    description: "Sub-Graph Module: packages/sgm-choco"
+    color: FFD580
+  - name: sgm/crate
+    description: "Sub-Graph Module: packages/sgm-crate"
+    color: FFD580
+  - name: sgm/deb
+    description: "Sub-Graph Module: packages/sgm-deb"
+    color: FFD580
+  - name: sgm/deno
+    description: "Sub-Graph Module: packages/sgm-deno"
+    color: FFD580
+  - name: sgm/go
+    description: "Sub-Graph Module: packages/sgm-go"
+    color: FFD580
+  - name: sgm/maven
+    description: "Sub-Graph Module: packages/sgm-maven"
+    color: FFD580
+  - name: sgm/npm
+    description: "Sub-Graph Module: packages/sgm-npm"
+    color: FFD580
+  - name: sgm/pip
+    description: "Sub-Graph Module: packages/sgm-pip"
+    color: FFD580
+  - name: sgm/rpm
+    description: "Sub-Graph Module: packages/sgm-rpm"
+    color: FFD580
+  
+  # RTC (Real-Time Communication)
+  - name: sgm/discord
+    description: "Sub-Graph Module: rtc/sgm-discord"
+    color: B4E8D9
+  - name: sgm/slack
+    description: "Sub-Graph Module: rtc/sgm-slack"
+    color: B4E8D9
+  
+  # SCM (Source Control Management)
+  - name: sgm/gharchive
+    description: "Sub-Graph Module: sgm-gharchive"
+    color: D9B4E8
+  - name: sgm/git
+    description: "Sub-Graph Module: sgm-git"
+    color: D9B4E8
+  - name: sgm/github
+    description: "Sub-Graph Module: sgm-github"
+    color: D9B4E8
+  - name: sgm/template
+    description: "Sub-Graph Module: sgm-template"
+    color: CCCCCC
+  
+  # SOCIAL
+  - name: sgm/email
+    description: "Sub-Graph Module: social/sgm-email"
+    color: E8D9B4
+  - name: sgm/linkedin
+    description: "Sub-Graph Module: social/sgm-linkedin"
+    color: E8D9B4
+  - name: sgm/twitter
+    description: "Sub-Graph Module: social/sgm-twitter"
+    color: E8D9B4
+  
+  # THREATS
+  - name: sgm/nist
+    description: "Sub-Graph Module: threats/sgm-nist"
+    color: FF9999
+  
+  # VIDEOS
+  - name: sgm/youtube
+    description: "Sub-Graph Module: videos/sgm-youtube"
+    color: 99CCFF
 
