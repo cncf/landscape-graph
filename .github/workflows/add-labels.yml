@@ -1,0 +1,28 @@
+name: Add Labels via Comment
+
+on:
+  issue_comment:
+    types: [created]
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  add-labels:
+    # Only run if comment starts with /label
+    if: startsWith(github.event.comment.body, '/label')
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Add or remove labels
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE: ${{ github.event.issue.number }}
+          COMMENT: ${{ github.event.comment.body }}
+          SENDER: ${{ github.event.comment.user.login }}
+        run: |
+          bash .github/scripts/add-labels.sh

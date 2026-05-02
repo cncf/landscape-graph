@@ -1,0 +1,57 @@
+# Component Labels Mapping
+# Format: full_path    short_label
+#
+# This file maps component paths to short labels for use in GitHub issues.
+# It is used by the add-labels.sh script to resolve label references.
+#
+
+
+# BLOGS modules
+blogs\sgm-blogcncf             sgm/blogcncf
+
+# BOARDS modules
+boards\sgm-ghdiscuss           sgm/ghdiscuss
+boards\sgm-stackoverflow       sgm/stackoverflow
+
+# CNCF modules
+cncf                           sgm/cncf
+
+# CORE modules
+core                           sgm/core
+
+# CORP modules
+corp\sgm-crunchbase            sgm/crunchbase
+corp\sgm-yahoofinance          sgm/yahoofinance
+
+# PACKAGES modules
+packages\sgm-brew              sgm/brew
+packages\sgm-choco             sgm/choco
+packages\sgm-crate             sgm/crate
+packages\sgm-deb               sgm/deb
+packages\sgm-deno              sgm/deno
+packages\sgm-go                sgm/go
+packages\sgm-maven             sgm/maven
+packages\sgm-npm               sgm/npm
+packages\sgm-pip               sgm/pip
+packages\sgm-rpm               sgm/rpm
+
+# RTC modules
+rtc\sgm-discord                sgm/discord
+rtc\sgm-slack                  sgm/slack
+
+# SCM modules
+sgm-gharchive                  sgm/gharchive
+sgm-git                        sgm/git
+sgm-github                     sgm/github
+sgm-template                   sgm/template
+
+# SOCIAL modules
+social\sgm-email               sgm/email
+social\sgm-linkedin            sgm/linkedin
+social\sgm-twitter             sgm/twitter
+
+# THREATS modules
+threats\sgm-nist               sgm/nist
+
+# VIDEOS modules
+videos\sgm-youtube             sgm/youtube
