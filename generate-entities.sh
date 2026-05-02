@@ -8,5 +8,5 @@ jp -f landscape-items-clean.json "[?relation].{ id: id, \
                                                 relation: relation, \
                                                 oss: oss, \
                                                 license: license, \
-                                                description: description \
+                                                description: description, \
                                                 repos: repos }"
